@@ -54,3 +54,23 @@ ComponentDidUpdate
 **useEffect Lifecycles:**
 
 componentDidMount, componentDidUpdate, componentWillUnmount
+
+**React Optimizations**
+
+Avoid re-renders by providing array of values in useEffect.
+Big Calculations useMemo to store the output.
+
+**Call Endpoint Once to Fetch Initial Data**
+
+UseEffect with empty Array is called only after first render.
+
+**Function with big calculations**
+
+UseMemo - Runs the function only if arguments change other it will return the stored value.
+
+**Difference with useMemo vs useCallback**
+
+useMemo - stores value
+useCallback - stores function
+
+
