@@ -59,6 +59,8 @@ componentDidMount, componentDidUpdate, componentWillUnmount
 
 Avoid re-renders by providing array of values in useEffect.
 Big Calculations useMemo to store the output.
+useCallback to store the function.
+code splitting, React.lazy, dynamic import.
 
 **Call Endpoint Once to Fetch Initial Data**
 
@@ -72,5 +74,28 @@ UseMemo - Runs the function only if arguments change other it will return the st
 
 useMemo - stores value
 useCallback - stores function
+
+**Dispatch & Action in useReducer ?**
+
+dispatch is called with action which calls the reducer to return the state.
+
+**devtools display state**
+
+usedebugvalue
+
+**allow transition in state**
+
+useTransition
+
+## Nextjs
+
+**nextjs advantages**
+
+comes with webpack.
+dynamic import, lazyload using suspense.
+compiler replaces babel for individual files and terser for minifying output bundles.
+
+
+
 
 
