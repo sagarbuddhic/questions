@@ -2,9 +2,9 @@
 
 ## Javascript
 
-**Var keyword vs let & const?**
+**Var VS let & const keyword?**
 
-variables with var keyword has default hoisting.\
+Variables with var keyword has default hoisting.\
 Declaring a variable after its usage is allowed in javascript,\
 all declaration will be moved up by default which is called hoisting.
 
@@ -35,7 +35,7 @@ let curriedSum = curry();
 alert( curriedSum(1)(2)(3)(4)() ); // 3
 ```
 
-**parse the stringified JSON**
+**Parse the stringified JSON**
 
 JSON.Parse
 
@@ -138,7 +138,7 @@ Future requests will serve the static file from the cache. ISR on Vercel persist
 
 react library - stale while revalidate.
 
-**Dynamic routinng**
+**Dynamic routing**
 
 the matching paths will be available in the query string.
 
@@ -163,6 +163,12 @@ Containers are deployed applications bundled with all necessary dependencies and
 **Virtualization**
 
 Virtualization is the means of employing software (such as Hypervisor) to create a virtual version of a resource such as a server, data storage, or application
+
+AWS ECS is just a logical grouping (cluster) of EC2 instances, and all the EC2 instances part of an ECS act as Docker host i.e. ECS can send command to launch a container on them (EC2). If you already have an EC2, and then launch ECS, you'll still have a single instance. If you add/register (by installing the AWS ECS Container Agent) the EC2 to ECS it'll become the part of the cluster, but still a single instance of EC2.
+
+To simplify it further, if you have launched an Amazon ECS with no EC2 instances added to it, it's good for nothing i.e. you can't do anything about it. ECS makes sense only once one (or more) EC2 instances are added to it.
+
+The next confusing thing here is the container term - which is not fully virtualized machine instances, and Docker is one technology we can use to create container instances. Docker is a utility you can install on our machine, which makes it a Docker host, and on this host you can create containers (same as virtual machines - but much more light-weight). To sum up, ECS is just about clustering of EC2 instances, and uses Docker to instantiate containers/instances/virtual machines on these (EC2) hosts. 
 
 **Virtualization vs Containerization**
 
