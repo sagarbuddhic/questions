@@ -205,6 +205,10 @@ So when you add a custom error handler, you must delegate to the default Express
 
 set request values.
 
+**concurrency**
+
+As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.  
+
 ## REST Apis
 
 **stateless**
