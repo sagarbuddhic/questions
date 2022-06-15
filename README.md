@@ -5,8 +5,7 @@
 **Var VS let & const keyword?**
 
 Variables with var keyword has default hoisting.\
-Declaring a variable after its usage is allowed in javascript,\
-all declaration will be moved up by default which is called hoisting.
+Declaring a variable after its usage is allowed in javascript,all declaration will be moved up by default which is called hoisting.
 
 It is a good practice to declare a variable before it is used.
 
@@ -14,9 +13,15 @@ It is a good practice to declare a variable before it is used.
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
 
+**Recursive**
+
+In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
+
 **Currying:**
 
-Transforming a function.
+Currying is translating a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+
+Example below of using closures, currying and recursive function.
 
 ```
 function curry() {
@@ -47,28 +52,47 @@ The defer attribute specifies that the script should be executed after the page 
 
 **typeof ob === "undefined"**
 
-**const vs let**
+One reason to use typeof is that it does not throw an error if the variable has not been declared.
 
-**arrow function vs normal function**
+**let vs const**
+
+both are block scoped.
+we can change let values but if we try to change const values we get Uncaught TypeError.
+
+**Arrow function vs Normal function**
 
 With a regular function this represents the object that calls the function.
-With an arrow function this represents the owner of the function:
+With an arrow function this represents the owner of the function.
+
+**Tree Shaking**
+
+Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+
+In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
 
 ## React
 
 
 **React Lifecycle:**
 
+Mount Phase:
+
 Constructor\
 getDerivedStateFromProps\
 Render\
 ComponentDidMount
+
+Update Phase:
 
 getDerivedStateFromProps\
 ShouldComponentUpdate\
 Render\
 getSnapshotBeforeUpdate()\
 ComponentDidUpdate
+
+UnMount Phase:
+
+ComponentWillUnmount
 
 **useEffect Lifecycles:**
 
@@ -80,6 +104,45 @@ Avoid re-renders by providing array of values in useEffect.\
 Big Calculations useMemo to store the output.\
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
+
+**Dynamic Import**
+
+When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
+
+Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and tree shaking.
+
+**Bundling**
+
+Most React apps will have their files “bundled” using tools like Webpack, Rollup or Browserify. Bundling is the process of following imported files and merging them into a single file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
+
+**code splitting**
+
+To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime. The best way to introduce code-splitting into your app is through the dynamic import() syntax.
+
+**React.lazy**
+
+The React.lazy function lets you render a dynamic import as a regular component.
+
+```
+import React, { Suspense } from 'react';
+import MyErrorBoundary from './MyErrorBoundary';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+const AnotherComponent = React.lazy(() => import('./AnotherComponent'));
+
+const MyComponent = () => (
+  <div>
+    <MyErrorBoundary>
+      <Suspense fallback={<div>Loading...</div>}>
+        <section>
+          <OtherComponent />
+          <AnotherComponent />
+        </section>
+      </Suspense>
+    </MyErrorBoundary>
+  </div>
+);
+```
 
 **Call Endpoint Once to Fetch Initial Data**
 
@@ -189,6 +252,12 @@ storage.
 **Dynamo DB**
 
 **Amazon Ec2**
+
+**Uploading large files**
+
+Multipart upload is a three-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket.
+
+You can list all of your in-progress multipart uploads or get a list of the parts that you have uploaded for a specific multipart upload. Each of these operations is explained in this section.
 
 ## NodeJS
 
