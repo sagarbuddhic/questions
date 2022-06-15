@@ -171,12 +171,13 @@ useTransition
 
 ## Nextjs
 
-**nextjs advantages**
+**Nextjs Advantages**
 
-comes with webpack.\
-dynamic import, lazyload using suspense.\
-compiler replaces babel for individual files and terser for minifying output bundles.
-automatic static optimization.
+Comes with webpack.\
+Dynamic import, lazyload using suspense.\
+Compiler replaces babel for individual files and terser for minifying output bundles.\
+prerendering.\
+Automatic static optimization.
 
 **What is pre-rendering**
 
@@ -194,6 +195,7 @@ Next.js will pre-render this page at build time using the props returned by getS
 **ISR**
 
 Incremental Static Generation uses revalidate.
+Next.js allows you to create or update static pages after you’ve built your site. Incremental Static Regeneration (ISR) enables you to use static-generation on a per-page basis, without needing to rebuild the entire site. With ISR, you can retain the benefits of static while scaling to millions of pages.
 When a request is made to a path that hasn’t been generated, Next.js will server-render the page on the first request.
 Future requests will serve the static file from the cache. ISR on Vercel persists the cache globally and handles rollbacks.
 
@@ -203,25 +205,17 @@ react library - stale while revalidate.
 
 **Dynamic routing**
 
-the matching paths will be available in the query string.
+In Next.js you can add brackets to a page ([param]) to create a dynamic route (a.k.a. url slugs, pretty urls, and others).The matching paths will be available in the query string.
 
 **Client Side Navigation**
 
-adding links, useRouter.
+Adding links, useRouter.
 
 ## Containerization
 
-**docker file**
-
-**Components of docker**
-
-Client - Performs Docker build pull and run operations to open up communication with the Docker Host.
-Host - Contains Docker daemon, containers, and associated images.
-Registry- This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
-
 **What is Container**
 
-Containers are deployed applications bundled with all necessary dependencies and configuration file
+Containers are deployed applications bundled with all necessary dependencies and configuration file.
 
 **Virtualization**
 
@@ -236,6 +230,14 @@ The next confusing thing here is the container term - which is not fully virtual
 **Virtualization vs Containerization**
 
 Virtualization is an abstract version of a physical machine, while containerization is the abstract version of an application.
+
+**docker file**
+
+**Components of docker**
+
+Client - Performs Docker build pull and run operations to open up communication with the Docker Host.
+Host - Contains Docker daemon, containers, and associated images.
+Registry- This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
 
 **Commands**
 
