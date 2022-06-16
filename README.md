@@ -247,68 +247,101 @@ docker system prune
 
 ## AWS
 
+**Parameter store**
+
+Parameter Store, a capability of AWS Systems Manager, provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, Amazon Machine Image (AMI) IDs, and license codes as parameter values.
+
 **S3 Bucket**
 
-storage.
+Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps.
 
-**Dynamo DB**
+**Large Files in AWS**
 
-**Amazon Ec2**
-
-**Uploading large files**
+When you upload large files to Amazon S3, it's a best practice to leverage multipart uploads. If you're using the AWS Command Line Interface (AWS CLI), then all high-level aws s3 commands automatically perform a multipart upload when the object is large. These high-level commands include aws s3 cp and aws s3 sync.
 
 Multipart upload is a three-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket.
 
 You can list all of your in-progress multipart uploads or get a list of the parts that you have uploaded for a specific multipart upload. Each of these operations is explained in this section.
 
+**Amazon VPC**
+
+Amazon VPC gives you full control over your virtual networking environment, including resource placement, connectivity, and security.
+
+**Serverless**
+
+Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers. There are still servers in serverless, but they are abstracted away from app development.
+
+**Dynamo DB**
+
+Amazon DynamoDB is a fully managed, serverless, key-value NoSQL database designed to run high-performance applications at any scale. DynamoDB offers built-in security, continuous backups, automated multi-Region replication, in-memory caching, and data export tools.
+
+**Amazon API Gateway**
+
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
+
+**Amazon EC2**
+
+An Amazon EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure. 
+
 ## NodeJS
+
+**Concurrency**
+
+As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.
+
+**Process environment**
+
+Config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
 
 ### ExpressJS
 
-**static files**
+**Static files**
 
 app.use(express.static('public'))
 
-**request params**
+**Request params**
 
-**next function**
+The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}.
 
-Notice the call above to next(). Calling this function invokes the next middleware function in the app. The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function.
-If you pass an error to next() and you do not handle it in a custom error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace. The stack trace is not included in the production environment.
+**Next function**
+
+Calling this function invokes the next middleware function in the app, The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function.
+
+If you pass an error to next() and you do not handle it in a custom error handler, it will be handled by the built-in error handler. The error will be written to the client with the stack trace. The stack trace is not included in the production environment.
+
 res.statusCode & res.statusMessage.
-So when you add a custom error handler, you must delegate to the default Express error handler, when the headers have already been sent to the client:
 
-**middleware function**
+So when you add a custom error handler, you must delegate to the default Express error handler, when the headers have already been sent to the client.
 
-set request values.
+**Middleware function**
 
-**concurrency**
+Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
 
-As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.  
+Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
 
-## REST Apis
+Middleware functions can perform the following tasks:
 
-**stateless**
-
-client provides all information required for the server in the form of url, query string, header or through a body.
-
-**CRUD**
-
-Create, Read, Update, Delete
+Execute any code.\
+Make changes to the request and the response objects.\
+End the request-response cycle.\
+Call the next middleware function in the stack.
 
 **Error handling functions**
 
 Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next).
 
-**process environment**
+## REST Apis
 
-config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
+**Stateless**
 
-## AWS
+Client provides all information required for the server in the form of url, query string, header or through a body.
 
-**parameter store**
+**CRUD**
 
-**S3 Bucket**
+Create, Read, Update, Delete
+POST,  GET,   PUT,    DELETE.
+
+**Jenkins**
 
 ## 12 Factor
 
