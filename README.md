@@ -341,22 +341,24 @@ Client provides all information required for the server in the form of url, quer
 Create, Read, Update, Delete
 POST,  GET,   PUT,    DELETE.
 
-**Jenkins**
+## Jenkins
+
+Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
 
 ## 12 Factor
 
-Codebase (Github, Jenkins deployment)
-Dependencies (package.json, dockerfile)
-Config (parameter store in AWS)
-Backing Services (Endpoints, My Sql Database)
-Build, release, and Run (Jenksins Build, run tests, Release using jenkins)
-Processes (execute the app as one or more stateless processes)
-Port Binding (change ports in package.json)
-Concurrency (Scale out via the process model)
-Disposability (maximize the robustness with fast startup and graceful shutdown)
-Dev/prod parity (Running scripts to make prod same as stage)
-Logs (Kibana logs)
-Admin processes (Run admin/management tasks as one-off processes)
+Codebase (Github, Jenkins deployment)\
+Dependencies (package.json, dockerfile)\
+Config (parameter store in AWS)\
+Backing Services (Endpoints, My Sql Database)\
+Build, release, and Run (Jenksins Build, run tests, Release using jenkins)\
+Processes (execute the app as one or more stateless processes)\
+Port Binding (change ports in package.json)\
+Concurrency (Scale out via the process model)\
+Disposability (maximize the robustness with fast startup and graceful shutdown)\
+Dev/prod parity (Running scripts to make prod same as stage)\
+Logs (Kibana logs)\
+Admin processes (Run admin/management tasks as one-off processes)\
 
 
 
