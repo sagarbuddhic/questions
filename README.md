@@ -281,6 +281,10 @@ docker pull image
 docker run image
 docker system prune
 
+**docker vs kubernettes vs jenkins**
+
+Docker is a container engine that can make and handle containers, whereas Jenkins is a CI/CD model that can run/build/test the application. Kubernetes is a container-orchestration system for automating computer applications with the external help of CI/CD.
+
 ## AWS
 
 **Parameter store**
