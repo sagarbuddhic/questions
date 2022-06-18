@@ -70,6 +70,149 @@ Tree shaking is a term commonly used within a JavaScript context to describe the
 
 In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
 
+**Common javascript functions**
+
+map - returns array with mapped values.\
+
+```
+const filteredNumbers = numbers.map((num, index) => {
+  if (index < 3) {
+    return num;
+  }
+});
+ ```
+
+filter - returns filtered values based on a condition.\
+
+```
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+```
+
+reducer - returns a value.
+
+```
+reduce((previousValue, currentValue, currentIndex, array);
+```
+
+some  -
+
+The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.\
+
+```
+const array = [1, 2, 3, 4, 5];
+
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+```
+
+every - 
+
+every element should satisfy the condition.
+
+includes -
+
+check if an array includes a value. we can also check strings.
+```
+includes(searchElement, fromIndex)
+```
+
+slice -
+
+return a sliced value.
+
+```
+slice(start, end)
+
+start - start index.
+end - index of the value to be excluded.
+```
+
+splice
+
+The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. 
+
+```
+Remove 0 (zero) elements before index 2, and insert "drum"
+
+let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
+let removed = myFish.splice(2, 0, 'drum')
+```
+
+shift & unshift
+
+shift() removes the first element from an array, unshift() adds a new element to the start of the array.
+
+fill
+
+```
+
+const heights2 = [1, 2, 4, 5, 6, 7, 1, 1];
+heights2.fill(0, 4);
+console.log(heights2); // [1, 2, 4, 5, 0, 0, 0, 0]
+```
+
+reverse
+
+```
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+// expected output: "reversed:" Array ["three", "two", "one"]
+```
+
+sort
+
+```
+const numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
+
+```
+
+object.entries
+
+```
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// expected output:
+// "a: somestring"
+// "b: 42"
+```
+
+find
+
+```
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// expected output: 12
+```
+
+flat:
+
+```
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: [0, 1, 2, 3, 4]
+```
+
 ## React
 
 
