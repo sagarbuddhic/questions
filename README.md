@@ -490,6 +490,41 @@ As soon as Node js starts, it initializes an event loop. The event loop works on
 
 Config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
 
+***Connect to MySql***
+
+```
+const mysql = require('mysql');
+
+const connection = mysql.createconnection((
+  host: localhost,
+  database: '',
+  user: '',
+  password: '',
+));
+
+connection.connect();
+connection.query('select * from test', (err, rows, column) => {
+console.log();
+});
+
+connection.end();
+```
+
+**Connect to MongoDB**
+
+```
+const MongoClient = require('mongodb').MongoClient;
+
+MongoCLient.connect('mongodb://localhost:27017/animals', (err, client) => {
+    const db = client.db('animals');
+    db.collections('mammal').find().toArray((err, result) => {
+       if (err) throw err
+
+    console.log(result)
+    });
+})
+```
+
 ### ExpressJS
 
 ***Static files***
