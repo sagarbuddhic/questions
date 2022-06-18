@@ -105,6 +105,32 @@ Big Calculations useMemo to store the output.\
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
 
+**Redux**
+
+The whole global state of your app is stored in an object tree inside a single store. The only way to change the state tree is to create an action, an object describing what happened, and dispatch it to the store. To specify how state gets updated in response to an action, you write pure reducer functions that calculate a new state based on the old state and the action.
+
+```
+function counterReducer(state = { value: 0 }, action)
+```
+
+```
+store.dispatch({ type: 'counter/incremented' })
+```
+
+**How does Redux compare to the React Context API?**
+
+Similarities
+
+Both Redux and React's Context API deal with "prop drilling". That said, they both allow you to pass data without having to pass the props through multiple layers of components. Internally, Redux uses the React context API that allows it to pass the store along your component tree.
+
+Differences
+
+With Redux, you get the power of Redux Dev Tools Extension. It automatically logs every action your app performs, and it allows time traveling – you can click on any past action and jump to that point in time. Redux also supports the concept of middleware, where you may bind customized function calls on every action dispatch. Such examples include an automatic event logger, interception of certain actions, etc.
+
+With React's Context API, you deal with a pair of components speaking only to each other. This gives you nice isolation between irrelevant data. You also have the flexibility of how you may use the data with your components, i.e., you can provide the state of a parent component, and you may pass context data as props to wrapped components.
+
+There is a key difference in how Redux and React's Context treat data. Redux maintains the data of your whole app in a giant, stateful object. It deduces the changes of your data by running the reducer function you provide, and returns the next state that corresponds to every action dispatched. React Redux then optimizes component rendering and makes sure that each component re-renders only when the data it needs change. Context, on the other hand, does not hold any state. It is only a conduit for the data. To express changes in data you need to rely on the state of a parent component.
+
 **Dynamic Import**
 
 When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
@@ -231,6 +257,16 @@ The next confusing thing here is the container term - which is not fully virtual
 
 Virtualization is an abstract version of a physical machine, while containerization is the abstract version of an application.
 
+**Docker Image**
+
+A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.
+
+Due to their read-only quality, these images are sometimes referred to as snapshots. They represent an application and its virtual environment at a specific point in time. This consistency is one of the great features of Docker. It allows developers to test and experiment software in stable, uniform conditions.
+
+Since images are, in a way, just templates, you cannot start or run them. What you can do is use that template as a base to build a container. A container is, ultimately, just a running image. Once you create a container, it adds a writable layer on top of the immutable image, meaning you can now modify it.
+
+The image-base on which you create a container exists separately and cannot be altered. When you run a containerized environment, you essentially create a read-write copy of that filesystem (docker image) inside the container. This adds a container layer which allows modifications of the entire copy of the image.
+
 **docker file**
 
 **Components of docker**
@@ -344,6 +380,21 @@ POST,  GET,   PUT,    DELETE.
 ## Jenkins
 
 Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
+
+## Testing
+
+**Test runners**
+
+It is jest responsibility that collect all the files and runs each test case and show pass and fail results in your console.
+
+**Mocha vs Chai**
+
+Mocha requires other libraries to work such as sinon for stubbing.
+Jest does not require any pre configuration.
+
+**React Testing Library**
+
+render, fireEvent, waitFor, screen
 
 ## 12 Factor
 
