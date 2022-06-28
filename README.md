@@ -132,6 +132,45 @@ The rest parameter syntax allows a function to accept an indefinite number of ar
 
 ***Parse Int***
 
+The parseInt method parses a value as a string and returns the first integer.
+
+A radix parameter specifies the number system to use:
+
+2 = binary, 8 = octal, 10 = decimal, 16 = hexadecimal.
+
+```
+parseInt('32', 10) // 32
+```
+
+***Math Floor***
+
+The Math.floor() function returns the largest integer less than or equal to a given number.
+
+```
+console.log(Math.floor(5.95));
+// expected output: 5
+
+console.log(Math.floor(5.05));
+// expected output: 5
+
+console.log(Math.floor(5));
+// expected output: 5
+
+console.log(Math.floor(-5.05));
+// expected output: -6
+```
+
+***Math.Ceil***
+
+The Math.ceil() function always rounds a number up to the next largest integer.
+
+***Math.round()***
+
+The Math.round() function returns the value of a number rounded to the nearest integer.
+
+console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
+// expected output: 6 6 5
+
 ***Parse the stringified JSON***
 
 JSON.Parse
