@@ -60,6 +60,10 @@ A “higher-order function” is a function that accepts functions as parameters
 
 The in operator returns true if the specified property is in the specified object or its prototype chain.
 
+```
+'test' in {'test': 't'} // true
+```
+
 ***this keyword***
 
 The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
@@ -68,6 +72,14 @@ The JavaScript this keyword refers to the object it belongs to. This has differe
 
 When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.
 
+***Event Propagation***
+
+If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute.
+
+In other words, event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
+
+To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
+
 ***Anonymous Functions***
 
 Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
@@ -75,18 +87,6 @@ Anonymous functions can be used as an argument to other functions or as an immed
 ***Closures:***
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
-
-***Recursive***
-
-In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
-
-***Spread***
-
-Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
-
-***Rest***
-
-The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
 
 ***Currying:***
 
@@ -110,6 +110,25 @@ let curriedSum = curry();
 
 alert( curriedSum(1)(2)(3)(4)() ); // 3
 ```
+
+***Recursive***
+
+In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
+
+***Spread***
+
+Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+```
+let obj1 = { foo: 'bar', x: 42 };
+let obj2 = { foo: 'baz', y: 13 };
+
+let mergedObj = { ...obj1, ...obj2 };
+```
+
+***Rest***
+
+The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
 
 ***Parse Int***
 
