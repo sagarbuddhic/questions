@@ -171,15 +171,27 @@ The Math.round() function returns the value of a number rounded to the nearest i
 console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
 // expected output: 6 6 5
 
-***Parse the stringified JSON***
+**JSON Parse***
 
-JSON.Parse
+JSON.Parse && JSON.stringify
 
 ***defer attribute***
 
 The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts.
 
 ***Concatenation***
+
+```
+let test = 'test' + 'best' // testbest
+```
+
+***Template literals (Template strings)***
+
+Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
+
+```
+`string text ${expression} string text`
+```
 
 ***typeof ob === "undefined"***
 
@@ -196,7 +208,7 @@ window.document or just document is the main object of the potentially visible (
 Since window is the global object, you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
 
 *** window objects***
-
+ 
 window.localStorage
 document.cookie
 
