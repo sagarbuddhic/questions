@@ -4,8 +4,8 @@
 
 ***Var VS let & const keyword?***
 
-Variables with var keyword has default hoisting.\
-Declaring a variable after its usage is allowed in javascript,all declaration will be moved up by default which is called hoisting.
+
+Declaring a variable after its usage is allowed in javascript,all declaration will be moved up by default which is called hoisting.Variables with var keyword has default hoisting.\
 
 It is a good practice to declare a variable before it is used.
 
@@ -22,18 +22,33 @@ console.log(rest);
 
 ***Logical AND (&&)***
 
-the operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
+The operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
 
+```
+12 && 13 && 14 // 14
+12 && 0 && false && 15 // 0
+```
 
 ***Logical OR (||)***
 
 The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true.
+The operator returns the value of the first truthy operand encountered when evaluating from left to right, or the value of the last operand if they are all falsey.
+
+```
+12 || 13 || 15 // 12
+undefined || false // false
+```
 
 ***Nullish coalescing operator (??)***
 
 The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 
 This can be seen as a special case of the logical OR (||) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use || to provide some default value to another variable foo, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., '' or 0). See below for more examples.
+
+```
+'' ?? 'test' // ''
+null ?? 'test' // 'test'
+```
 
 ***Higher order function***
 
