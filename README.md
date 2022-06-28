@@ -9,6 +9,54 @@ Declaring a variable after its usage is allowed in javascript,all declaration wi
 
 It is a good practice to declare a variable before it is used.
 
+***Destructuring***
+
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+```
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// expected output: Array [30,40,50]
+```
+
+***Logical AND (&&)***
+
+the operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
+
+
+***Logical OR (||)***
+
+The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true.
+
+***Nullish coalescing operator (??)***
+
+The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+
+This can be seen as a special case of the logical OR (||) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use || to provide some default value to another variable foo, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., '' or 0). See below for more examples.
+
+***Higher order function***
+
+In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
+
+A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+
+***in operator***
+
+The in operator returns true if the specified property is in the specified object or its prototype chain.
+
+***this keyword***
+
+The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
+
+***Event Bubbling***
+
+When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.
+
+***Anonymous Functions***
+
+Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
+
 ***Closures:***
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
@@ -16,6 +64,14 @@ A closure is a function having access to the parent scope, even after the parent
 ***Recursive***
 
 In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
+
+***Spread***
+
+Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+***Rest***
+
+The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
 
 ***Currying:***
 
@@ -40,6 +96,8 @@ let curriedSum = curry();
 alert( curriedSum(1)(2)(3)(4)() ); // 3
 ```
 
+***Parse Int***
+
 ***Parse the stringified JSON***
 
 JSON.Parse
@@ -54,6 +112,53 @@ The defer attribute specifies that the script should be executed after the page 
 
 One reason to use typeof is that it does not throw an error if the variable has not been declared.
 
+***window vs document***
+
+Window is the main JavaScript object root, aka the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window.
+
+window.screen or just screen is a small information object about physical screen dimensions.
+
+window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
+
+Since window is the global object, you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
+
+*** window objects***
+
+window.localStorage
+document.cookie
+
+***singleton***
+
+
+```
+var Singleton = (function () {
+    var instance;
+
+    function createInstance() {
+        var object = new Object("I am the instance");
+        return object;
+    }
+
+    return {
+        getInstance: function () {
+            if (!instance) {
+                instance = createInstance();
+            }
+            return instance;
+        }
+    };
+})();
+
+function run() {
+
+    var instance1 = Singleton.getInstance();
+    var instance2 = Singleton.getInstance();
+
+    console.log("Same instance? " + (instance1 === instance2));
+}
+```
+
+
 ***let vs const***
 
 both are block scoped.
@@ -61,8 +166,11 @@ we can change let values but if we try to change const values we get Uncaught Ty
 
 ***Arrow function vs Normal function***
 
-With a regular function this represents the object that calls the function.
-With an arrow function this represents the owner of the function.
+Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.\
+Arrow functions don't have access to the new.target keyword.\
+Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.\
+Arrow functions cannot be used as constructors.\
+Arrow functions cannot use yield, within its body.
 
 ***Tree Shaking***
 
@@ -301,6 +409,10 @@ Most React apps will have their files “bundled” using tools like Webpack, Ro
 ***code splitting***
 
 To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime. The best way to introduce code-splitting into your app is through the dynamic import() syntax.
+
+***HOC***
+
+A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.Concretely, a higher-order component is a function that takes a component and returns a new component.
 
 ***React.lazy***
 
@@ -606,14 +718,3 @@ Disposability (maximize the robustness with fast startup and graceful shutdown)\
 Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
-
-
-
-
-
-
-
-
-
-
-
