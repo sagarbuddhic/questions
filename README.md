@@ -207,9 +207,18 @@ window.document or just document is the main object of the potentially visible (
 
 Since window is the global object, you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
 
-*** window objects***
+***window objects***
+
+localStorage - No Expiration date. 
  
-window.localStorage
+history
+innerHeight
+innerWidth
+localStorage.getItem("test1");
+sessionStorage.
+navigator.geoLocation
+pageXOffset
+screen
 document.cookie
 
 ***singleton***
