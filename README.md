@@ -714,23 +714,21 @@ POST,  GET,   PUT,    DELETE.
 
 ## Containerization Topics
 
-***What is Container***
-
-Containers are deployed applications bundled with all necessary dependencies and configuration file.
-
-***Virtualization***
-
-Virtualization is the means of employing software (such as Hypervisor) to create a virtual version of a resource such as a server, data storage, or application
-
-AWS ECS is just a logical grouping (cluster) of EC2 instances, and all the EC2 instances part of an ECS act as Docker host i.e. ECS can send command to launch a container on them (EC2). If you already have an EC2, and then launch ECS, you'll still have a single instance. If you add/register (by installing the AWS ECS Container Agent) the EC2 to ECS it'll become the part of the cluster, but still a single instance of EC2.
-
-To simplify it further, if you have launched an Amazon ECS with no EC2 instances added to it, it's good for nothing i.e. you can't do anything about it. ECS makes sense only once one (or more) EC2 instances are added to it.
-
-The next confusing thing here is the container term - which is not fully virtualized machine instances, and Docker is one technology we can use to create container instances. Docker is a utility you can install on our machine, which makes it a Docker host, and on this host you can create containers (same as virtual machines - but much more light-weight). To sum up, ECS is just about clustering of EC2 instances, and uses Docker to instantiate containers/instances/virtual machines on these (EC2) hosts. 
-
 ***Virtualization vs Containerization***
 
 Virtualization is an abstract version of a physical machine, while containerization is the abstract version of an application.
+
+
+Containers are deployed applications bundled with all necessary dependencies and configuration file.
+
+
+Virtualization is the means of employing software (such as Hypervisor) to create a virtual version of a resource such as a server, data storage, or application
+
+***ECS***
+
+AWS ECS is just a logical grouping (cluster) of EC2 instances, and all the EC2 instances part of an ECS act as Docker host i.e. ECS can send command to launch a container on them (EC2). If you have launched an Amazon ECS with no EC2 instances added to it, it's good for nothing i.e. you can't do anything about it. ECS makes sense only once one (or more) EC2 instances are added to it.Docker is a utility you can install on our machine, which makes it a Docker host, and on this host you can create containers (same as virtual machines - but much more light-weight).
+
+To sum up, ECS is just about clustering of EC2 instances, and uses Docker to instantiate containers/instances/virtual machines on these (EC2) hosts. 
 
 ***Docker Image***
 
