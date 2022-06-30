@@ -804,12 +804,114 @@ Jenkins is typically run as a standalone application in its own process with the
 
 ***Test runners***
 
-It is jest responsibility that collect all the files and runs each test case and show pass and fail results in your console.
+They collect all the files and runs each test case and show pass and fail results in your console.
+Examples: Mocha, Jest.
 
-***Mocha vs Chai***
+***Mocha***
+
+```
+describe('Array', function () {
+  describe('#indexOf()', function () {
+    it('should return -1 when the value is not present', function () {
+      assert.equal([1, 2, 3].indexOf(4), -1);
+    });
+  });
+});
+```
+
+Different Assertion libraries can be used with mocha.
+
+***should***
+
+```
+user.should.have.property('name', 'tj');
+user.should.have.property('pets').with.lengthOf(4);
+```
+
+***Expect***
+
+```
+expect(window.r).to.be(undefined);
+expect({ a: 'b' }).to.eql({ a: 'b' })
+expect(5).to.be.a('number');
+expect([]).to.be.an('array');
+expect(window).not.to.be.an(Image);
+```
+
+***chai***
+
+Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
+
+```
+Should
+chai.should();
+
+foo.should.be.a('string');
+foo.should.equal('bar');
+foo.should.have.lengthOf(3);
+tea.should.have.property('flavors')
+  .with.lengthOf(3);
+
+
+Expect
+var expect = chai.expect;
+
+expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.lengthOf(3);
+expect(tea).to.have.property('flavors')
+  .with.lengthOf(3);
+
+
+Assert
+var assert = chai.assert;
+
+assert.typeOf(foo, 'string');
+assert.equal(foo, 'bar');
+assert.lengthOf(foo, 3)
+assert.property(tea, 'flavors');
+assert.lengthOf(tea.flavors, 3);
+                
+```
+
+***Mocha vs Jest***
 
 Mocha requires other libraries to work such as sinon for stubbing.
 Jest does not require any pre configuration.
+
+***Jest***
+
+```
+test('null', () => {
+  const n = null;
+  expect(n).toBeNull();
+  expect(n).toBeDefined();
+  expect(n).not.toBeUndefined();
+  expect(n).not.toBeTruthy();
+  expect(n).toBeFalsy();
+});
+
+test('zero', () => {
+  const z = 0;
+  expect(z).not.toBeNull();
+  expect(z).toBeDefined();
+  expect(z).not.toBeUndefined();
+  expect(z).not.toBeTruthy();
+  expect(z).toBeFalsy();
+});
+
+test('two plus two', () => {
+  const value = 2 + 2;
+  expect(value).toBeGreaterThan(3);
+  expect(value).toBeGreaterThanOrEqual(3.5);
+  expect(value).toBeLessThan(5);
+  expect(value).toBeLessThanOrEqual(4.5);
+
+  // toBe and toEqual are equivalent for numbers
+  expect(value).toBe(4);
+  expect(value).toEqual(4);
+});
+```
 
 ***React Testing Library***
 
