@@ -666,6 +666,7 @@ Dynamic import, lazyload using suspense.\
 Compiler replaces babel for individual files and terser for minifying output bundles.\
 prerendering.\
 Automatic static optimization.
+Adding Links which code splits, client side navigation and prefetches.
 
 ***What is pre-rendering***
 
@@ -697,9 +698,15 @@ In Next.js you can add brackets to a page ([param]) to create a dynamic route (a
 
 ***Client Side Navigation***
 
-Adding links, useRouter.
+Client-side navigation means that the page transition happens using JavaScript, which is faster than the default navigation done by the browser.
 
+If you’ve used <a href="…"> instead of <Link href="…"> and did this, the background color will be cleared on link clicks because the browser does a full refresh.
 
+Next.js does code splitting automatically, so each page only loads what’s necessary for that page. That means when the homepage is rendered, the code for other pages is not served initially.
+
+Furthermore, in a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant!
+
+Next.js automatically optimizes your application for the best performance by code splitting, client-side navigation, and prefetching (in production).
 
 ## REST Apis Topics
 
@@ -710,6 +717,7 @@ Client provides all information required for the server in the form of url, quer
 ***CRUD***
 
 Create, Read, Update, Delete
+
 POST,  GET,   PUT,    DELETE.
 
 ## Containerization Topics
