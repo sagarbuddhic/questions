@@ -580,6 +580,8 @@ useTransition
 
 As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.
 
+https://www.geeksforgeeks.org/if-node-js-is-single-threaded-then-how-to-handles-concurrency/#:~:text=Node%20js%20uses%20an%20event,First%20In%20First%20Out)%20order.
+
 ***Process environment***
 
 Config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
