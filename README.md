@@ -3,8 +3,8 @@
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
 ### [-NodeJS](#nodejs-topics)
-### [-NextJS](#nextjs-topics)
 ### [-ExpressJS](#expressjs-topics)
+### [-NextJS](#nextjs-topics)
 ### [-Rest Apis](#rest-apis-topics)
 ### [-Containerization](#containerization-topics)
 ### [-AWS](#aws-topics)
@@ -700,11 +700,11 @@ In Next.js you can add brackets to a page ([param]) to create a dynamic route (a
 
 Client-side navigation means that the page transition happens using JavaScript, which is faster than the default navigation done by the browser.
 
-If you’ve used <a href="…"> instead of <Link href="…"> and did this, the background color will be cleared on link clicks because the browser does a full refresh.
+Link
 
-Next.js does code splitting automatically, so each page only loads what’s necessary for that page. That means when the homepage is rendered, the code for other pages is not served initially.
+Using <a href=""></a> instead of <Link href="" />, The background color will be cleared on link clicks because the browser does a full refresh.Next.js does code splitting automatically, so each page only loads what’s necessary for that page. That means when the homepage is rendered, the code for other pages is not served initially.
 
-Furthermore, in a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant!
+In a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant!
 
 Next.js automatically optimizes your application for the best performance by code splitting, client-side navigation, and prefetching (in production).
 
