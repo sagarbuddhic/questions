@@ -760,6 +760,8 @@ Docker is a container engine that can make and handle containers, whereas Jenkin
 
 ## AWS Topics
 
+Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. These cloud computing web services provide distributed computing processing capacity and software tools via AWS server farms.
+
 ***Parameter store***
 
 Parameter Store, a capability of AWS Systems Manager, provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, Amazon Machine Image (AMI) IDs, and license codes as parameter values.
@@ -779,6 +781,7 @@ You can list all of your in-progress multipart uploads or get a list of the part
 ***Amazon VPC***
 
 Amazon VPC gives you full control over your virtual networking environment, including resource placement, connectivity, and security.
+Get started by setting up your VPC in the AWS service console. Next, add resources to it such as Amazon Elastic Compute Cloud (EC2) and Amazon Relational Database Service (RDS) instances. Finally, define how your VPCs communicate with each other across accounts, Availability Zones, or AWS Regions. In the example below, network traffic is being shared between two VPCs within each Region.
 
 ***Serverless***
 
@@ -794,10 +797,7 @@ Amazon API Gateway is a fully managed service that makes it easy for developers 
 
 ***Amazon EC2***
 
-An Amazon EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure. 
-
-
-
+An Amazon EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure.
 
 ## Jenkins Topics
 
