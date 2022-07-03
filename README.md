@@ -15,21 +15,45 @@
 
 ## CSS Topics
 
-***Descendant Selector***
+***Descendant Selector (space)***
 
 The descendant selector matches all elements that are descendants of a specified element.
+
+```
+div p {
+  background-color: yellow;
+}
+```
 
 ***Child Selector (>)***
 
 The child selector selects all elements that are the children of a specified element.
 
-***Adjacent Sibling Selector***
+```
+div > p {
+  background-color: yellow;
+}
+```
+
+***Adjacent Sibling Selector (+)***
 
 The adjacent sibling selector is used to select an element that is directly after another specific element.
+
+```
+div + p {
+  background-color: yellow;
+}
+```
 
 ***General Sibling Selector (~)***
 
 The general sibling selector selects all elements that are next siblings of a specified element.
+
+```
+div ~ p {
+  background-color: yellow;
+}
+```
 
 ***pseudo***
 
