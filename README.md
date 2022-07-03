@@ -1,5 +1,6 @@
 # Questions
 
+### [CSS](#css-topics)
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
 ### [-NodeJS](#nodejs-topics)
@@ -12,6 +13,53 @@
 ### [-Testing](#testing-topics)
 ### [-12 Factor](#12-factor-topics)
 
+## CSS Topics
+
+***Descendant Selector***
+
+The descendant selector matches all elements that are descendants of a specified element.
+
+***Child Selector (>)***
+
+The child selector selects all elements that are the children of a specified element.
+
+***Adjacent Sibling Selector***
+
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+
+***General Sibling Selector (~)***
+
+The general sibling selector selects all elements that are next siblings of a specified element.
+
+***pseudo***
+
+A pseudo-class is used to define a special state of an element.
+
+Example: Style an element when a user mouses over it.
+
+```
+a:hover {
+  color: #FF00FF;
+}
+```
+
+***Pseudo-element***
+
+```
+h1::after {
+  content: url(smiley.gif);
+}
+```
+
+***CSS [attribute] Selector***
+
+The [attribute] selector is used to select elements with a specified attribute.
+
+```
+a[target] {
+  background-color: yellow;
+}
+```
 
 ## Javascript Topics
 ***Var VS let & const keyword?***
