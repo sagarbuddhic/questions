@@ -735,6 +735,46 @@ const MyComponent = () => (
 );
 ```
 
+***Pure Components***
+
+shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true. This method is not called for the initial render or when forceUpdate() is used.Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state or props.The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.
+
+ReactJS has provided us a Pure Component. If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. ReactJS Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or  Not.
+
+In v16.6, React has a new utility called React.memo, a higher order function that takes a functional component as parameter and returns an optimized version of your component that updates only on props change.
+
+```
+import React, { memo } from 'react';
+
+function areEqual(prevProps, nextProps) {
+  return prevProps.contacts === nextProps.contacts;
+  // the component will be updated only on `contact` props changes.
+}
+
+export default memo(
+  function ContactList({ title, contacts }) {
+    return <List title={title} data={contacts} />;
+  },
+  areEqual
+);
+```
+
+React v16.8: It’s a hook called useMemo , that takes as first parameters a value (can be a component) and as second parameter an array of dependencies.
+
+```
+import React, { useMemo } from 'react';
+
+function ContactList({ title, contacts }) {
+  const listComponent = useMemo(() => {
+    return <List title={title} data={contacts} />;
+  }, [contacts]);
+  //  ^^^^^^^^ `props.contacts` dependency
+  
+  return listComponent;
+}
+```
+
+
 This will automatically load the bundle containing the OtherComponent when this component is first rendered.
 
 ***Call Endpoint Once to Fetch Initial Data***
