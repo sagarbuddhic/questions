@@ -86,6 +86,70 @@ a[target] {
 ```
 
 ## Javascript Topics
+
+***Web Socket vs HTTP***
+
+Web Socket:
+
+WebSocket is a bidirectional communication protocol that can send the data from the client to the server or from the server to the client by reusing the established connection channel. The connection is kept alive until terminated by either the client or the server.
+
+Almost all the real-time applications like (trading, monitoring, notification) services use WebSocket to receive the data on a single communication channel.
+
+All the frequently updated applications used WebSocket because it is faster than HTTP Connection.
+
+HTTP Connection:
+
+The HTTP protocol is a unidirectional protocol that works on top of TCP protocol which is a connection-oriented transport layer protocol, we can create the connection by using HTTP request methods after getting the response HTTP connection get closed.
+
+Simple RESTful application uses HTTP protocol which is stateless.
+
+When we do not want to retain a connection for a particular amount of time or reuse the connection for transmitting data; An HTTP connection is slower than WebSockets.
+
+***web socket***
+
+```
+// Create WebSocket connection.
+const socket = new WebSocket('ws://localhost:8080');
+
+// Connection opened
+socket.addEventListener('open', function (event) {
+    socket.send('Hello Server!');
+});
+
+// Listen for messages
+socket.addEventListener('message', function (event) {
+    console.log('Message from server ', event.data);
+});
+```
+
+***web workers***
+
+Web Workers are a simple means for web content to run scripts in background threads.A worker is an object created using a constructor (e.g. Worker()) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the window object.
+
+The magic of workers happens via the postMessage() method and the onmessage event handler. When you want to send a message to the worker, you post messages to it like this (main.js):
+
+```
+first.onchange = function() {
+  myWorker.postMessage([first.value, second.value]);
+  console.log('Message posted to worker');
+}
+
+second.onchange = function() {
+  myWorker.postMessage([first.value, second.value]);
+  console.log('Message posted to worker');
+}
+
+```
+
+```
+onmessage = function(e) {
+  console.log('Message received from main script');
+  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  console.log('Posting message back to main script');
+  postMessage(workerResult);
+}
+```
+
 ***Var VS let & const keyword?***
 
 
@@ -263,6 +327,17 @@ JSON.Parse && JSON.stringify
 
 The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts.
 
+***prototype***
+
+inheritance
+
+```
+//Student.prototype = Person.prototype;
+Student.prototype = new Person();
+Student.prototype.constructor = Student;
+
+```
+
 ***Concatenation***
 
 ```
@@ -290,6 +365,35 @@ window.screen or just screen is a small information object about physical screen
 window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
 
 Since window is the global object, you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
+
+***delete operator***
+
+The JavaScript delete operator removes a property from an object;
+
+delete object.property
+
+When you delete an array element, the array length is not affected.When the delete operator removes an array element, that element is no longer in the array. In the following example, trees[3] is removed with delete.
+
+```
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+delete trees[3];
+if (3 in trees) {
+    // this is not executed
+}
+```
+
+***eval***
+
+The eval() method evaluates or executes an argument.
+
+```
+let text = "x * y";
+let result = eval(text);
+```
+
+With eval(), malicious code can run inside your application without permission.
+
+With eval(), third-party code can see the scope of your application, which can lead to possible attacks.
 
 ***window objects***
 
@@ -552,6 +656,16 @@ Big Calculations useMemo to store the output.\
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
 
+***React JS Multiple SetStates***
+
+On a button click with multiple set states, react has optimization which runs in set state in batches.
+
+React batches state updates that occur in event handlers and lifecycle methods. Thus, if you update state multiple times in a <div onClick /> handler, React will wait for event handling to finish before re-rendering.This only works in React-controlled synthetic event handlers and lifecycle methods. State updates are not batched in AJAX and setTimeout event handlers.
+
+React 18:
+
+Batch Updates are available for all events.
+
 ***Redux***
 
 The whole global state of your app is stored in an object tree inside a single store. The only way to change the state tree is to create an action, an object describing what happened, and dispatch it to the store. To specify how state gets updated in response to an action, you write pure reducer functions that calculate a new state based on the old state and the action.
@@ -645,6 +759,12 @@ usedebugvalue
 ***allow transition in state***
 
 useTransition
+
+**Refresh Table specific row***
+
+Create seperate component for rows. Re-render will only happen for rows with value change.
+use redux cache to cache api response, fetch updated value from endpoint and update the complete cache. pass that to rows props.
+
 
 ## NodeJS Topics
 
