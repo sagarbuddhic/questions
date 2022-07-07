@@ -735,6 +735,8 @@ const MyComponent = () => (
 );
 ```
 
+This will automatically load the bundle containing the OtherComponent when this component is first rendered.
+
 ***Call Endpoint Once to Fetch Initial Data***
 
 UseEffect with empty Array is called only after first render.
