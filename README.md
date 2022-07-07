@@ -653,6 +653,7 @@ componentDidMount, componentDidUpdate, componentWillUnmount
 
 Avoid re-renders by providing array of values in useEffect.\
 Big Calculations useMemo to store the output.\
+useMemo or memo HOC for re-render only when a prop changes.
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
 
