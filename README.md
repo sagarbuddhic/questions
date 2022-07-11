@@ -1,5 +1,6 @@
 # Questions
 
+### [GIT](#git-topics)
 ### [CSS](#css-topics)
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
@@ -12,6 +13,23 @@
 ### [-Jenkins](#jenkins-topics)
 ### [-Testing](#testing-topics)
 ### [-12 Factor](#12-factor-topics)
+
+## GIT Topics
+
+***GIT INIT***
+
+The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
+
+Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
+
+## Heroku Topics
+
+heroku CLI
+heroku
+heroku create
+heroku local web
+git push heroku master
+heroku logs
 
 ## CSS Topics
 
@@ -80,7 +98,7 @@ h1::after {
 The [attribute] selector is used to select elements with a specified attribute.
 
 ```
-a[target] {
+a[target] {11
   background-color: yellow;
 }
 ```
@@ -858,6 +876,10 @@ MongoCLient.connect('mongodb://localhost:27017/animals', (err, client) => {
 
 ### ExpressJS
 
+***express json***
+
+This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
+
 ***Static files***
 
 app.use(express.static('public'))
@@ -1209,6 +1231,32 @@ test('handles server error', async () => {
   expect(screen.getByRole('button')).not.toBeDisabled()
 })
 ```
+
+## Mongo DB:
+
+***Cluster***
+
+“cluster” is the word usually used for either a replica set or a sharded cluster. A replica set is the replication of a group of MongoDB servers that hold copies of the same data.
+
+***Replica Set***
+
+A MongoDB replica set ensures replication is enforced by providing data redundancy and high availability over more than one MongoDB server.
+
+***Shards***
+
+A sharded cluster in MongoDB is a collection of datasets distributed across many shards (servers) in order to achieve horizontal scalability and better performance in read and write operations.
+
+***Database Access***
+
+Use "Database Access" Tab in mongo to edit the password.
+
+***Network Access***
+
+In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
+
+***Database***
+
+MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A database stores one or more collections of documents.
 
 ## 12 Factor Topics
 
