@@ -105,6 +105,8 @@ a[target] {11
 
 ## Javascript Topics
 
+***Declarative vs Imperative***
+
 ***Web Socket vs HTTP***
 
 Web Socket:
@@ -667,6 +669,61 @@ ComponentWillUnmount
 
 componentDidMount, componentDidUpdate, componentWillUnmount
 
+
+***Uncontrolled Components***
+
+In most cases, we recommend using controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
+
+To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
+
+
+
+***Virtual DOM***
+
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+
+***Render Props***
+
+The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function.
+
+***JSX***
+
+Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
+
+***Strict Mode***
+
+StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.Strict mode checks are run in development mode only; they do not impact the production build.
+
+***Typechecking With PropTypes***
+
+React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special propTypes property:
+
+```import PropTypes from 'prop-types'```
+
+***Refs***
+
+In the typical React dataflow, props are the only way that parent components interact with their children. To modify a child, you re-render it with new props. However, there are a few cases where you need to imperatively modify a child outside of the typical dataflow. The child to be modified could be an instance of a React component, or it could be a DOM element. For both of these cases, React provides an escape hatch.
+
+When to Use Refs
+There are a few good use cases for refs:
+
+Managing focus, text selection, or media playback.
+Triggering imperative animations.
+Integrating with third-party DOM libraries.
+
+***React Fiber***
+
+Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM.
+
+***React Portals***
+
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+A typical use case for portals is when a parent component has an overflow: hidden or z-index style, but you need the child to visually “break out” of its container. For example, dialogs, hovercards, and tooltips.
+
+***React Profiler***
+
+The Profiler measures how often a React application renders and what the “cost” of rendering is. Its purpose is to help identify parts of an application that are slow and may benefit from optimizations such as memoization.
+
 ***React Optimizations***
 
 Avoid re-renders by providing array of values in useEffect.\
@@ -674,6 +731,17 @@ Big Calculations useMemo to store the output.\
 useMemo or memo HOC for re-render only when a prop changes.
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
+
+***React Error Boundaries***
+
+As of React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree.
+This change means that as you migrate to React 16, you will likely uncover existing crashes in your application that have been unnoticed before. Adding error boundaries lets you provide better user experience when something goes wrong.
+
+For example, Facebook Messenger wraps content of the sidebar, the info panel, the conversation log, and the message input into separate error boundaries. If some component in one of these UI areas crashes, the rest of them remain interactive.
+
+***React Fragments***
+
+A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 
 ***React JS Multiple SetStates***
 
@@ -725,13 +793,22 @@ Most React apps will have their files “bundled” using tools like Webpack, Ro
 
 To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime. The best way to introduce code-splitting into your app is through the dynamic import() syntax.
 
+***Babel***
+
+Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones). It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
+
 ***HOC***
 
 A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.Concretely, a higher-order component is a function that takes a component and returns a new component.
 
+***IOC***
+
+One Example in react is passing the component itself as props.
+
 ***React.lazy***
 
 The React.lazy function lets you render a dynamic import as a regular component.
+This will automatically load the bundle containing the OtherComponent when this component is first rendered.
 
 ```
 import React, { Suspense } from 'react';
