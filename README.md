@@ -105,6 +105,10 @@ a[target] {11
 
 ## Javascript Topics
 
+***CDN***
+
+CDN stands for Content Delivery Network. CDNs deliver cached, static content from a network of servers across the globe.
+
 ***Declarative vs Imperative***
 
 ***Web Socket vs HTTP***
@@ -676,7 +680,32 @@ In most cases, we recommend using controlled components to implement forms. In a
 
 To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
 
+***Composition Vs Inheritance***
 
+Sometimes we think about components as being “special cases” of other components. For example, we might say that a WelcomeDialog is a special case of Dialog.In React, this is also achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props:
+
+```
+function Dialog(props) {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+    </FancyBorder>
+  );
+}
+
+function WelcomeDialog() {
+  return (
+    <Dialog
+      title="Welcome"
+      message="Thank you for visiting our spacecraft!" />
+  );
+}
+```
 
 ***Virtual DOM***
 
@@ -689,6 +718,34 @@ The term “render prop” refers to a technique for sharing code between React 
 ***JSX***
 
 Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
+JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”. 
+
+***props.children***
+
+props.children
+props.children is available on every component. It contains the content between the opening and closing tags of a component. 
+
+```
+<Welcome>Hello world!</Welcome>
+
+function Welcome(props) {
+  return <p>{props.children}</p>;
+}
+```
+
+***State***
+
+A component needs state when some data associated with it changes over time. For example, a Checkbox component might need isChecked in its state, and a NewsFeed component might want to keep track of fetchedPosts in its state.
+
+The most important difference between state and props is that props are passed from a parent component, but state is managed by the component itself. A component cannot change its props, but it can change its state.
+
+***Controlled vs. Uncontrolled Components***
+
+React has two different approaches to dealing with form inputs.
+
+An input form element whose value is controlled by React is called a controlled component. When a user enters data into a controlled component a change event handler is triggered and your code decides whether the input is valid (by re-rendering with the updated value). If you do not re-render then the form element will remain unchanged.
+
+An uncontrolled component works like form elements do outside of React. When a user inputs data into a form field (an input box, dropdown, etc) the updated information is reflected without React needing to do anything. However, this also means that you can’t force the field to have a certain value.
 
 ***Strict Mode***
 
@@ -719,6 +776,17 @@ Fiber is the new reconciliation engine in React 16. Its main goal is to enable i
 
 Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
 A typical use case for portals is when a parent component has an overflow: hidden or z-index style, but you need the child to visually “break out” of its container. For example, dialogs, hovercards, and tooltips.
+
+```
+render() {
+  // React does *not* create a new div. It renders the children into `domNode`.
+  // `domNode` is any valid DOM node, regardless of its location in the DOM.
+  return ReactDOM.createPortal(
+    this.props.children,
+    domNode
+  );
+}
+```
 
 ***React Profiler***
 
@@ -796,6 +864,10 @@ To avoid winding up with a large bundle, it’s good to get ahead of the problem
 ***Babel***
 
 Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones). It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
+
+***Compilers***
+
+A JavaScript compiler takes JavaScript code, transforms it and returns JavaScript code in a different format. The most common use case is to take ES6 syntax and transform it into syntax that older browsers are capable of interpreting. Babel is the compiler most commonly used with React.
 
 ***HOC***
 
