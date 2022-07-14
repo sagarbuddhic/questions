@@ -733,6 +733,10 @@ function Welcome(props) {
 }
 ```
 
+***react dom***
+
+The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside the React model if you need to.
+
 ***State***
 
 A component needs state when some data associated with it changes over time. For example, a Checkbox component might need isChecked in its state, and a NewsFeed component might want to keep track of fetchedPosts in its state.
