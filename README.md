@@ -1128,6 +1128,18 @@ Create, Read, Update, Delete
 
 POST,  GET,   PUT,    DELETE.
 
+POST:
+
+POST methods are used to create a new resource into the collection of resources.
+
+PUT:
+
+Use PUT APIs primarily to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not).
+
+PATCH:
+
+HTTP PATCH requests are to make a partial update on a resource.
+
 ## Containerization Topics
 
 ***Virtualization vs Containerization***
