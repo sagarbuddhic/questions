@@ -1407,6 +1407,24 @@ test('handles server error', async () => {
 })
 ```
 
+## Analytics
+
+***Google Analytics***
+
+***Group Stats***
+
+InHouse tracking.
+
+***Mixpanel***
+
+Mixpanel events. Provides test and prod environment. Live events can be seen.
+
+Mixpanel is a leading product analytics software company, currently helping the world answer 81 million product questions every year. Our pioneering event-based tracking solution gives product teams the ability to gain insights into how to best acquire, convert, and retain their users across web and mobile platforms.
+
+***HotJar***
+
+See where the users are active.
+
 ## Mongo DB:
 
 ***Cluster***
