@@ -998,7 +998,7 @@ Config values are set in parameter store in AWS, those values set to process env
 const mysql = require('mysql');
 
 const connection = mysql.createconnection((
-  host: localhost,
+  host: localhost,  
   database: '',
   user: '',
   password: '',
@@ -1015,16 +1015,27 @@ connection.end();
 **Connect to MongoDB**
 
 ```
-const MongoClient = require('mongodb').MongoClient;
+const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverApi: ServerApiVersion.v1,
+  });
 
-MongoCLient.connect('mongodb://localhost:27017/animals', (err, client) => {
-    const db = client.db('animals');
-    db.collections('mammal').find().toArray((err, result) => {
-       if (err) throw err
+  await client.connect();
 
-    console.log(result)
+  const db = client.db("sample_work");
+  db.collection("users")
+    .find()
+    .toArray((err, results) => {
+      if (err) throw err;
+      const output = results.map((result) => ({
+        id: result.id,
+        name: result.name,
+        email: result.email,
+        gender: result.gender,
+        status: result.status,
+      }));
     });
-})
 ```
 
 ### ExpressJS
