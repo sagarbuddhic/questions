@@ -1068,17 +1068,16 @@ Call the next middleware function in the stack.
 
 Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next).
 
-
 ## NextJS Topics
 
 ***Nextjs Advantages***
 
-Comes with webpack.\
-Dynamic import, lazyload using suspense.\
-Compiler replaces babel for individual files and terser for minifying output bundles.\
-prerendering.\
-Automatic static optimization.
-Adding Links which code splits, client side navigation and prefetches.
+* Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.
+* Pre-rendering
+* With Links, Nextjs code splits, prefetches and does client side navigation.
+* Incremental Static Generation.
+* Automatic static optimization.
+* Dynamic import, lazyload using suspense.
 
 ***What is pre-rendering***
 
