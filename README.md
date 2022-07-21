@@ -12,6 +12,7 @@
 ### [-AWS](#aws-topics)
 ### [-Jenkins](#jenkins-topics)
 ### [-Testing](#testing-topics)
+### [-MySql](#mysql-topics)
 ### [-12 Factor](#12-factor-topics)
 
 ## GIT Topics
@@ -1450,6 +1451,27 @@ In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 ***Database***
 
 MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A database stores one or more collections of documents.
+
+
+
+
+
+
+
+
+
+## My Sql
+
+* sudo systemctl start mysql.service
+* show databases;
+* create database sagar;
+* use sagar;
+* create table user (id int, name varchar(50), email varchar(50), gender varchar(10), status varchar(10));
+* show tables;
+* select user();
+* INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
+
+
 
 ## 12 Factor Topics
 
