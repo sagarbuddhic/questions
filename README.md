@@ -716,10 +716,18 @@ The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”
 
 The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function.
 
+A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.Example Downshift.
+
+```
+<DataProvider render={data => (
+  <h1>Hello {data.target}</h1>
+)}/>
+```
+
 ***JSX***
 
 Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
-JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”. 
+JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.
 
 ***props.children***
 
@@ -756,11 +764,39 @@ An uncontrolled component works like form elements do outside of React. When a u
 
 StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.Strict mode checks are run in development mode only; they do not impact the production build.
 
+Identifying components with unsafe lifecycles
+Warning about legacy string ref API usage
+Warning about deprecated findDOMNode usage
+Detecting unexpected side effects
+Detecting legacy context API
+Ensuring reusable state
+
 ***Typechecking With PropTypes***
 
 React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special propTypes property:
+ When an invalid value is provided for a prop, a warning will be shown in the JavaScript console.
 
 ```import PropTypes from 'prop-types'```
+
+```
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+
+Greeting.defaultProps = {
+  name: 'sagar'
+}
+```
 
 ***Refs***
 
