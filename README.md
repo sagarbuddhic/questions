@@ -434,8 +434,29 @@ pageXOffset
 screen
 document.cookie
 
-***singleton***
+***promise***
 
+Promise.all returns first reject.
+
+```
+const timeout = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(110), 1000);
+});
+
+const rejected = new Promise((resolve, reject) => {
+ reject("Bankrupt");
+});
+
+const allPromises = Promise.all([timeout, rejected]);
+allPromises.then (
+  value => console.log(value),
+  reason => console.log(reason)
+);
+
+// "Bankrupt"
+```
+
+***singleton***
 
 ```
 var Singleton = (function () {
