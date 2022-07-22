@@ -377,6 +377,49 @@ Student.prototype.constructor = Student;
 
 ```
 
+***Event Emitter***
+
+```
+class EventEmitter {
+ constructor() {
+   this.events = {};
+  }
+	
+  on(eventName, fn) {
+  	if(!this.events[eventName]) {
+    	this.events[eventName] = [];
+    }
+    this.events[eventName].push(fn);
+  }
+  
+  emit(eventName, data) {
+  	const events = this.events[eventName];
+    if(events) {
+    	events.forEach(fn => {
+      	fn(data);
+      });
+    }
+  }
+}
+
+let emitter = new EventEmitter();
+let first = function (data) {
+  console.log(`first ${data}`);
+}
+
+let second = function (data) {
+  console.log(`second ${data}`);
+}
+
+emitter.on('ADD', first);
+emitter.on('ADD', second);
+
+emitter.emit('ADD', 1);
+
+//"first 1"
+//"second 1"
+```
+
 ***Concatenation***
 
 ```
