@@ -237,6 +237,21 @@ The in operator returns true if the specified property is in the specified objec
 'test' in {'test': 't'} // true
 ```
 
+***Callback***
+
+https://stackoverflow.com/questions/70237742/can-someone-please-explain-me-how-is-nodejs-single-threaded-being-asynchronous
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+Callback Hell - Hard to read & maintain callbacks.
+Asynchronous operations are ALL implemented in native code (usually C/C++ code) by nodejs.
+
+Promises - 
+A promise will gain control over the results of callbacks: resolve and reject functions;
+All promise objects have the then () method.
+
+Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
+
 ***this keyword***
 
 The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
@@ -1041,6 +1056,8 @@ use redux cache to cache api response, fetch updated value from endpoint and upd
 ## NodeJS Topics
 
 ***Concurrency***
+
+https://stackoverflow.com/questions/70237742/can-someone-please-explain-me-how-is-nodejs-single-threaded-being-asynchronous
 
 As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.
 
