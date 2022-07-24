@@ -182,6 +182,20 @@ Declaring a variable after its usage is allowed in javascript,all declaration wi
 
 It is a good practice to declare a variable before it is used.
 
+***Hoisting Tricky Question***
+
+var bar = 1;
+
+function test() {
+   bar = 10;
+   return bar;
+   function bar () {}; // using hoisting bar is initialized later to a function.
+
+}
+
+test();
+console.log(bar); // returns 1 instead 10.
+
 ***Destructuring***
 
 The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -376,6 +390,49 @@ inheritance
 Student.prototype = new Person();
 Student.prototype.constructor = Student;
 
+```
+
+***Event Emitter***
+
+```
+class EventEmitter {
+ constructor() {
+   this.events = {};
+  }
+	
+  on(eventName, fn) {
+  	if(!this.events[eventName]) {
+    	this.events[eventName] = [];
+    }
+    this.events[eventName].push(fn);
+  }
+  
+  emit(eventName, data) {
+  	const events = this.events[eventName];
+    if(events) {
+    	events.forEach(fn => {
+      	fn(data);
+      });
+    }
+  }
+}
+
+let emitter = new EventEmitter();
+let first = function (data) {
+  console.log(`first ${data}`);
+}
+
+let second = function (data) {
+  console.log(`second ${data}`);
+}
+
+emitter.on('ADD', first);
+emitter.on('ADD', second);
+
+emitter.emit('ADD', 1);
+
+//"first 1"
+//"second 1"
 ```
 
 ***Concatenation***
@@ -873,9 +930,10 @@ The Profiler measures how often a React application renders and what the “cost
 
 Avoid re-renders by providing array of values in useEffect.\
 Big Calculations useMemo to store the output.\
-useMemo or memo HOC for re-render only when a prop changes.
+useMemo or memo HOC for re-render only when a prop changes(Table rows).
 useCallback to store the function.\
 code splitting, React.lazy, dynamic import.
+Error Boundaries.
 
 ***React Error Boundaries***
 
