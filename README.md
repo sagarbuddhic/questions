@@ -106,6 +106,14 @@ a[target] {11
 
 ## Javascript Topics
 
+***single Threaded***
+
+Javascript is a single threaded language.This means it has one call stack and one memory heap. 
+Javascript engine (V8, Spidermonkey, JavaScriptCore, etc...) has Web API(Javascript uses low level programming languages like C++ to perform these behind the scenes.)
+ that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.
+
+ http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
 ***CDN***
 
 CDN stands for Content Delivery Network. CDNs deliver cached, static content from a network of servers across the globe.
