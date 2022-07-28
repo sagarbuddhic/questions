@@ -104,7 +104,92 @@ a[target] {11
 }
 ```
 
-## Javascript Topics
+## Javascript 
+
+***simple logic***
+
+```
+console.log('2' + 3) // 23 EcmaScript standard specifies that unless either of the arguments is a string, the + operator is assumed to mean numeric addition and not string concatenation.
+console.log(2 + true); // 3
+console.log("5" - 2); // 3
+console.log("x" * 2); // NAN
+
+const numArray = [0, 1, 2, 3];
+numArray[10] = 11;
+console.log(numArray);// 0, 1, 2, 3, empty, 11.
+
+
+function test3(num) {
+  return
+    [num]
+}
+
+console.log(test3(10)); // undefined. return executes what is available in that line.
+```
+
+***IIFE(Immediately Invoked Function Expression)***
+
+If you want to create a function and execute it immediately after the declaration, we can declare an anonymous function.
+
+Anonymous functions are functions without names.
+Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
+
+***apply,call,bind***
+
+***Intersection Observer***
+
+***Object Freeze***
+
+Freezing an object is equivalent to preventing extensions and then changing all existing properties' descriptors to configurable: false, writable: false.
+
+```
+const person = Object.freeze({name: "Geeksforgeeks"});
+    
+     // TypeError in strict mode
+     //in non-strict mode it prints "Geeksforgeeks"
+     person.name = "gfg";
+```
+
+The const keyword ensures that the variable created is read-only. But It doesn’t mean that the actual value to which the const variable reference is immutable. Even though the person variable is constant. However, you can change the value of its property. But you cannot reassign a different value to the person constant.
+
+```
+const person = {
+        name: "Geeksforgeeks"
+    };
+         
+// No TypeError
+person.name = "gfg";
+console.log(person.name);
+```
+
+***object seal***
+
+The Object.seal() method seals an object. Sealing an object prevents extensions and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. seal() returns the same object that was passed in.
+
+***undefined vs null***
+
+undefined means a variable has been declared but has not yet been assigned a value.
+null is an assignment value. It can be assigned to a variable as a representation of no value.
+
+ undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+
+```
+null === undefined // false
+null == undefined // true
+null === null // true
+```
+
+
+***AAA***
+
+The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.
+
+So the arrange section you only have code required to setup that specific test. Here objects would be created, mocks setup (if you are using one) and potentially expectations would be set. Then there is the Act, which should be the invocation of the method being tested. And on Assert you would simply check whether the expectations were met. More info can be found HERE.
+
+***forEach vs map***
+
+The forEach() method returns “undefined“.
+Not mutating the original array.
 
 ***single Threaded***
 
@@ -391,6 +476,8 @@ The defer attribute specifies that the script should be executed after the page 
 
 ***prototype***
 
+All JavaScript objects inherit properties and methods from a prototype.
+
 inheritance
 
 ```
@@ -398,6 +485,19 @@ inheritance
 Student.prototype = new Person();
 Student.prototype.constructor = Student;
 
+```
+
+The JavaScript prototype property allows you to add new properties to object constructors:
+
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
 ```
 
 ***Event Emitter***
