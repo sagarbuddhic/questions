@@ -125,6 +125,17 @@ function test3(num) {
 }
 
 console.log(test3(10)); // undefined. return executes what is available in that line.
+
+
+```
+
+***undefined vs not defined***
+
+```
+let x;
+console.log(x); // undefined
+console.log(type0f(x)); // 'undefined'
+console.log(y)// ReferenceError: y is not defined
 ```
 
 ***IIFE(Immediately Invoked Function Expression)***
@@ -135,6 +146,76 @@ Anonymous functions are functions without names.
 Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
 
 ***apply,call,bind***
+
+call:
+
+The call() method is a predefined JavaScript method.
+
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+```
+function fullName() {
+    return this.firstName + " " + this.lastName;
+  }
+  
+const person1 = {
+  firstName:"Jhn",
+  lastName: "Doe"
+}
+
+console.log(fullName.call(person1)); // Jhn Doe
+```
+
+apply:
+The apply() method accepts arguments in an array:
+
+```
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+```
+
+bind:
+
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+```
+
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+let display = person.display.bind(person);
+setTimeout(display, 3000);
+```
 
 ***Intersection Observer***
 
@@ -673,6 +754,20 @@ both are block scoped.
 we can change let values but if we try to change const values we get Uncaught TypeError.
 
 ***Arrow function vs Normal function***
+
+Arrow functions dont have hoisting, normal functions have hoisting. 
+
+```
+foo(); // 'FOOOOO'
+function foo() {
+  console.log('FOOOOO');
+}
+
+foo1(); Uncaught ReferenceError: foo1 is not defined
+var foo1 = () => {
+  console.log('FOOOOO');
+};
+```
 
 Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.\
 Arrow functions don't have access to the new.target keyword.\
