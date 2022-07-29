@@ -106,25 +106,26 @@ a[target] {11
 
 ## Javascript 
 
-***simple logic***
+***Tricky Logic***
 
 ```
-console.log('2' + 3) // 23 EcmaScript standard specifies that unless either of the arguments is a string, the + operator is assumed to mean numeric addition and not string concatenation.
-console.log(2 + true); // 3
-console.log("5" - 2); // 3
-console.log("x" * 2); // NAN
+console.log('2' + 3) // 23 - If one string is present, other values are strings.
+
+console.log(2 + true); // 3 - Boolean will be made integer(true is 1 & false is 0)
+
+console.log("5" - 2); // 3 - for minus integer will be parsed from string.
+
+console.log("x" * 2); // NAN - x is parsed and it is NAN.
 
 const numArray = [0, 1, 2, 3];
 numArray[10] = 11;
-console.log(numArray);// 0, 1, 2, 3, empty, 11.
-
+console.log(numArray);// 0, 1, 2, 3,,,,,,, 11 - returns array with 11 values with empty values in between.
 
 function test3(num) {
   return
     [num]
 }
-
-console.log(test3(10)); // undefined. return executes what is available in that line.
+console.log(test3(10)); // undefined. return adds semicolon at the end and returns undefined.
 
 var y = 1;
 if (function f() {}) {
@@ -135,16 +136,16 @@ console.log(y); // 1undefined
 (function() {
   var a = b = 5;
 })();
-
 console.log(b); // 5 - b is defined globally.
 
 for (var i = 0; i < 4; i++) {
   setTimeout(() => console.log(i), 0)
-} // 4 4 4 4
+} // 4 4 4 4 - for loop runs and increments value to 4, setTimeout is moved to webAPIs once the loop runs
+// and que is emoty then setTimeout is added to queue and to callstack and runs four times to show 4.
 
 const clothes = ['jacket', 't-shirt'];
 clothes.length = 0;
-clothes[0]; // undefined
+clothes[0]; // undefined - length = 0 sets empty array.
 
 const length = 4;
 const numbers = [];
@@ -157,8 +158,8 @@ console.log(numbers); // [5]
 
 0.1 + 0.2 == 0.3 // false 0.1 + 0.2 = 0.30000
 
-myVar;   // undefined
-myConst; // reference error
+console.log(myVar);   // undefined - hoisting moves declarations to the top.
+console.log(myConst); // reference error - const & let does not support hoisting.
 var myVar = 'value';
 const myConst = 3.14;
 
@@ -175,19 +176,12 @@ var myObject = {
     }
 };
 myObject.func();
-
 // outer func:  this.foo = bar
 // outer func:  self.foo = bar
 // inner func:  this.foo = undefined
 // inner func:  self.foo = bar
 
 ```
-
-***string terms***
-
-palindrome - reverse words should read the same.(racecar)
-anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
-vowels
 
 ***undefined vs not defined***
 
@@ -197,6 +191,12 @@ console.log(x); // undefined
 console.log(type0f(x)); // 'undefined'
 console.log(y)// ReferenceError: y is not defined
 ```
+
+***string terms***
+
+palindrome - reverse words should read the same.(racecar)
+anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
+vowels - a,e,i,o,u.
 
 ***IIFE(Immediately Invoked Function Expression)***
 
