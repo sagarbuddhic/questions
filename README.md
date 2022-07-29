@@ -126,8 +126,68 @@ function test3(num) {
 
 console.log(test3(10)); // undefined. return executes what is available in that line.
 
+var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y); // 1undefined
+
+(function() {
+  var a = b = 5;
+})();
+
+console.log(b); // 5 - b is defined globally.
+
+for (var i = 0; i < 4; i++) {
+  setTimeout(() => console.log(i), 0)
+} // 4 4 4 4
+
+const clothes = ['jacket', 't-shirt'];
+clothes.length = 0;
+clothes[0]; // undefined
+
+const length = 4;
+const numbers = [];
+for (var i = 0; i < length; i++);
+{ 
+  // a simple block
+  numbers.push(i + 1);
+}
+console.log(numbers); // [5]
+
+0.1 + 0.2 == 0.3 // false 0.1 + 0.2 = 0.30000
+
+myVar;   // undefined
+myConst; // reference error
+var myVar = 'value';
+const myConst = 3.14;
+
+var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
+
+// outer func:  this.foo = bar
+// outer func:  self.foo = bar
+// inner func:  this.foo = undefined
+// inner func:  self.foo = bar
 
 ```
+
+***string terms***
+
+palindrome - reverse words should read the same.(racecar)
+anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
+vowels
 
 ***undefined vs not defined***
 
