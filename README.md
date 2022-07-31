@@ -194,9 +194,9 @@ console.log(y)// ReferenceError: y is not defined
 
 ***string terms***
 
-palindrome - reverse words should read the same.(racecar)
-anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
-vowels - a,e,i,o,u.
+* palindrome - reverse words should read the same.(racecar)
+* anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
+* vowels - a,e,i,o,u.
 
 ***IIFE(Immediately Invoked Function Expression)***
 
