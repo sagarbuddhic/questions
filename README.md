@@ -13,6 +13,7 @@
 ### [-Jenkins](#jenkins-topics)
 ### [-Testing](#testing-topics)
 ### [-MySql](#mysql-topics)
+### [Heroku](#heroku-topics)
 ### [-12 Factor](#12-factor-topics)
 
 ## GIT Topics
@@ -22,15 +23,6 @@
 The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
 
 Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
-
-## Heroku Topics
-
-heroku CLI
-heroku
-heroku create
-heroku local web
-git push heroku master
-heroku logs
 
 ## CSS Topics
 
@@ -1882,3 +1874,12 @@ Disposability (maximize the robustness with fast startup and graceful shutdown)\
 Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
+
+## Heroku Topics
+
+* heroku CLI
+* heroku
+* heroku create
+* heroku local web
+* git push heroku master
+* heroku logs
