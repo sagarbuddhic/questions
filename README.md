@@ -1,13 +1,13 @@
 # Questions
 
 ### [GIT](#git-topics)
-### [CSS](#css-topics)
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
 ### [-NodeJS](#nodejs-topics)
 ### [-ExpressJS](#expressjs-topics)
 ### [-NextJS](#nextjs-topics)
 ### [-Rest Apis](#rest-apis-topics)
+### [CSS](#css-topics)
 ### [-Containerization](#containerization-topics)
 ### [-AWS](#aws-topics)
 ### [-Jenkins](#jenkins-topics)
@@ -23,78 +23,6 @@
 The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
 
 Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
-
-## CSS Topics
-
-***Descendant Selector (space)***
-
-The descendant selector matches all elements that are descendants of a specified element.
-
-```
-div p {
-  background-color: yellow;
-}
-```
-
-***Child Selector (>)***
-
-The child selector selects all elements that are the children of a specified element.
-
-```
-div > p {
-  background-color: yellow;
-}
-```
-
-***Adjacent Sibling Selector (+)***
-
-The adjacent sibling selector is used to select an element that is directly after another specific element.
-
-```
-div + p {
-  background-color: yellow;
-}
-```
-
-***General Sibling Selector (~)***
-
-The general sibling selector selects all elements that are next siblings of a specified element.
-
-```
-div ~ p {
-  background-color: yellow;
-}
-```
-
-***pseudo***
-
-A pseudo-class is used to define a special state of an element.
-
-Example: Style an element when a user mouses over it.
-
-```
-a:hover {
-  color: #FF00FF;
-}
-```
-
-***Pseudo-element***
-
-```
-h1::after {
-  content: url(smiley.gif);
-}
-```
-
-***CSS [attribute] Selector***
-
-The [attribute] selector is used to select elements with a specified attribute.
-
-```
-a[target] {11
-  background-color: yellow;
-}
-```
 
 ## Javascript Topics
 
@@ -1426,7 +1354,7 @@ const client = new MongoClient(uri, {
     });
 ```
 
-### ExpressJS
+### ExpressJS Topics
 
 ***express json***
 
@@ -1542,6 +1470,79 @@ PATCH:
 
 HTTP PATCH requests are to make a partial update on a resource.
 
+
+
+## CSS Topics
+
+***Descendant Selector (space)***
+
+The descendant selector matches all elements that are descendants of a specified element.
+
+```
+div p {
+  background-color: yellow;
+}
+```
+
+***Child Selector (>)***
+
+The child selector selects all elements that are the children of a specified element.
+
+```
+div > p {
+  background-color: yellow;
+}
+```
+
+***Adjacent Sibling Selector (+)***
+
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+
+```
+div + p {
+  background-color: yellow;
+}
+```
+
+***General Sibling Selector (~)***
+
+The general sibling selector selects all elements that are next siblings of a specified element.
+
+```
+div ~ p {
+  background-color: yellow;
+}
+```
+
+***pseudo***
+
+A pseudo-class is used to define a special state of an element.
+
+Example: Style an element when a user mouses over it.
+
+```
+a:hover {
+  color: #FF00FF;
+}
+```
+
+***Pseudo-element***
+
+```
+h1::after {
+  content: url(smiley.gif);
+}
+```
+
+***CSS [attribute] Selector***
+
+The [attribute] selector is used to select elements with a specified attribute.
+
+```
+a[target] {11
+  background-color: yellow;
+}
+```
 ## Containerization Topics
 
 ***Virtualization vs Containerization***
@@ -1813,7 +1814,7 @@ Mixpanel is a leading product analytics software company, currently helping the 
 
 See where the users are active.
 
-## Mongo DB:
+## MongoDB Topics:
 
 ***Cluster***
 
@@ -1847,7 +1848,7 @@ MongoDB stores data records as documents (specifically BSON documents) which are
 
 
 
-## My Sql
+## MySql topics
 
 * sudo systemctl start mysql.service
 * show databases;
