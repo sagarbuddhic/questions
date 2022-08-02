@@ -1575,19 +1575,21 @@ The image-base on which you create a container exists separately and cannot be a
 
 ***Components of docker***
 
-Client - Performs Docker build pull and run operations to open up communication with the Docker Host.
-Host - Contains Docker daemon, containers, and associated images.
-Registry- This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
+* Client - Performs Docker build pull and run operations to open up communication with the Docker Host.
+* Host - Contains Docker daemon, containers, and associated images.
+* Registry- This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
 
 ***Commands***
 
-docker pull image
-docker run image
-docker system prune
+* docker pull image
+* docker run image
+* docker system prune
 
 ***docker vs kubernettes vs jenkins***
 
-Docker is a container engine that can make and handle containers, whereas Jenkins is a CI/CD model that can run/build/test the application. Kubernetes is a container-orchestration system for automating computer applications with the external help of CI/CD.
+* Docker is a container engine that can make and handle containers.
+* Jenkins is a CI/CD model that can run/build/test the application.
+* Kubernetes is a container-orchestration system for automating computer applications with the external help of CI/CD.
 
 ## AWS Topics
 
@@ -1606,8 +1608,6 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
 When you upload large files to Amazon S3, it's a best practice to leverage multipart uploads. If you're using the AWS Command Line Interface (AWS CLI), then all high-level aws s3 commands automatically perform a multipart upload when the object is large. These high-level commands include aws s3 cp and aws s3 sync.
 
 Multipart upload is a three-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket.
-
-You can list all of your in-progress multipart uploads or get a list of the parts that you have uploaded for a specific multipart upload. Each of these operations is explained in this section.
 
 ***Amazon VPC***
 
