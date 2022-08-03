@@ -180,7 +180,8 @@ const member = {
   lastName: "Nilsen",
 }
 
-let fullName = person.fullName.bind(member);
+let test = person.fullName.bind(member);
+test();
 ```
 
 ```
