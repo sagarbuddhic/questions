@@ -1356,34 +1356,32 @@ const client = new MongoClient(uri, {
 
 ### ExpressJS Topics
 
-***express json***
+***Request Object***
 
-This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
+params - /candidates/:id - req.params.id property is an object containing properties mapped to the named route “parameters”.
+query - /candidates/?skills='aws' - req.query contains all query.
+body - req.body contains all body.
 
-***Static files***
+***app.use()***
 
+The app.use() function is used to mount the specified middleware function(s) at the path which is being specified. It is mostly used to set up middleware for your application.
 app.use(express.static('public'))
-
-***Request params***
-
-The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}.
+```
+app.use(express.json()); // The express.json() function is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser
+```
 
 ***Next function***
 
-Calling this function invokes the next middleware function in the app, The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function.
-
-If you pass an error to next() and you do not handle it in a custom error handler, it will be handled by the built-in error handler. The error will be written to the client with the stack trace. The stack trace is not included in the production environment.
-
-res.statusCode & res.statusMessage.
+The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function.
+If you pass an error to next() and you do not handle it in a custom error handler, it will be handled by the built-in error handler.
+The error will be written to the client with the stack trace. The stack trace is not included in the production environment.
 
 So when you add a custom error handler, you must delegate to the default Express error handler, when the headers have already been sent to the client.
 
 ***Middleware function***
 
 Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
-
 Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
-
 Middleware functions can perform the following tasks:
 
 Execute any code.\
@@ -1859,7 +1857,14 @@ MongoDB stores data records as documents (specifically BSON documents) which are
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
 
+## Heroku Topics
 
+* heroku CLI
+* heroku
+* heroku create
+* heroku local web
+* git push heroku master
+* heroku logs
 
 ## 12 Factor Topics
 
@@ -1875,12 +1880,3 @@ Disposability (maximize the robustness with fast startup and graceful shutdown)\
 Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
-
-## Heroku Topics
-
-* heroku CLI
-* heroku
-* heroku create
-* heroku local web
-* git push heroku master
-* heroku logs
