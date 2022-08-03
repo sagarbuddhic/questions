@@ -663,17 +663,20 @@ With eval(), third-party code can see the scope of your application, which can l
 
 ***window objects***
 
-localStorage - No Expiration date. 
- 
-history
-innerHeight
-innerWidth
+* localStorage - No Expiration date.
+
+```
 localStorage.getItem("test1");
-sessionStorage.
-navigator.geoLocation
-pageXOffset
-screen
-document.cookie
+```
+
+* history
+* innerHeight
+* innerWidth
+* sessionStorage.
+* navigator.geoLocation
+* pageXOffset
+* screen
+* document.cookie
 
 ***promise***
 
