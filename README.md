@@ -331,7 +331,6 @@ onmessage = function(e) {
 
 ***Var VS let & const keyword?***
 
-
 Declaring a variable after its usage is allowed in javascript,all declaration will be moved up by default which is called hoisting.Variables with var keyword has default hoisting.\
 
 It is a good practice to declare a variable before it is used.
@@ -383,7 +382,6 @@ undefined || false // false
 ***Nullish coalescing operator (??)***
 
 The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
-
 This can be seen as a special case of the logical OR (||) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use || to provide some default value to another variable foo, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., '' or 0). See below for more examples.
 
 ```
@@ -431,9 +429,7 @@ When an event happens on an element, it first runs the handlers on it, then on i
 ***Event Propagation***
 
 If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute.
-
 In other words, event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
-
 To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
 
 ***Anonymous Functions***
