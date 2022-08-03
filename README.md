@@ -240,11 +240,9 @@ null == undefined // true
 null === null // true
 ```
 
-
 ***AAA***
 
 The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.
-
 So the arrange section you only have code required to setup that specific test. Here objects would be created, mocks setup (if you are using one) and potentially expectations would be set. Then there is the Act, which should be the invocation of the method being tested. And on Assert you would simply check whether the expectations were met. More info can be found HERE.
 
 ***forEach vs map***
@@ -254,7 +252,7 @@ Not mutating the original array.
 
 ***single Threaded***
 
-Javascript is a single threaded language.This means it has one call stack and one memory heap. 
+Javascript is a single threaded language.This means it has one call stack and one memory heap.
 Javascript engine (V8, Spidermonkey, JavaScriptCore, etc...) has Web API(Javascript uses low level programming languages like C++ to perform these behind the scenes.)
  that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.
 
@@ -271,17 +269,13 @@ CDN stands for Content Delivery Network. CDNs deliver cached, static content fro
 Web Socket:
 
 WebSocket is a bidirectional communication protocol that can send the data from the client to the server or from the server to the client by reusing the established connection channel. The connection is kept alive until terminated by either the client or the server.
-
 Almost all the real-time applications like (trading, monitoring, notification) services use WebSocket to receive the data on a single communication channel.
-
 All the frequently updated applications used WebSocket because it is faster than HTTP Connection.
 
 HTTP Connection:
 
 The HTTP protocol is a unidirectional protocol that works on top of TCP protocol which is a connection-oriented transport layer protocol, we can create the connection by using HTTP request methods after getting the response HTTP connection get closed.
-
 Simple RESTful application uses HTTP protocol which is stateless.
-
 When we do not want to retain a connection for a particular amount of time or reuse the connection for transmitting data; An HTTP connection is slower than WebSockets.
 
 ***web socket***
