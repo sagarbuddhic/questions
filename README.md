@@ -1012,6 +1012,20 @@ function Welcome(props) {
 }
 ```
 
+***Keys***
+
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. We don’t recommend using indexes for keys if the order of items may change.
+
+```
+const todoItems = todos.map((todo) =>
+  <li key={todo.id}>
+    {todo.text}
+  </li>
+);
+```
+
+***Lifting State Up***
+
 ***react dom***
 
 The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside the React model if you need to.
