@@ -1466,6 +1466,21 @@ HTTP PATCH requests are to make a partial update on a resource.
 
 ## CSS Topics
 
+***Box Model***
+
+In CSS, the term "box model" is used when talking about design and layout.
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+
+***visibility hidden vs display none***
+
+display none removes element from the DOM.
+
+***grid vs flex***
+
+The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
+fr - fractional unit.
+grid-template-columns: repeat(3, 1fr)
+
 ***Descendant Selector (space)***
 
 The descendant selector matches all elements that are descendants of a specified element.
@@ -1525,6 +1540,38 @@ h1::after {
   content: url(smiley.gif);
 }
 ```
+
+***margin vs padding***
+
+ the margin property controls the space outside an element, and the padding property controls the space inside an element.
+
+ ***ruleset***
+
+ ***css integration***
+
+ * style tags in the head section.
+ * inline styling.
+ * css in seperate file and linking to the html page.
+
+ ***sprites***
+
+ An image sprite is a collection of images put into a single image.
+
+ ***css image repetition***
+
+ The background-repeat property is used to control the image. 
+
+ ```
+ background-image: url(‘url_of_image’);
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+ ```
+
+ ***RGB***
+
+ In CSS, a color can be specified as an RGB value, using this formula: rgb(red, green, blue) Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
 
 ***CSS [attribute] Selector***
 
@@ -1850,6 +1897,18 @@ MongoDB stores data records as documents (specifically BSON documents) which are
 * show tables;
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
+
+## HTML
+
+***Semantic Elements***
+
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+
 
 ## Heroku Topics
 
