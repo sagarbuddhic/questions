@@ -923,6 +923,30 @@ style.
 
 ## ReactJS Topics
 
+***React Build***
+
+React build combine all components and css into minified version, will be added to respective bundles.
+
+* Minified versions of JavaScript files (bundle.js)
+* Minified versions of CSS files (style.css)
+
+dist folder 
+* bundle.js
+* style.css
+
+```
+npm install compression //installation
+var compression = require(‘compression’); //import to app	
+app.use(compression());
+```
+
+compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
+
+***bundle***
+
+bundle analyzer: This analysis provides a clear picture of each library used in your project and how they affect the JavaScript bundle size.
+Compressing Bundles: Gzip and Brotli are the most commonly used compression techniques, and you can use their Webpack plugins to simplify the entire process.
+
 ***React Lifecycle:***
 
 Mount Phase:
