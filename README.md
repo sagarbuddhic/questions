@@ -26,6 +26,10 @@ Executing git init creates a .git subdirectory in the current working directory,
 
 ## Javascript Topics
 
+***white label***
+
+White label software is a fully customizable software, enabling companies to rebrand it as their own. It is typically sold as part of a subscription, as the software developer lends rights to use and customize the front-end aspects for a specific period.
+
 ***Tricky Logic***
 
 ```
