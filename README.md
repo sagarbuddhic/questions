@@ -1515,6 +1515,30 @@ div > p {
 }
 ```
 
+***css transform***
+
+CSS transforms allow you to move, rotate, scale, and skew elements.
+
+***position***
+
+The five different position values are fixed, static, absolute, sticky, and relative.
+
+* Static - The element is positioned according to the normal flow of the document.
+* Relative - The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.
+* Absolute - The element is removed from the normal document flow, and no space is created for the element in the page layout.
+* Fixed - The element is removed from the normal document flow, and no space is created for the element in the page layout.
+* Sticky - The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left.
+
+***mixin***
+
+Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
+
+***float***
+
+The CSS float property specifies how an element should float.
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side.
+
 ***Adjacent Sibling Selector (+)***
 
 The adjacent sibling selector is used to select an element that is directly after another specific element.
