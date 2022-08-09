@@ -923,6 +923,26 @@ style.
 
 ## ReactJS Topics
 
+***React Render***
+
+```
+// client side
+import ReactDOM from 'react-dom/client';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+```
+// server side
+import ReactDOM from 'react-dom/server';
+ReactDOMServer.renderToString(<App/>);
+```
+
+
 ***React Build***
 
 React build combine all components and css into minified version, will be added to respective bundles.
