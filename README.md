@@ -24,6 +24,25 @@ The git init command creates a new Git repository. It can be used to convert an 
 
 Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
 
+***Remote Repos***
+
+To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.
+
+The git remote add command takes two arguments:
+
+A remote name, for example, origin
+A remote URL, for example, https://github.com/user/repo.git
+
+***git push***
+
+Git Push Origin and Git Push Origin Master had a big difference before the git version 1.7.11. At that time 
+
+git push origin 
+by default pushes all your branches to the origin. While
+
+git push origin master 
+pushing your master branch to the origin.
+
 ## Javascript Topics
 
 ***white label***
