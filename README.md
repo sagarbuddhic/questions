@@ -942,6 +942,31 @@ style.
 
 ## ReactJS Topics
 
+***React Folder Structure***
+
+src/js
+src/style
+
+src - contains js, style.js.
+
+src: It stands for source and is the raw code before minification or concatenation or some other compilation it has been used to read or edit the code.
+
+The /src folder comprises of the raw non-minified code.
+
+dist: It stands for distribution and is the minified or concatenated version it has been actually used on production sites.
+
+***minification***
+Developers write code that is optimized for human readability. This code might contain extra information that is not necessary for the code to run, such as comments, spaces, indents, and multiple lines.
+
+***build folder***
+
+static/js
+static/css
+
+***React Scripts***
+
+react-scripts
+
 ***React Render***
 
 ```
