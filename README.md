@@ -18,6 +18,32 @@
 
 ## GIT Topics
 
+***Package Manager***
+
+Package managers or Package Management Systems are collections of tools that help you install, remove, modify, upgrade, configure computer programs, as well as audit dependencies and report which ones should be upgraded to mitigate potential vulnerabilities.
+
+***yarn vs npm***
+
+Dependencies:
+
+yarn:
+
+Yarn installs dependencies using the yarn command. It installs dependencies concurrently, i.e., in parallel, allowing you to add multiple files simultaneously.yarn produces yarn.lock. Yarn outperforms NPM when installing bigger files.
+
+npm:
+
+NPM installs dependencies one by one through the npm install command. it produces package.json.
+
+Security:
+
+Both yarn and npm does secuirty check on packages.
+
+Plug'n'Play - Yarn produces a single .pnp.cjs file that maps project dependencies instead of utilizing the node modules folder. This results in more streamlined dependency trees and quicker project launch and package installation.
+
+Zero installation - Works with Plug'n'Play, as it uses the .pnp.cjs file to map packages stored in the offline cache. This allows you to quickly retrieve and install packages that have been saved.
+
+License check - Yarn has a built-in licensing checker when obtaining and installing packages.
+
 ***GIT INIT***
 
 The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
@@ -273,6 +299,15 @@ So the arrange section you only have code required to setup that specific test. 
 
 The forEach() method returns “undefined“.
 Not mutating the original array.
+
+***History***
+
+The term “history” and "history object" in this documentation refers to the history package.
+
+The following terms are also used:
+“browser history” - A DOM-specific implementation, useful in web browsers that support the HTML5 history API.
+“hash history” - A DOM-specific implementation for legacy web browsers
+“memory history” - An in-memory history implementation, useful in testing and non-DOM environments like React Native
 
 ***single Threaded***
 
