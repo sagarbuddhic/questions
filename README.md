@@ -304,10 +304,24 @@ Not mutating the original array.
 
 The term “history” and "history object" in this documentation refers to the history package.
 
+```
+history.back();     // equivalent to clicking back button
+history.go(-1);     // equivalent to history.back();
+```
+
 The following terms are also used:
 “browser history” - A DOM-specific implementation, useful in web browsers that support the HTML5 history API.
 “hash history” - A DOM-specific implementation for legacy web browsers
 “memory history” - An in-memory history implementation, useful in testing and non-DOM environments like React Native
+
+***Location***
+
+window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+
+***Location vs History***
+
+The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.
+
 
 ***single Threaded***
 
@@ -976,6 +990,33 @@ style.display
 style.
 
 ## ReactJS Topics
+
+***create react app***
+
+What are each of these files and folders for?
+
+*  README.md is a markdown file that includes a lot of helpful tips and links that can help you while learning to use Create React App.
+* node_modules is a folder that includes all of the dependency-related code that Create React App has installed. You will never need to go into this folder.
+* package.json that manages our app dependencies and what is included in our node_modules folder for our project, plus the * scripts we need to run our app.
+* .gitignore is a file that is used to exclude files and folders from being tracked by Git. We don't want to include large folders such as the node_modules folder
+* public is a folder that we can use to store our static assets, such as images, svgs, and fonts for our React app.
+* src is a folder that contains our source code. It is where all of our React-related code will live and is what we will primarily work in to build our app.
+
+***Source Map Explorer***
+
+Source map explorer analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
+
+***depcheck***
+
+Depcheck is a tool for analyzing the dependencies in a project to see: how each dependency is used, which dependencies are useless, and which dependencies are missing from package.json.
+
+***change app's metadata***
+
+public/index.html
+
+***build folder***
+
+contains static/js, static/css, assetmanifest.json
 
 ***React Folder Structure***
 
