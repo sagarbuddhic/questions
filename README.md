@@ -991,6 +991,12 @@ style.
 
 ## ReactJS Topics
 
+***React Classes***
+
+Super(): It is used to call the constructor of its parent class. This is required when we need to access some variables of its parent class.
+
+ If we want to use this in the constructor, we need to pass it to super. If we want to use this.props inside the constructor we need to pass it with the super() function. Otherwise, we don’t want to pass props to super() because we see this.Props are available inside the render function.
+
 ***create react app***
 
 What are each of these files and folders for?
