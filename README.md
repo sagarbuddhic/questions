@@ -116,6 +116,16 @@ const clothes = ['jacket', 't-shirt'];
 clothes.length = 0;
 clothes[0]; // undefined - length = 0 sets empty array.
 
+// foo = [] creates a new array and assigns a reference to it to a variable. Any other references are unaffected and still point to the original array.
+// foo.length = 0 modifies the array itself. If you access it via a different variable, then you still get the modified array.
+var foo = [1,2,3];
+var bar = [1,2,3];
+var foo2 = foo;
+var bar2 = bar;
+foo = [];
+bar.length = 0;
+console.log(foo, bar, foo2, bar2);
+
 const length = 4;
 const numbers = [];
 for (var i = 0; i < length; i++);
@@ -163,9 +173,9 @@ console.log(y)// ReferenceError: y is not defined
 
 ***string terms***
 
-* palindrome - reverse words should read the same.(racecar)
-* anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different. 
-* vowels - a,e,i,o,u.
+* Palindrome - reverse words should read the same.(racecar)
+* Anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different(secure) - (rescue).
+* Vowels - a,e,i,o,u.
 
 ***IIFE(Immediately Invoked Function Expression)***
 
