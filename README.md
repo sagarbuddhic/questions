@@ -1078,6 +1078,30 @@ import ReactDOM from 'react-dom/server';
 ReactDOMServer.renderToString(<App/>);
 ```
 
+***React Router***
+
+once `BrowserRouter` is added we can start using router anywhere.
+
+```
+<Route path="/" element={<Home />} />
+```
+
+***React DOM***
+
+```
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
+);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
 
 ***React Build***
 
