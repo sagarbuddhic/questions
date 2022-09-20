@@ -1693,9 +1693,11 @@ HTTP PATCH requests are to make a partial update on a resource.
 In CSS, the term "box model" is used when talking about design and layout.
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
 
-***visibility hidden vs display none***
+***visibility vs display vs opacity***
 
-display none removes element from the DOM.
+* visibility: hidden - Element is still part of DOM, So the element takes up space.
+* display: none - Element is removed from the DOM.
+* opacity: 0 - This is used for transition mainly. Element is still part of DOM, So the element takes up space.
 
 ***grid vs flex***
 
