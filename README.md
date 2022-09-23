@@ -1769,6 +1769,27 @@ div ~ p {
 }
 ```
 
+***table***
+
+```
+divWrapper {
+  overflow: scroll;
+}
+
+table {
+  layout: fixed
+  width: 100%
+}
+
+colgroup {
+
+}
+
+tbody {
+  
+}
+```
+
 ***pseudo***
 
 A pseudo-class is used to define a special state of an element.
