@@ -1693,7 +1693,7 @@ HTTP PATCH requests are to make a partial update on a resource.
 In CSS, the term "box model" is used when talking about design and layout.
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
 
-***visibility vs display vs opacity***
+***Visibility vs Display vs Opacity***
 
 * visibility: hidden - Element is still part of DOM, So the element takes up space.
 * display: none - Element is removed from the DOM.
@@ -1707,12 +1707,18 @@ grid-template-columns: repeat(3, 1fr)
 
 ***Descendant Selector (space)***
 
-The descendant selector matches all elements that are descendants of a specified element.
+The descendant selector matches all elements that are descendants of a specified element. selects all paragraph below.
 
 ```
 div p {
   background-color: yellow;
 }
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
 ```
 
 ***Child Selector (>)***
@@ -1723,40 +1729,44 @@ The child selector selects all elements that are the children of a specified ele
 div > p {
   background-color: yellow;
 }
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
 ```
-
-***css transform***
-
-CSS transforms allow you to move, rotate, scale, and skew elements.
-
-***position***
-
-The five different position values are fixed, static, absolute, sticky, and relative.
-
-* Static - The element is positioned according to the normal flow of the document.
-* Relative - The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.
-* Absolute - The element is removed from the normal document flow, and no space is created for the element in the page layout.
-* Fixed - The element is removed from the normal document flow, and no space is created for the element in the page layout.
-* Sticky - The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left.
-
-***mixin***
-
-Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
-
-***float***
-
-The CSS float property specifies how an element should float.
-
-The CSS clear property specifies what elements can float beside the cleared element and on which side.
 
 ***Adjacent Sibling Selector (+)***
 
 The adjacent sibling selector is used to select an element that is directly after another specific element.
 
 ```
-div + p {
-  background-color: yellow;
-}
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. After a div.</p>
+<p>Paragraph 4. After a div.</p>
+
+<div>
+  <p>Paragraph 5 in the div.</p>
+  <p>Paragraph 6 in the div.</p>
+</div>
+
+<p>Paragraph 7. After a div.</p>
+<p>Paragraph 8. After a div.</p>
+
 ```
 
 ***General Sibling Selector (~)***
@@ -1764,30 +1774,15 @@ div + p {
 The general sibling selector selects all elements that are next siblings of a specified element.
 
 ```
-div ~ p {
-  background-color: yellow;
-}
-```
+<p>Paragraph 1.</p>
 
-***table***
+<div>
+  <p>Paragraph 2.</p>
+</div>
 
-```
-divWrapper {
-  overflow: scroll;
-}
-
-table {
-  layout: fixed
-  width: 100%
-}
-
-colgroup {
-
-}
-
-tbody {
-  
-}
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
 ```
 
 ***pseudo***
@@ -1810,7 +1805,76 @@ h1::after {
 }
 ```
 
-***margin vs padding***
+***css transform***
+
+CSS transforms allow you to move, rotate, scale, and skew elements.
+
+***position***
+
+The five different position values are fixed, static, absolute, sticky, and relative.
+
+* Static - The element is positioned according to the normal flow of the document.
+* Relative - The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.
+* Absolute - The element is removed from the normal document flow, and no space is created for the element in the page layout.
+Absolutely positioned elements are positioned with respect to a containing block, which is the nearest postioned ancestor. If there is no positioned ancestor, the viewport will be the containing block.
+* Fixed - The element is removed from the normal document flow, and no space is created for the element in the page layout.
+Elements with fixed positioning are fixed with respect to the viewport—the viewport is always their containing block.
+* Sticky - The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left.
+
+***mixin***
+
+Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
+
+```
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($theme: DarkRed);
+}
+.success {
+  @include theme($theme: DarkGreen);
+}
+
+https://sass-lang.com/guide
+```
+
+***float***
+
+The CSS float property specifies how an element should float.
+In its simplest use, the float property can be used to wrap text around images.
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side.
+When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.
+
+***Table***
+
+```
+divWrapper {
+  overflow: scroll;
+}
+
+table {
+  layout: fixed
+  width: 100%
+}
+
+colgroup {
+
+}
+
+tbody {
+  
+}
+```
+
+***Margin vs Padding***
 
  the margin property controls the space outside an element, and the padding property controls the space inside an element.
 
@@ -1828,7 +1892,7 @@ h1::after {
 
  ***css image repetition***
 
- The background-repeat property is used to control the image. 
+ The background-repeat property is used to control the image.
 
  ```
  background-image: url(‘url_of_image’);
@@ -1851,6 +1915,7 @@ a[target] {11
   background-color: yellow;
 }
 ```
+
 ## Containerization Topics
 
 ***Virtualization vs Containerization***
