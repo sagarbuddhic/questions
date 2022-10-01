@@ -1699,11 +1699,55 @@ The CSS box model is essentially a box that wraps around every HTML element. It 
 * display: none - Element is removed from the DOM.
 * opacity: 0 - This is used for transition mainly. Element is still part of DOM, So the element takes up space.
 
+***display***
+
+* contents - Makes the container disappear, making the child elements children of the element the next level up in the DOM
+* inline - 	Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
+* block - Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
+* flex - Displays an element as a block-level flex container
+* grid - Displays an element as a block-level grid container
+* inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+* inline-flex, inline-grid, inline-table.
+
+Explanation
+
+An element with display: flex is similar to an element with display: block, whereby it occupies the whole row. However, its child elements can be positioned flexibly and dynamically, compared to previously-available layout properties.
+
+If we change this to display: inline-flex, it:
+
+makes the parent container display inline
+still applies all flex properties to the children, no differently form display: flex
+This means that if the child elements aren't too big, two containers with display: inline-flex can sit side-by-side.
+Other display properties also have an inline counterpart:
+
+block has inline-block
+table has inline-table
+and even grid has inline-grid
+
+https://codepen.io/clairecodes/pen/POjKXY
+
 ***grid vs flex***
 
 The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
 fr - fractional unit.
 grid-template-columns: repeat(3, 1fr)
+
+***vertical align***
+
+baseline - baseline of parent.
+percentage, pixels allowed.
+
+**align items***
+
+The align-items property specifies the default alignment for items inside the flexible container.
+
+align-self - overrides align items.
+
+The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
+
+text-align
+
+justify-contents - center in flexbox.
 
 ***Descendant Selector (space)***
 
