@@ -259,6 +259,8 @@ setTimeout(display, 3000);
 
 ***Intersection Observer***
 
+The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the viewport), or when the amount by which the two intersect changes by a requested amount.
+
 ***Object Freeze***
 
 Freezing an object is equivalent to preventing extensions and then changing all existing properties' descriptors to configurable: false, writable: false.
@@ -326,12 +328,13 @@ The following terms are also used:
 
 ***Location***
 
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history
+window.location.href
+window.location.assign
 
 ***Location vs History***
 
 The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.
-
 
 ***single Threaded***
 
@@ -346,6 +349,8 @@ Javascript engine (V8, Spidermonkey, JavaScriptCore, etc...) has Web API(Javascr
 CDN stands for Content Delivery Network. CDNs deliver cached, static content from a network of servers across the globe.
 
 ***Declarative vs Imperative***
+
+try / catch is great but it only works for imperative code, React components are declarative and specify what should be rendered.
 
 ***Web Socket vs HTTP***
 
