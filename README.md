@@ -477,7 +477,9 @@ In Javascript, functions can be assigned to variables in the same way that strin
 
 A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
 
-***in operator***
+Examples: Map, Filter Function.
+
+***In Operator***
 
 The in operator returns true if the specified property is in the specified object or its prototype chain.
 
@@ -500,7 +502,7 @@ All promise objects have the then () method.
 
 Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
 
-***this keyword***
+***This keyword***
 
 The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
 
