@@ -2318,3 +2318,8 @@ Disposability (maximize the robustness with fast startup and graceful shutdown)\
 Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
+
+## Formatting
+
+EditorConfig - VSCode will format according to the options in this file. If EditorConfig or prettierrc is not available then vscode will use its formatter.
+ESLint - Create React App comes with ESLint and it can be extended.
