@@ -2323,3 +2323,17 @@ Admin processes (Run admin/management tasks as one-off processes)\
 
 EditorConfig - VSCode will format according to the options in this file. If EditorConfig or prettierrc is not available then vscode will use its formatter.
 ESLint - Create React App comes with ESLint and it can be extended.
+ESLint - shows errors.
+Prettier - we can show as warnings and it has better formatting. https://prettier.io/docs/en/comparison.html
+
+```
+"[javascript]": {
+
+        "editor.formatOnSave": true,
+
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+        // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+
+    },
+```
