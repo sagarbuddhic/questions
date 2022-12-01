@@ -2337,3 +2337,5 @@ Prettier - we can show as warnings and it has better formatting. https://prettie
 
     },
 ```
+
+sudo apt-get install ubuntu-desktop
