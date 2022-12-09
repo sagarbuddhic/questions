@@ -1855,6 +1855,9 @@ h1::after {
   content: url(smiley.gif);
 }
 ```
+***hover***
+
+margin not considered on hover.
 
 ***css transform***
 
