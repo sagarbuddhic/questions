@@ -334,6 +334,20 @@ window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Locati
 window.location.href
 window.location.assign
 
+***Window***
+
+getSelection - object representing range of text or current position of cursor.
+getRangeAt
+getClientRects, getBoundingClientRects.
+
+// point a cursor
+const inputRange = document.createRange();
+inputRange.selectNodeContents(editDiv.current);
+inputRange.collapse(false);
+selection.removeAllRanges();
+selection.addRange(inputRange);
+
+
 ***Location vs History***
 
 The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.
