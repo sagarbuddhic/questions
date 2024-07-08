@@ -15,6 +15,9 @@
 ### [-MySql](#mysql-topics)
 ### [Heroku](#heroku-topics)
 ### [-12 Factor](#12-factor-topics)
+### [Python](#python)
+### [Data Structures](#data-structures)
+
 
 ## GIT Topics
 
@@ -2238,6 +2241,37 @@ test('handles server error', async () => {
   expect(screen.getByRole('button')).not.toBeDisabled()
 })
 ```
+
+## Python
+
+order of precedance
+x = 10+3*2**2
+print(x)
+parenthesis
+exponentiation
+multiplication or division
+addition or subtraction
+
+elif - used for else if
+
+for value in ['test']
+
+none similar to null object
+
+## Data Structures
+
+Algorithm           ArrayList   LinkedList
+seek front            O(1)         O(1)
+seek back             O(1)         O(1)
+seek to index         O(1)         O(N)
+insert at front       O(N)         O(1)
+insert at back        O(1)         O(1)
+insert after an item  O(N)         O(1)
+
+DIfferent Big O:
+
+O(n) - traverse all items
+O(log n) - no need to traverse all items in an array.
 
 ## Analytics
 
