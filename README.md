@@ -2258,7 +2258,10 @@ for value in ['test']
 
 none similar to null object
 
-## Data Structures
+## Data Structures & Algorithms
+
+collection of values and the format they are stored in, relation between values and the operations on those values.
+steps taken to solve a problem.
 
 Algorithm           ArrayList   LinkedList
 seek front            O(1)         O(1)
@@ -2270,8 +2273,33 @@ insert after an item  O(N)         O(1)
 
 DIfferent Big O:
 
-O(n) - traverse all items
-O(log n) - no need to traverse all items in an array.
+Complexity of an algorithm as a function of the size.
+
+O(1) - not based on input size. constant time.
+O(log n) - n/2 until we reach 1. It can also be denoted as 2<sup>n</sup>. cutting half of the items.
+Example: Binary Search
+O(n) - traverse all items. linear time algorithm.
+O(n logn) - merge sorting, heap sorting. quasilinear runtime.
+O(n<sup>2</sup>) - two dimensional array or traversing items for n array n times. quadratic runtime.cubic runtime.
+O(n!) - n * (n-1) * (n -2) ....
+
+Algorithms(set of tasks):
+
+linear search - sequential or simple search.
+binary search - cutting to half.
+brute force - same as linear , exponential runtimes.
+divide and conquer - merge sort. 
+
+Data Structures:
+
+Linked List - Nodes contain reference to the next node.
+double linked list - contains both previous and next node reference.
+
+Efficiency:
+
+Time Complexity
+Space Complexity
+
 
 ## Analytics
 
