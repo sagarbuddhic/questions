@@ -2271,9 +2271,16 @@ insert at front       O(N)         O(1)
 insert at back        O(1)         O(1)
 insert after an item  O(N)         O(1)
 
+ADT        DS
+
+List    Dynamic Array, Linked List
+Queue   Linked List Based, Array Based, Stack Based
+Map     TreeMap, HashMap, HashTable
+
 DIfferent Big O:
 
-Complexity of an algorithm as a function of the size.
+Upper Bound of the complexity in the worst case, 
+helping to quantify performance as the input size becomes arbitrarily large.
 
 O(1) - not based on input size. constant time.
 O(log n) - n/2 until we reach 1. It can also be denoted as 2<sup>n</sup>. cutting half of the items.
@@ -2288,12 +2295,36 @@ Algorithms(set of tasks):
 linear search - sequential or simple search.
 binary search - cutting to half.
 brute force - same as linear , exponential runtimes.
-divide and conquer - merge sort. 
+divide and conquer - merge sort.
+selection sort - O (n2)
+quick sort - O (n log n)
 
 Data Structures:
 
 Linked List - Nodes contain reference to the next node.
 double linked list - contains both previous and next node reference.
+Stack - One Ended linear data structure, push and pop(LIFO).
+Queue - Linear Data Structure models real world queues, enqueue and dequeue(FIFO).
+Priority Queue
+Indexed Priority Queue
+Heap - A heap is a tree based DS that satisfies the heap variant(ordered).
+Union Find - DS keeps track of elements which are split into one or more disjoint sets(find and union).
+Tree - Undirected graph with nodes.
+       Leaf Node - without children.
+Binary Tree - At most two children(greater value to the right side).
+BFS -  Breadth First Search.
+Hash Table - mapping from keys to values called hashing. they use functions to generate keys.
+Object Data - non-scalar objects in javascript behave as associated arrays, 
+so an object itself can behave as a basic hash table.
+Fenwick tree - sum range queries.
+Suffix Array - non empty substring at the end of a string of characters.
+LCP - longest common prefix array. 
+BBST - Balanaced Binary Search Tree self balancing binary search tree it will adjust itself.
+Balanced Binary Tree - height of the tree is O(Log n) where n is the number of nodes.
+It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
+The difference between the heights of the left subtree and the right subtree for any node is known as the balance factor of the node.
+AVL - Trees with rotation to make it balanced.
+
 
 Efficiency:
 
