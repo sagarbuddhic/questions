@@ -33,11 +33,14 @@ Dependencies:
 
 yarn:
 
-Yarn installs dependencies using the yarn command. It installs dependencies concurrently, i.e., in parallel, allowing you to add multiple files simultaneously.yarn produces yarn.lock. Yarn outperforms NPM when installing bigger files.
+Yarn installs dependencies using the yarn command. It installs dependencies concurrently, i.e., in parallel, allowing you to add multiple files simultaneously.
+yarn produces yarn.lock. 
+Yarn outperforms NPM when installing bigger files.
 
 npm:
 
-NPM installs dependencies one by one through the npm install command. it produces package.json.
+NPM installs dependencies one by one through the npm install command. 
+it produces package.json.
 
 Security:
 
