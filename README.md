@@ -337,7 +337,9 @@ The following terms are also used:
 ***Location***
 
 window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history
+
 window.location.href
+
 window.location.assign
 
 ***Window***
