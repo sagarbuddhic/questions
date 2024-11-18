@@ -336,24 +336,22 @@ The following terms are also used:
 
 ***Location***
 
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history
-
-window.location.href
-
-window.location.assign
+window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
+window.location.href  
+window.location.assign  
 
 ***Window***
 
 getSelection - object representing range of text or current position of cursor.  
-getRangeAt
-getClientRects, getBoundingClientRects.
+getRangeAt  
+getClientRects, getBoundingClientRects.  
 
-// point a cursor
-const inputRange = document.createRange();
-inputRange.selectNodeContents(editDiv.current);
-inputRange.collapse(false);
-selection.removeAllRanges();
-selection.addRange(inputRange);
+// point a cursor  
+const inputRange = document.createRange();  
+inputRange.selectNodeContents(editDiv.current);  
+inputRange.collapse(false);  
+selection.removeAllRanges();  
+selection.addRange(inputRange);  
 
 
 ***Location vs History***
