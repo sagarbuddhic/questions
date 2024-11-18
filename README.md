@@ -344,7 +344,7 @@ window.location.assign
 
 ***Window***
 
-getSelection - object representing range of text or current position of cursor.
+getSelection - object representing range of text or current position of cursor.  
 getRangeAt
 getClientRects, getBoundingClientRects.
 
