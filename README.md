@@ -441,6 +441,7 @@ It is a good practice to declare a variable before it is used.
 
 ***Hoisting Tricky Question***
 
+```
 var bar = 1;
 
 function test() {
@@ -452,6 +453,7 @@ function test() {
 
 test();
 console.log(bar); // returns 1 instead 10.
+```
 
 ***Destructuring***
 
