@@ -1361,11 +1361,13 @@ The Profiler measures how often a React application renders and what the “cost
 ***React Optimizations***
 
 Avoid re-renders by providing array of values in useEffect.\
-Big Calculations useMemo to store the output.\
-useMemo or memo HOC for re-render only when a prop changes(Table rows).
-useCallback to store the function.\
-code splitting, React.lazy, dynamic import.
-Error Boundaries.
+Big Calculations useMemo to store the output.\  
+useMemo or memo HOC for re-render only when a prop changes(Table rows).  
+useCallback to store the function.\  
+code splitting, React.lazy, dynamic import.  
+Error Boundaries.  
+
+https://www.geeksforgeeks.org/code-splitting-in-react/
 
 ***React Error Boundaries***
 
