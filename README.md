@@ -1233,6 +1233,7 @@ A component with a render prop takes a function that returns a React element and
   <h1>Hello {data.target}</h1>
 )}/>
 ```
+https://www.geeksforgeeks.org/react-js-render-props/
 
 ***JSX***
 
