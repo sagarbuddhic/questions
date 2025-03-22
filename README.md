@@ -1025,6 +1025,18 @@ console.log(arr1.flat());
 // expected output: [0, 1, 2, 3, 4]
 ```
 
+| Features          | Map                       | Object                 |
+| Accidental Keys   | no keys by default        |  prototype             |
+| Security          | safe                      |  allow an attacker to override the object's prototype |
+| Key Types         | map key can be functions  |  must be a string 
+                       objects  
+| size property     | number of items           |  Object.keys().length
+| Iteration         | map is iterable           |  Object.entries()
+| Performance       | better                    |  not optimized
+| Serializing
+ & parsing          | no native support         | native support for serialization
+
+
 ***css***
 
 style.display
@@ -2439,6 +2451,55 @@ Disposability (maximize the robustness with fast startup and graceful shutdown)\
 Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
+
+## Solid Principles
+
+* S - This principle states that every method/class should handle a single responsibility. 
+       This is important because it results in better readability of code and separation of concerns.
+* O - open to extension, closed for modification. *The idea is that a class, once implemented,
+      should be closed for any further modification. If any more functionality is needed,
+      it can be added later using extension features such as inheritance. 
+      This is primarily done so as to not break existing code as well as unit tests.
+       It also results in a modular code.
+* L - Liskov - A child class should be able to do what parent does. Example - Human - child - parent.
+* I - Interface segregation principle - The Interface Segregation Principle — ISP — states that instead of a generalized interface for a class,
+       it is better to use separate segregated interfaces with smaller functionalities. 
+      This is similar to ideas we’ve discussed so far around maintaining loose coupling, but for interfaces.
+* D - Dependency inversion principle - both high-level and low-level modules will depend on abstractions rather than high-level modules dependent on low-level modules. 
+      Every dependency in the design should be directed toward an abstract class or interface. 
+      No dependency should target a concrete class.
+
+## Microfrontend
+
+Micro-frontends is an architectural style where the traditionally monolithic frontend codebase is split into smaller, more manageable pieces. 
+These pieces, or "micro-frontends," can be developed, tested, and deployed independently, enabling teams to work more efficiently and scale their projects more effectively.
+equivalent of microservices.
+
+https://www.codementor.io/@riza/introduction-to-micro-frontends-architecture-in-react-js-2hqa9dvxtg
+
+## microservices
+
+Microservices are an architectural approach based on building an application as a collection of small services.
+
+Let’s think of an application as a store. Applications are traditionally “monolithic” which means they are built as a single, autonomous unit --think of your favorite big-box store, selling everything from bananas to lawn furniture.
+
+https://nodesource.com/blog/microservices-in-nodejs
+
+## Observer pattern
+
+The observer design pattern enables a subscriber to register with and receive notifications from a provider. It's suitable for any scenario that requires push-based notification. 
+The pattern defines a provider (also known as a subject or an observable) and zero, one, or more observers.Observers register with the provider, and whenever a predefined condition, event, or state change occurs, 
+the provider automatically notifies all observers by invoking a delegate.
+
+The Observer Design Pattern is a behavioral design pattern that defines a one-to-many dependency between objects. 
+When one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
+
+https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
+
+## OAuth
+
+commonly used to grant websites or applications limited access to user data without exposing credentials.
+It’s widely used for authentication and authorization in APIs, allowing users to log in with services like Google, Facebook, or GitHub
 
 ## Formatting
 
