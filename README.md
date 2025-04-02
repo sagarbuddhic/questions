@@ -405,6 +405,10 @@ socket.addEventListener('message', function (event) {
 });
 ```
 
+/// Set vs array
+
+Collection of unique value, Elements are accessed using hash table.
+
 ***web workers***
 
 Web Workers are a simple means for web content to run scripts in background threads.A worker is an object created using a constructor (e.g. Worker()) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the window object.
@@ -435,9 +439,26 @@ onmessage = function(e) {
 
 ***Var VS let & const keyword?***
 
-Declaring a variable after its usage is allowed in javascript,all declaration will be moved up by default which is called hoisting.Variables with var keyword has default hoisting.\
+*** primitive vs non primitive ***
 
-It is a good practice to declare a variable before it is used.
+*** shallow copy vs deep copy***
+
+structured clone.
+
+***prototype***
+
+***type coercion***
+
+***pure functions***
+
+
+
+for (var i = 0; i < 5; i++) {
+    setTimeout(() => {
+        console.log(i);
+    }, 1000);
+}
+
 
 ***Hoisting Tricky Question***
 
@@ -840,10 +861,6 @@ function run() {
 both are block scoped.
 we can change let values but if we try to change const values we get Uncaught TypeError.
 
-***Arrow function vs Normal function***
-
-Arrow functions dont have hoisting, normal functions have hoisting. 
-
 ```
 foo(); // 'FOOOOO'
 function foo() {
@@ -856,11 +873,14 @@ var foo1 = () => {
 };
 ```
 
+***Arrow function vs Normal function***
+
 Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.\
-Arrow functions don't have access to the new.target keyword.\
+Arrow functions do not have their own this → this inside Person is not referring to the new object.
 Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.\
 Arrow functions cannot be used as constructors.\
 Arrow functions cannot use yield, within its body.
+Arrow functions do not have a prototype property, which is required for constructor functions
 
 ***Tree Shaking***
 
@@ -1125,9 +1145,14 @@ ReactDOMServer.renderToString(<App/>);
 
 once `BrowserRouter` is added we can start using router anywhere.
 
+*** React Thunk***
+
 ```
 <Route path="/" element={<Home />} />
 ```
+
+nested routes
+Link vs NavLinnk
 
 ***React DOM***
 
@@ -1553,11 +1578,60 @@ useTransition
 
 **Refresh Table specific row***
 
-Create seperate component for rows. Re-render will only happen for rows with value change.
+Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 use redux cache to cache api response, fetch updated value from endpoint and update the complete cache. pass that to rows props.
 
 
-## NodeJS Topics
+`## NodeJS Topics
+
+
+*** single threaded event loop architecture ***
+
+*** architecture ***
+
+*** common node js middlewares ***
+
+*** Handling a Large Volume of Customers in Node.js ***
+
+load balancing(scale horizontal), caching(redis), use non blocking code, connection loop to reuse db connections,
+compressions for response, rate limit, monitor and log, 
+
+cors, bodyparser, compression, cookie parser
+
+*** child processes ***
+
+runs on different processes
+
+*** worker thread *** 
+
+*** v8 engine ***
+
+*** debugging issue which is only in production not in dev docker ***
+
+*** use async and await ***
+
+function asyncTask() {
+  return functionA()
+    .then((valueA) => functionB(valueA))  // Pass valueA to functionB
+    .then((valueB) => functionC(valueB))  // Pass result of functionB to functionC
+    .then((valueC) => functionD(valueC))  // Pass result of functionC to functionD
+    .catch((err) => logger.error(err));   // Handle any errors
+}
+
+async function asyncTask() {
+  try {
+    const valueA = await functionA();
+    const valueB = await functionB(valueA);
+    const valueC = await functionC(valueB);
+    return await functionD(valueC);
+  } catch (err) {
+    logger.error(err);
+  }
+}
+
+*** create query executed and disk storage in database becomes full solution for this***
+
+runs on a different thread
 
 ***Concurrency***
 
@@ -1616,6 +1690,10 @@ const client = new MongoClient(uri, {
       }));
     });
 ```
+
+content negotiation
+
+*** third party libraries***
 
 ### ExpressJS Topics
 
@@ -2010,6 +2088,17 @@ a[target] {11
 }
 ```
 
+<!DOCTYPE>
+<head>
+<link> - best place to use it  in head tags
+<script> - best place for script tags
+custom tag names - inline
+
+inline vs block
+inline block
+replaced element - images
+box model
+
 ## Containerization Topics
 
 ***Virtualization vs Containerization***
@@ -2365,11 +2454,66 @@ InHouse tracking.
 
 Mixpanel events. Provides test and prod environment. Live events can be seen.
 
-Mixpanel is a leading product analytics software company, currently helping the world answer 81 million product questions every year. Our pioneering event-based tracking solution gives product teams the ability to gain insights into how to best acquire, convert, and retain their users across web and mobile platforms.
-
 ***HotJar***
 
 See where the users are active.
+
+## Database General:
+
+DBMS vs RDBMS
+
+Primary Key vs Foreign Key
+
+ACID
+
+Constraints
+
+DDL & DML
+
+DROP vs TRUNCATE
+
+Difference Between Delete, Drop, and Truncate
+
+Group By vs Order by
+
+Where vs Having
+
+Aggregate Functions in SQL
+
+Indexing and Clustered Indexing in SQL
+
+UNION vs UNION ALL in SQL
+
+SQL Query to Find the Second Highest Value in a Table
+
+Views
+
+text to dates
+
+triggers
+
+stored procedures
+
+## No SQL:
+
+difference with no sql and sql
+
+tyoes of no sql DBS 
+
+Popular NoSQL Databases & Their Use Cases
+
+CAP Theorem
+
+advantages and disadvantages of no sql.
+
+Types of Indexing in NoSQL Databases
+
+Sharding in NoSQL Databases
+ Replication in NoSQL Databases
+
+  data consistency 
+
+  eventual consistency
 
 ## MongoDB Topics:
 
@@ -2397,14 +2541,6 @@ In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 
 MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A database stores one or more collections of documents.
 
-
-
-
-
-
-
-
-
 ## MySql topics
 
 * sudo systemctl start mysql.service
@@ -2425,8 +2561,6 @@ A semantic element clearly describes its meaning to both the browser and the dev
 Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
 
 Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
-
-
 
 ## Heroku Topics
 
@@ -2452,9 +2586,11 @@ Dev/prod parity (Running scripts to make prod same as stage)\
 Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
 
+Design patterns are reusable solutions to common problems in software design
+
 ## Solid Principles
 
-* S - This principle states that every method/class should handle a single responsibility. 
+* S - This principle states that every method/class should handle a single responsibility.
        This is important because it results in better readability of code and separation of concerns.
 * O - open to extension, closed for modification. *The idea is that a class, once implemented,
       should be closed for any further modification. If any more functionality is needed,
@@ -2469,37 +2605,46 @@ Admin processes (Run admin/management tasks as one-off processes)\
       Every dependency in the design should be directed toward an abstract class or interface. 
       No dependency should target a concrete class.
 
-## Microfrontend
+## Observer Pattern
 
-Micro-frontends is an architectural style where the traditionally monolithic frontend codebase is split into smaller, more manageable pieces. 
-These pieces, or "micro-frontends," can be developed, tested, and deployed independently, enabling teams to work more efficiently and scale their projects more effectively.
-equivalent of microservices.
+The Observer Pattern is a behavioral design pattern where an object (Subject) maintains a list of its dependents (Observers) and notifies them of any state changes, typically by calling one of their methods.
 
-https://www.codementor.io/@riza/introduction-to-micro-frontends-architecture-in-react-js-2hqa9dvxtg
+This pattern is useful for implementing event-driven programming or publish-subscribe mechanisms.
 
-## microservices
-
-Microservices are an architectural approach based on building an application as a collection of small services.
-
-Let’s think of an application as a store. Applications are traditionally “monolithic” which means they are built as a single, autonomous unit --think of your favorite big-box store, selling everything from bananas to lawn furniture.
-
-https://nodesource.com/blog/microservices-in-nodejs
-
-## Observer pattern
-
-The observer design pattern enables a subscriber to register with and receive notifications from a provider. It's suitable for any scenario that requires push-based notification. 
-The pattern defines a provider (also known as a subject or an observable) and zero, one, or more observers.Observers register with the provider, and whenever a predefined condition, event, or state change occurs, 
-the provider automatically notifies all observers by invoking a delegate.
-
-The Observer Design Pattern is a behavioral design pattern that defines a one-to-many dependency between objects. 
-When one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
+News - Mobile - Desktop
 
 https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
 
-## OAuth
+## Decorator Pattern
 
-commonly used to grant websites or applications limited access to user data without exposing credentials.
-It’s widely used for authentication and authorization in APIs, allowing users to log in with services like Google, Facebook, or GitHub
+The Decorator Pattern is a structural design pattern that lets you dynamically add behavior to objects without modifying their existing code.
+
+## Singleton Pattern
+
+A class has only one instance and provide a global point of access.
+
+## Factory Pattern
+
+The Factory Pattern in TypeScript is used to create objects without exposing the instantiation logic to the client. This makes the code more modular and scalable.
+
+## Builder, Prototype, Adapter pattern
+
+## Iterator Pattern
+
+The Iterator Pattern is a behavioral design pattern that provides a way to access elements of a collection sequentially without exposing its underlying structure.
+
+## Microfrontend
+
+Webpack module federation
+
+Routing in Microfrontend
+communicating in Microfrontend
+
+## Microservices
+
+https://nodesource.com/blog/microservices-in-nodejs
+
+## OAuth
 
 ## Formatting
 
