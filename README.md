@@ -1066,28 +1066,24 @@ style.
 
 ***React Classes***
 
-Super(): It is used to call the constructor of its parent class. This is required when we need to access some variables of its parent class.
+Super()
 
- If we want to use this in the constructor, we need to pass it to super. If we want to use this.props inside the constructor we need to pass it with the super() function. Otherwise, we don’t want to pass props to super() because we see this.Props are available inside the render function.
+passing props to super.
 
 ***create react app***
 
 What are each of these files and folders for?
 
-*  README.md is a markdown file that includes a lot of helpful tips and links that can help you while learning to use Create React App.
-* node_modules is a folder that includes all of the dependency-related code that Create React App has installed. You will never need to go into this folder.
-* package.json that manages our app dependencies and what is included in our node_modules folder for our project, plus the * scripts we need to run our app.
-* .gitignore is a file that is used to exclude files and folders from being tracked by Git. We don't want to include large folders such as the node_modules folder
-* public is a folder that we can use to store our static assets, such as images, svgs, and fonts for our React app.
-* src is a folder that contains our source code. It is where all of our React-related code will live and is what we will primarily work in to build our app.
+*  README.md.
+* node_modules - semantic-  ^, *, ~.
+* package.json.
+* .gitignore
+* public 
+* src
 
 ***Source Map Explorer***
 
-Source map explorer analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.
-
 ***depcheck***
-
-Depcheck is a tool for analyzing the dependencies in a project to see: how each dependency is used, which dependencies are useless, and which dependencies are missing from package.json.
 
 ***change app's metadata***
 
@@ -1104,13 +1100,12 @@ src/style
 
 src - contains js, style.js.
 
-src: It stands for source and is the raw code before minification or concatenation or some other compilation it has been used to read or edit the code.
-
 The /src folder comprises of the raw non-minified code.
 
 dist: It stands for distribution and is the minified or concatenated version it has been actually used on production sites.
 
 ***minification***
+
 Developers write code that is optimized for human readability. This code might contain extra information that is not necessary for the code to run, such as comments, spaces, indents, and multiple lines.
 
 ***build folder***
@@ -1122,24 +1117,14 @@ static/css
 
 react-scripts
 
+Creating a React App Without Webpack and Babel
+
 ***React Render***
 
-```
 // client side
 import ReactDOM from 'react-dom/client';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
 
-```
-// server side
 import ReactDOM from 'react-dom/server';
-ReactDOMServer.renderToString(<App/>);
-```
 
 ***React Router***
 
@@ -1147,29 +1132,14 @@ once `BrowserRouter` is added we can start using router anywhere.
 
 *** React Thunk***
 
-```
-<Route path="/" element={<Home />} />
-```
+Nested routes - outlets
 
-nested routes
 Link vs NavLinnk
 
 ***React DOM***
 
 ```
 import ReactDOM from "react-dom/client";
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root")
-);
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
-```
 
 ***React Build***
 
@@ -1182,18 +1152,30 @@ dist folder
 * bundle.js
 * style.css
 
-```
-npm install compression //installation
-var compression = require(‘compression’); //import to app	
-app.use(compression());
-```
-
 compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
 
 ***bundle***
 
 bundle analyzer: This analysis provides a clear picture of each library used in your project and how they affect the JavaScript bundle size.
 Compressing Bundles: Gzip and Brotli are the most commonly used compression techniques, and you can use their Webpack plugins to simplify the entire process.
+
+*** Bundling ***:
+minification to build folder, , Tree Shaking, Code Splitting
+
+***Babel***
+
+***Compilers***
+
+***Virtual DOM***
+
+***Reconciliation***
+
+*** React Diff Algorithm ***
+
+Element Type Checking
+Key Based
+
+***React Fiber***
 
 ***React Lifecycle:***
 
@@ -1220,336 +1202,65 @@ ComponentWillUnmount
 
 componentDidMount, componentDidUpdate, componentWillUnmount
 
-
-***Uncontrolled Components***
-
-In most cases, we recommend using controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
-
-To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
-
 ***Composition Vs Inheritance***
 
-Sometimes we think about components as being “special cases” of other components. For example, we might say that a WelcomeDialog is a special case of Dialog.In React, this is also achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props:
+no hierarchies with composition.
+no parent child relationship.
+Composition with HOCs(Adds behavior without modifying the original component).
 
-```
-function Dialog(props) {
-  return (
-    <FancyBorder color="blue">
-      <h1 className="Dialog-title">
-        {props.title}
-      </h1>
-      <p className="Dialog-message">
-        {props.message}
-      </p>
-    </FancyBorder>
-  );
-}
-
-function WelcomeDialog() {
-  return (
-    <Dialog
-      title="Welcome"
-      message="Thank you for visiting our spacecraft!" />
-  );
-}
-```
-
-***Virtual DOM***
-
-The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
-https://www.geeksforgeeks.org/reactjs-virtual-dom/
+***HOC***
 
 ***Render Props***
 
-The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function.
+Example Downshift.
+MouseTracker
 
-A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.Example Downshift.
-
-```
-<DataProvider render={data => (
-  <h1>Hello {data.target}</h1>
-)}/>
-```
-https://www.geeksforgeeks.org/react-js-render-props/
-
-***JSX***
-
-Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
-JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”.
-
-***props.children***
-
-props.children
-props.children is available on every component. It contains the content between the opening and closing tags of a component. 
-
-```
-<Welcome>Hello world!</Welcome>
-
-function Welcome(props) {
-  return <p>{props.children}</p>;
-}
-```
-
-***Keys***
-
-Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. We don’t recommend using indexes for keys if the order of items may change.
-
-```
-const todoItems = todos.map((todo) =>
-  <li key={todo.id}>
-    {todo.text}
-  </li>
-);
-```
+***Pure Components***
 
 ***Lifting State Up***
 
-***react dom***
-
-The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside the React model if you need to.
-
-***State***
-
-A component needs state when some data associated with it changes over time. For example, a Checkbox component might need isChecked in its state, and a NewsFeed component might want to keep track of fetchedPosts in its state.
-
-The most important difference between state and props is that props are passed from a parent component, but state is managed by the component itself. A component cannot change its props, but it can change its state.
-
-***Controlled vs. Uncontrolled Components***
-
-React has two different approaches to dealing with form inputs.
-
-An input form element whose value is controlled by React is called a controlled component. When a user enters data into a controlled component a change event handler is triggered and your code decides whether the input is valid (by re-rendering with the updated value). If you do not re-render then the form element will remain unchanged.
-
-An uncontrolled component works like form elements do outside of React. When a user inputs data into a form field (an input box, dropdown, etc) the updated information is reflected without React needing to do anything. However, this also means that you can’t force the field to have a certain value.
-
-***Strict Mode***
-
-StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.Strict mode checks are run in development mode only; they do not impact the production build.
-
-Identifying components with unsafe lifecycles
-Warning about legacy string ref API usage
-Warning about deprecated findDOMNode usage
-Detecting unexpected side effects
-Detecting legacy context API
-Ensuring reusable state
-
-***Typechecking With PropTypes***
-
-React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special propTypes property:
- When an invalid value is provided for a prop, a warning will be shown in the JavaScript console.
-
-```import PropTypes from 'prop-types'```
-
-```
-import PropTypes from 'prop-types';
-
-class Greeting extends React.Component {
-  render() {
-    return (
-      <h1>Hello, {this.props.name}</h1>
-    );
-  }
-}
-
-Greeting.propTypes = {
-  name: PropTypes.string
-};
-
-Greeting.defaultProps = {
-  name: 'sagar'
-}
-```
-
-***Refs***
-
-In the typical React dataflow, props are the only way that parent components interact with their children. To modify a child, you re-render it with new props. However, there are a few cases where you need to imperatively modify a child outside of the typical dataflow. The child to be modified could be an instance of a React component, or it could be a DOM element. For both of these cases, React provides an escape hatch.
-
-When to Use Refs
-There are a few good use cases for refs:
-
-Managing focus, text selection, or media playback.
-Triggering imperative animations.
-Integrating with third-party DOM libraries.
-
-***React Fiber***
-
-Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM.
+***props.children***
 
 ***React Portals***
 
-Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
-A typical use case for portals is when a parent component has an overflow: hidden or z-index style, but you need the child to visually “break out” of its container. For example, dialogs, hovercards, and tooltips.
+***JSX***
 
-```
-render() {
-  // React does *not* create a new div. It renders the children into `domNode`.
-  // `domNode` is any valid DOM node, regardless of its location in the DOM.
-  return ReactDOM.createPortal(
-    this.props.children,
-    domNode
-  );
-}
-```
+***Keys***
+
+***State vs props***
+
+***Controlled vs. Uncontrolled Components***
+
+***Strict Mode***
+
+***Typechecking With PropTypes***
+
+***Refs***
 
 ***React Profiler***
 
-The Profiler measures how often a React application renders and what the “cost” of rendering is. Its purpose is to help identify parts of an application that are slow and may benefit from optimizations such as memoization.
-
-***React Optimizations***
-
-Avoid re-renders by providing array of values in useEffect.\
-Big Calculations useMemo to store the output.\  
-useMemo or memo HOC for re-render only when a prop changes(Table rows).  
-useCallback to store the function.\  
-code splitting, React.lazy, dynamic import.  
-Error Boundaries.  
-
-https://www.geeksforgeeks.org/code-splitting-in-react/
-
 ***React Error Boundaries***
 
-As of React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree.
-This change means that as you migrate to React 16, you will likely uncover existing crashes in your application that have been unnoticed before. Adding error boundaries lets you provide better user experience when something goes wrong.
-
-For example, Facebook Messenger wraps content of the sidebar, the info panel, the conversation log, and the message input into separate error boundaries. If some component in one of these UI areas crashes, the rest of them remain interactive.
+getDerivedStateFromError
 
 ***React Fragments***
 
-A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
-
 ***React JS Multiple SetStates***
-
-On a button click with multiple set states, react has optimization which runs in set state in batches.
-
-React batches state updates that occur in event handlers and lifecycle methods. Thus, if you update state multiple times in a <div onClick /> handler, React will wait for event handling to finish before re-rendering.This only works in React-controlled synthetic event handlers and lifecycle methods. State updates are not batched in AJAX and setTimeout event handlers.
 
 React 18:
 
 Batch Updates are available for all events.
 
 ***Redux***
-
-The whole global state of your app is stored in an object tree inside a single store. The only way to change the state tree is to create an action, an object describing what happened, and dispatch it to the store. To specify how state gets updated in response to an action, you write pure reducer functions that calculate a new state based on the old state and the action.
-
-```
-function counterReducer(state = { value: 0 }, action)
-```
-
-```
-store.dispatch({ type: 'counter/incremented' })
-```
+@reduxjs/toolkit
 
 ***How does Redux compare to the React Context API?***
 
 Similarities
 
-Both Redux and React's Context API deal with "prop drilling". That said, they both allow you to pass data without having to pass the props through multiple layers of components. Internally, Redux uses the React context API that allows it to pass the store along your component tree.
+avoid prop drilling
 
 Differences
-
-With Redux, you get the power of Redux Dev Tools Extension. It automatically logs every action your app performs, and it allows time traveling – you can click on any past action and jump to that point in time. Redux also supports the concept of middleware, where you may bind customized function calls on every action dispatch. Such examples include an automatic event logger, interception of certain actions, etc.
-
-With React's Context API, you deal with a pair of components speaking only to each other. This gives you nice isolation between irrelevant data. You also have the flexibility of how you may use the data with your components, i.e., you can provide the state of a parent component, and you may pass context data as props to wrapped components.
-
-There is a key difference in how Redux and React's Context treat data. Redux maintains the data of your whole app in a giant, stateful object. It deduces the changes of your data by running the reducer function you provide, and returns the next state that corresponds to every action dispatched. React Redux then optimizes component rendering and makes sure that each component re-renders only when the data it needs change. Context, on the other hand, does not hold any state. It is only a conduit for the data. To express changes in data you need to rely on the state of a parent component.
-
-***Dynamic Import***
-
-When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
-
-Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and tree shaking.
-
-***Bundling***
-
-Most React apps will have their files “bundled” using tools like Webpack, Rollup or Browserify. Bundling is the process of following imported files and merging them into a single file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
-
-***code splitting***
-
-To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime. The best way to introduce code-splitting into your app is through the dynamic import() syntax.
-
-***Babel***
-
-Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones). It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
-
-***Compilers***
-
-A JavaScript compiler takes JavaScript code, transforms it and returns JavaScript code in a different format. The most common use case is to take ES6 syntax and transform it into syntax that older browsers are capable of interpreting. Babel is the compiler most commonly used with React.
-
-***HOC***
-
-A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.Concretely, a higher-order component is a function that takes a component and returns a new component.
-
-***IOC***
-
-One Example in react is passing the component itself as props.
-
-***React.lazy***
-
-The React.lazy function lets you render a dynamic import as a regular component.
-This will automatically load the bundle containing the OtherComponent when this component is first rendered.
-
-```
-import React, { Suspense } from 'react';
-import MyErrorBoundary from './MyErrorBoundary';
-
-const OtherComponent = React.lazy(() => import('./OtherComponent'));
-const AnotherComponent = React.lazy(() => import('./AnotherComponent'));
-
-const MyComponent = () => (
-  <div>
-    <MyErrorBoundary>
-      <Suspense fallback={<div>Loading...</div>}>
-        <section>
-          <OtherComponent />
-          <AnotherComponent />
-        </section>
-      </Suspense>
-    </MyErrorBoundary>
-  </div>
-);
-```
-
-***Pure Components***
-
-shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true. This method is not called for the initial render or when forceUpdate() is used.Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state or props.The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.
-
-ReactJS has provided us a Pure Component. If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. ReactJS Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or  Not.
-
-In v16.6, React has a new utility called React.memo, a higher order function that takes a functional component as parameter and returns an optimized version of your component that updates only on props change.
-
-```
-import React, { memo } from 'react';
-
-function areEqual(prevProps, nextProps) {
-  return prevProps.contacts === nextProps.contacts;
-  // the component will be updated only on `contact` props changes.
-}
-
-export default memo(
-  function ContactList({ title, contacts }) {
-    return <List title={title} data={contacts} />;
-  },
-  areEqual
-);
-```
-
-React v16.8: It’s a hook called useMemo , that takes as first parameters a value (can be a component) and as second parameter an array of dependencies.
-
-```
-import React, { useMemo } from 'react';
-
-function ContactList({ title, contacts }) {
-  const listComponent = useMemo(() => {
-    return <List title={title} data={contacts} />;
-  }, [contacts]);
-  //  ^^^^^^^^ `props.contacts` dependency
-  
-  return listComponent;
-}
-```
-
-
-This will automatically load the bundle containing the OtherComponent when this component is first rendered.
 
 ***Call Endpoint Once to Fetch Initial Data***
 
@@ -1564,26 +1275,33 @@ UseMemo - Runs the function only if arguments change other it will return the st
 useMemo - stores value.\
 useCallback - stores function
 
-***Dispatch & Action in useReducer ?***
-
-dispatch is called with action which calls the reducer to return the state.
-
-***devtools display state***
-
 usedebugvalue
 
 ***allow transition in state***
 
 useTransition
 
+***React Optimizations***
+
+code splitting, lazy.
+using keys for list.
+
+react patterns
+
+Avoid re-renders by providing array of values in useEffect.
+single render with empty array in useeffect.\
+
+Big Calculations useMemo to store the output.\  
+useCallback to store the function.\  
+PureComponents, React.memo for re-render only when a prop changes(Table rows).
+
+Error Boundaries.
+
 **Refresh Table specific row***
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
-use redux cache to cache api response, fetch updated value from endpoint and update the complete cache. pass that to rows props.
-
 
 `## NodeJS Topics
-
 
 *** single threaded event loop architecture ***
 
@@ -2149,15 +1867,15 @@ The image-base on which you create a container exists separately and cannot be a
 
 ## AWS Topics
 
-Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. These cloud computing web services provide distributed computing processing capacity and software tools via AWS server farms.
-
 ***Parameter store***
 
-Parameter Store, a capability of AWS Systems Manager, provides secure, hierarchical storage for configuration data management and secrets management. You can store data such as passwords, database strings, Amazon Machine Image (AMI) IDs, and license codes as parameter values.
+Parameter Store
+
+S3, Robots.txt, Cloud Front with Custom routing, route 53.
+
+api gateway, lambda, dynamo db, JWT authentication, cloudwatch.
 
 ***S3 Bucket***
-
-Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as data lakes, cloud-native applications, and mobile apps.
 
 ***Large Files in AWS***
 
@@ -2194,7 +1912,6 @@ Jenkins is typically run as a standalone application in its own process with the
 
 ***Test runners***
 
-They collect all the files and runs each test case and show pass and fail results in your console.
 Examples: Mocha, Jest.
 
 ***Mocha***
@@ -2209,7 +1926,7 @@ describe('Array', function () {
 });
 ```
 
-Different Assertion libraries can be used with mocha.
+*** Assertion libraries with mocha ***
 
 ***should***
 
@@ -2458,7 +2175,7 @@ Mixpanel events. Provides test and prod environment. Live events can be seen.
 
 See where the users are active.
 
-## Database General:
+## Database:
 
 DBMS vs RDBMS
 
@@ -2508,26 +2225,17 @@ advantages and disadvantages of no sql.
 
 Types of Indexing in NoSQL Databases
 
-Sharding in NoSQL Databases
- Replication in NoSQL Databases
+data consistency 
 
-  data consistency 
-
-  eventual consistency
+eventual consistency
 
 ## MongoDB Topics:
 
 ***Cluster***
 
-“cluster” is the word usually used for either a replica set or a sharded cluster. A replica set is the replication of a group of MongoDB servers that hold copies of the same data.
-
 ***Replica Set***
 
-A MongoDB replica set ensures replication is enforced by providing data redundancy and high availability over more than one MongoDB server.
-
 ***Shards***
-
-A sharded cluster in MongoDB is a collection of datasets distributed across many shards (servers) in order to achieve horizontal scalability and better performance in read and write operations.
 
 ***Database Access***
 
@@ -2536,10 +2244,6 @@ Use "Database Access" Tab in mongo to edit the password.
 ***Network Access***
 
 In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
-
-***Database***
-
-MongoDB stores data records as documents (specifically BSON documents) which are gathered together in collections. A database stores one or more collections of documents.
 
 ## MySql topics
 
@@ -2554,13 +2258,11 @@ MongoDB stores data records as documents (specifically BSON documents) which are
 
 ## HTML
 
-***Semantic Elements***
+***Semantic vs non***
 
-A semantic element clearly describes its meaning to both the browser and the developer.
+semantic elements: <form>, <table>, <article>
+non semantic elements:  <div>, <span>
 
-Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
-
-Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
 
 ## Heroku Topics
 
@@ -2607,31 +2309,19 @@ Design patterns are reusable solutions to common problems in software design
 
 ## Observer Pattern
 
-The Observer Pattern is a behavioral design pattern where an object (Subject) maintains a list of its dependents (Observers) and notifies them of any state changes, typically by calling one of their methods.
-
-This pattern is useful for implementing event-driven programming or publish-subscribe mechanisms.
-
-News - Mobile - Desktop
-
-https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
-
 ## Decorator Pattern
-
-The Decorator Pattern is a structural design pattern that lets you dynamically add behavior to objects without modifying their existing code.
 
 ## Singleton Pattern
 
-A class has only one instance and provide a global point of access.
-
 ## Factory Pattern
 
-The Factory Pattern in TypeScript is used to create objects without exposing the instantiation logic to the client. This makes the code more modular and scalable.
+## Builder
 
-## Builder, Prototype, Adapter pattern
+## Prototype
+
+## Adapter pattern
 
 ## Iterator Pattern
-
-The Iterator Pattern is a behavioral design pattern that provides a way to access elements of a collection sequentially without exposing its underlying structure.
 
 ## Microfrontend
 
@@ -2646,23 +2336,14 @@ https://nodesource.com/blog/microservices-in-nodejs
 
 ## OAuth
 
+Client ID, Client Secret, Access Token
+
+Authorization: Bearer Token
+
 ## Formatting
 
 EditorConfig - VSCode will format according to the options in this file. If EditorConfig or prettierrc is not available then vscode will use its formatter.
-ESLint - Create React App comes with ESLint and it can be extended.
-ESLint - shows errors.
+
+ESLint - Create React App comes with ESLint and it can be extended. shows syntax errors.
+
 Prettier - we can show as warnings and it has better formatting. https://prettier.io/docs/en/comparison.html
-
-```
-"[javascript]": {
-
-        "editor.formatOnSave": true,
-
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-        // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-
-    },
-```
-
-sudo apt-get install ubuntu-desktop
