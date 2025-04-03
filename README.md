@@ -21,61 +21,17 @@
 
 ## GIT Topics
 
-***Package Manager***
+*** Package Manager ***
 
-Package managers or Package Management Systems are collections of tools that help you install, remove, modify, upgrade, configure computer programs, as well as audit dependencies and report which ones should be upgraded to mitigate potential vulnerabilities.
+*** yarn vs npm ***
 
-https://www.geeksforgeeks.org/difference-between-npm-and-yarn/
+*** GIT INIT ***
 
-***yarn vs npm***
+.git subdirectory - metadata - subdirectories for objects, refs, template files. HEAD file current checked out commit.
 
-Dependencies:
+*** Remote Repos ***
 
-yarn:
-
-Yarn installs dependencies using the yarn command. It installs dependencies concurrently, i.e., in parallel, allowing you to add multiple files simultaneously.
-yarn produces yarn.lock. 
-Yarn outperforms NPM when installing bigger files.
-
-npm:
-
-NPM installs dependencies one by one through the npm install command. 
-it produces package.json.
-
-Security:
-
-Both yarn and npm does secuirty check on packages.
-
-Plug'n'Play - Yarn produces a single .pnp.cjs file that maps project dependencies instead of utilizing the node modules folder. This results in more streamlined dependency trees and quicker project launch and package installation.
-
-Zero installation - Works with Plug'n'Play, as it uses the .pnp.cjs file to map packages stored in the offline cache. This allows you to quickly retrieve and install packages that have been saved.
-
-License check - Yarn has a built-in licensing checker when obtaining and installing packages.
-
-***GIT INIT***
-
-The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
-
-Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
-
-***Remote Repos***
-
-To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.
-
-The git remote add command takes two arguments:
-
-A remote name, for example, origin
-A remote URL, for example, https://github.com/user/repo.git
-
-***git push***
-
-Git Push Origin and Git Push Origin Master had a big difference before the git version 1.7.11. At that time 
-
-git push origin 
-by default pushes all your branches to the origin. While
-
-git push origin master 
-pushing your master branch to the origin.
+*** git push ***
 
 ## Javascript Topics
 
@@ -117,37 +73,37 @@ structured clone.
 
 *** foreach vs for ***
 
-***Window***
+*** Window ***
 
-***window vs document***
+*** window vs document ***
 
 getSelection.  
 getRangeAt  
 getClientRects, getBoundingClientRects.  
 ***CDN***
 
-***string terms***
+*** string terms ***
 
 * Palindrome - reverse words should read the same.(racecar)
 * Anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different(secure) - (rescue).
 * Vowels - a,e,i,o,u.
 
-***IIFE(Immediately Invoked Function Expression)***
+*** IIFE(Immediately Invoked Function Expression) ***
 
-***Intersection Observer***
+*** Intersection Observer ***
 
-***Object Freeze vs seal vs const***
+*** Object Freeze vs seal vs const ***
 
-***AAA***
+*** AAA ***
 
-***History***
+*** History ***
 
 ```
 history.back();     // equivalent to clicking back button
 history.go(-1);     // equivalent to history.back();
 ```
 
-***Location***
+*** Location ***
 
 window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
 window.location.href  
@@ -163,11 +119,11 @@ selection.addRange(inputRange);
 *** spread vs rest ***
 
 
-***Closures:***
+*** Closures: ***
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
 
-***Currying:***
+*** Currying: ***
 
 Currying is translating a function from callable as f(a, b, c) into callable as f(a)(b)(c).
 
@@ -190,27 +146,27 @@ let curriedSum = curry();
 alert( curriedSum(1)(2)(3)(4)() ); // 3
 ```
 
-***Recursive***
+*** Recursive ***
 
 In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
 
-***Destructuring***
+*** Destructuring ***
 
-***Logical AND (&&)***
+*** Logical AND (&&) ***
 
 ```
 12 && 13 && 14 // 14
 12 && 0 && false && 15 // 0
 ```
 
-***Logical OR (||)***
+*** Logical OR (||) ***
 
 ```
 12 || 13 || 15 // 12
 undefined || false // false
 ```
 
-***Nullish coalescing operator (??)***
+*** Nullish coalescing operator (??) ***
 
 ```
 '' ?? 'test' // ''
@@ -219,41 +175,41 @@ null ?? 'test' // 'test'
 
 Amazon CloudFront
 
-***web workers***
+*** web workers ***
 
 cannot access window, cpu intensive tasks.
 
-***white label***
+*** white label ***
 
-***Tricky Logic***
+*** Tricky Logic ***
 
-***Web Socket vs HTTP***
+*** Web Socket vs HTTP ***
 
-***Higher order function***
+*** Higher order function ***
 
 Examples: Map, Filter Function.
 
-***In Operator***
+*** In Operator ***
 
-***Callback***
+*** Callback ***
 
 Callback Hell - Hard to read & maintain callbacks.
 Asynchronous operations are ALL implemented in native code (usually C/C++ code) by nodejs.
 
 Promises
 
-***this keyword***
+*** this keyword ***
 
  In a method, this refers to the owner object and in a function, this refers to the global object.
 
-***Event Bubbling***
+*** Event Bubbling ***
 
-***Event Propagation***
+*** Event Propagation ***
 
 event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
 To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
 
-***Parse Int***
+*** Parse Int ***
 
 The parseInt method parses a value as a string and returns the first integer.
 
@@ -283,11 +239,11 @@ console.log(Math.floor(-5.05));
 // expected output: -6
 ```
 
-***Math.Ceil***
+*** Math.Ceil ***
 
 The Math.ceil() function always rounds a number up to the next largest integer.
 
-***Math.round()***
+*** Math.round() ***
 
 The Math.round() function returns the value of a number rounded to the nearest integer.
 
@@ -295,21 +251,21 @@ console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
 // expected output: 6 6 5
 
 
-***Common javascript functions***
+*** Common javascript functions ***
 
-***Map***
+*** Map ***
 
- ***Filter***
+ *** Filter ***
 
-***Reducer***
+*** Reducer ***
 
-***Some***
+*** Some ***
 
-***Every***
+*** Every ***
 
-***Includes***
+*** Includes ***
 
-***Slice***
+*** Slice ***
 
 ```
 slice(start, end)
@@ -318,7 +274,7 @@ start - start index.
 end - index of the value to be excluded.
 ```
 
-***Splice***
+*** Splice ***
 
 ```
 Remove 0 (zero) elements before index 2, and insert "drum"
@@ -327,18 +283,17 @@ let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 let removed = myFish.splice(2, 0, 'drum')
 ```
 
-***Shift & Unshift***
+*** Shift & Unshift ***
 
-***Fill***
+*** Fill ***
 
 ```
-
 const heights2 = [1, 2, 4, 5, 6, 7, 1, 1];
 heights2.fill(0, 4);
 console.log(heights2); // [1, 2, 4, 5, 0, 0, 0, 0]
 ```
 
-***Reverse***
+*** Reverse ***
 
 ```
 const reversed = array1.reverse();
@@ -346,7 +301,7 @@ console.log('reversed:', reversed);
 // expected output: "reversed:" Array ["three", "two", "one"]
 ```
 
-***Sort***
+*** Sort ***
 
 ```
 const numbers = [4, 2, 5, 1, 3];
@@ -357,7 +312,7 @@ console.log(numbers);
 
 ```
 
-***Object.entries***
+*** Object.entries ***
 
 ```
 const object1 = {
@@ -374,7 +329,7 @@ for (const [key, value] of Object.entries(object1)) {
 // "b: 42"
 ```
 
-***Find***
+*** Find ***
 
 The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 
@@ -387,7 +342,7 @@ console.log(found);
 // expected output: 12
 ```
 
-***Flat***
+*** Flat ***
 
 ```
 const arr1 = [0, 1, 2, [3, 4]];
@@ -396,28 +351,28 @@ console.log(arr1.flat());
 // expected output: [0, 1, 2, 3, 4]
 ```
 
-***JSON Parse***
+*** JSON Parse ***
 
 deep copy
 JSON.Parse && JSON.stringify
 
-***defer attribute***
+*** defer attribute ***
 
-***Event Emitter***
+*** Event Emitter ***
 
-***Concatenation***
+*** Concatenation ***
 
 ```
 let test = 'test' + 'best' // testbest
 ```
 
-***Template literals (Template strings)***
+*** Template literals (Template strings) ***
 
-***delete operator***
+*** delete operator ***
 
-***eval***
+*** eval ***
 
-***window objects***
+*** window objects ***
 
 * localStorage - No Expiration date.
 
@@ -434,9 +389,9 @@ localStorage.getItem("test1");
 * screen
 * document.cookie
 
-***promise***
+*** promise ***
 
-***singleton***
+*** singleton ***
 
 ```
 var Singleton = (function () {
@@ -478,20 +433,20 @@ function run() {
  & parsing          | no native support         | native support for serialization
 
 
-***css***
+*** css ***
 
 style.display
 style.
 
 ## ReactJS Topics
 
-***React Classes***
+*** React Classes ***
 
 Super()
 
 passing props to super.
 
-***create react app***
+*** create react app ***
 
 What are each of these files and folders for?
 
@@ -502,19 +457,19 @@ What are each of these files and folders for?
 * public 
 * src
 
-***Source Map Explorer***
+*** Source Map Explorer ***
 
-***depcheck***
+*** depcheck ***
 
-***change app's metadata***
+*** change app's metadata ***
 
 public/index.html
 
-***build folder***
+*** build folder ***
 
 contains static/js, static/css, assetmanifest.json
 
-***React Folder Structure***
+*** React Folder Structure ***
 
 src/js
 src/style
@@ -525,44 +480,43 @@ The /src folder comprises of the raw non-minified code.
 
 dist: It stands for distribution and is the minified or concatenated version it has been actually used on production sites.
 
-***minification***
+*** minification ***
 
 Developers write code that is optimized for human readability. This code might contain extra information that is not necessary for the code to run, such as comments, spaces, indents, and multiple lines.
 
-***build folder***
+*** build folder ***
 
 static/js
 static/css
 
-***React Scripts***
+*** React Scripts ***
 
 react-scripts
 
 Creating a React App Without Webpack and Babel
 
-***React Render***
+*** React Render ***
 
 // client side
 import ReactDOM from 'react-dom/client';
 
 import ReactDOM from 'react-dom/server';
 
-***React Router***
+*** React Router ***
 
 once `BrowserRouter` is added we can start using router anywhere.
 
-*** React Thunk***
+*** React Thunk ***
 
 Nested routes - outlets
 
 Link vs NavLinnk
 
-***React DOM***
+*** React DOM ***
 
-```
 import ReactDOM from "react-dom/client";
 
-***React Build***
+*** React Build ***
 
 React build combine all components and css into minified version, will be added to respective bundles.
 
@@ -575,7 +529,7 @@ dist folder
 
 compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
 
-***bundle***
+*** bundle ***
 
 bundle analyzer: This analysis provides a clear picture of each library used in your project and how they affect the JavaScript bundle size.
 Compressing Bundles: Gzip and Brotli are the most commonly used compression techniques, and you can use their Webpack plugins to simplify the entire process.
@@ -583,22 +537,22 @@ Compressing Bundles: Gzip and Brotli are the most commonly used compression tech
 *** Bundling ***:
 minification to build folder, , Tree Shaking, Code Splitting
 
-***Babel***
+*** Babel ***
 
-***Compilers***
+*** Compilers ***
 
-***Virtual DOM***
+*** Virtual DOM ***
 
-***Reconciliation***
+*** Reconciliation ***
 
 *** React Diff Algorithm ***
 
 Element Type Checking
 Key Based
 
-***React Fiber***
+*** React Fiber ***
 
-***React Lifecycle:***
+*** React Lifecycle: ***
 
 Mount Phase:
 
@@ -619,63 +573,63 @@ UnMount Phase:
 
 ComponentWillUnmount
 
-***useEffect Lifecycles:***
+*** useEffect Lifecycles: ***
 
 componentDidMount, componentDidUpdate, componentWillUnmount
 
-***Composition Vs Inheritance***
+*** Composition Vs Inheritance ***
 
 no hierarchies with composition.
 no parent child relationship.
 Composition with HOCs(Adds behavior without modifying the original component).
 
-***HOC***
+*** HOC ***
 
-***Render Props***
+*** Render Props ***
 
 Example Downshift.
 MouseTracker
 
-***Pure Components***
+*** Pure Components ***
 
-***Lifting State Up***
+*** Lifting State Up ***
 
-***props.children***
+*** props.children ***
 
-***React Portals***
+*** React Portals ***
 
-***JSX***
+*** JSX ***
 
-***Keys***
+*** Keys ***
 
-***State vs props***
+*** State vs props ***
 
-***Controlled vs. Uncontrolled Components***
+*** Controlled vs. Uncontrolled Components ***
 
-***Strict Mode***
+*** Strict Mode ***
 
-***Typechecking With PropTypes***
+*** Typechecking With PropTypes ***
 
-***Refs***
+*** Refs ***
 
-***React Profiler***
+*** React Profiler ***
 
-***React Error Boundaries***
+*** React Error Boundaries ***
 
 getDerivedStateFromError
 
-***React Fragments***
+*** React Fragments ***
 
-***React JS Multiple SetStates***
+*** React JS Multiple SetStates ***
 
 React 18:
 
 Batch Updates are available for all events.
 
-***Redux***
+*** Redux ***
 @reduxjs/toolkit
 
-***How does Redux compare to the React Context API?***
+*** How does Redux compare to the React Context API ? ***
 
 Similarities
 
@@ -683,26 +637,26 @@ avoid prop drilling
 
 Differences
 
-***Call Endpoint Once to Fetch Initial Data***
+*** Call Endpoint Once to Fetch Initial Data ***
 
 UseEffect with empty Array is called only after first render.
 
-***Function with big calculations***
+*** Function with big calculations ***
 
 UseMemo - Runs the function only if arguments change other it will return the stored value.
 
-***Difference with useMemo vs useCallback***
+*** Difference with useMemo vs useCallback ***
 
 useMemo - stores value.\
 useCallback - stores function
 
 usedebugvalue
 
-***allow transition in state***
+*** allow transition in state ***
 
 useTransition
 
-***React Optimizations***
+*** React Optimizations ***
 
 code splitting, lazy.
 using keys for list.
@@ -718,28 +672,31 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Error Boundaries.
 
-**Refresh Table specific row***
+*** Refresh Table specific row ***
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
-`## NodeJS Topics
+## NodeJS Topics
 
 *** single threaded event loop architecture ***
 
-*** architecture ***
+*** libuv thread pool ***
 
-*** common node js middlewares ***
+*** middlewares ***
 
 *** Handling a Large Volume of Customers in Node.js ***
 
-load balancing(scale horizontal), caching(redis), use non blocking code, connection loop to reuse db connections,
-compressions for response, rate limit, monitor and log, 
-
-cors, bodyparser, compression, cookie parser
+Load Balancing & Scaling with Clustering <br/>
+Optimize Database Queries & Caching(redis) <br/>
+Use Asynchronous & Non-Blocking Code <br/>
+connection loop to reuse db connections <br/>
+compressions for response <br/>
+Rate Limiting & API Throttling <br/>
+monitor and log <br/>
 
 *** child processes ***
 
-runs on different processes
+concurrent
 
 *** worker thread *** 
 
@@ -747,38 +704,11 @@ runs on different processes
 
 *** debugging issue which is only in production not in dev docker ***
 
+cors, bodyparser, compression, cookie parser
+
 *** use async and await ***
 
-function asyncTask() {
-  return functionA()
-    .then((valueA) => functionB(valueA))  // Pass valueA to functionB
-    .then((valueB) => functionC(valueB))  // Pass result of functionB to functionC
-    .then((valueC) => functionD(valueC))  // Pass result of functionC to functionD
-    .catch((err) => logger.error(err));   // Handle any errors
-}
-
-async function asyncTask() {
-  try {
-    const valueA = await functionA();
-    const valueB = await functionB(valueA);
-    const valueC = await functionC(valueB);
-    return await functionD(valueC);
-  } catch (err) {
-    logger.error(err);
-  }
-}
-
 *** create query executed and disk storage in database becomes full solution for this***
-
-runs on a different thread
-
-***Concurrency***
-
-https://stackoverflow.com/questions/70237742/can-someone-please-explain-me-how-is-nodejs-single-threaded-being-asynchronous
-
-As soon as Node js starts, it initializes an event loop. The event loop works on a queue (which is called an event queue) and performs tasks in FIFO(First In First Out) order. It executes a task only when there is no ongoing task in the call stack. The call stack works in LIFO(Last In First Out) order. The event loop continuously checks the call stack to check if there is any task that needs to be run. Now whenever the event loop finds any function, it adds it to the stack and runs in order.
-
-https://www.geeksforgeeks.org/if-node-js-is-single-threaded-then-how-to-handles-concurrency/#:~:text=Node%20js%20uses%20an%20event,First%20In%20First%20Out)%20order.
 
 ***Process environment***
 
@@ -786,53 +716,11 @@ Config values are set in parameter store in AWS, those values set to process env
 
 ***Connect to MySql***
 
-```
-const mysql = require('mysql');
-
-const connection = mysql.createconnection((
-  host: localhost,  
-  database: '',
-  user: '',
-  password: '',
-));
-
-connection.connect();
-connection.query('select * from test', (err, rows, column) => {
-console.log();
-});
-
-connection.end();
-```
-
 **Connect to MongoDB**
 
-```
-const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverApi: ServerApiVersion.v1,
-  });
+*** content negotiation ***
 
-  await client.connect();
-
-  const db = client.db("sample_work");
-  db.collection("users")
-    .find()
-    .toArray((err, results) => {
-      if (err) throw err;
-      const output = results.map((result) => ({
-        id: result.id,
-        name: result.name,
-        email: result.email,
-        gender: result.gender,
-        status: result.status,
-      }));
-    });
-```
-
-content negotiation
-
-*** third party libraries***
+*** third party libraries ***
 
 ### ExpressJS Topics
 
