@@ -726,91 +726,43 @@ Config values are set in parameter store in AWS, those values set to process env
 
 ***Request Object***
 
-params - /candidates/:id - req.params.id property is an object containing properties mapped to the named route “parameters”.
-query - /candidates/?skills='aws' - req.query contains all query.
-body - req.body contains all body.
+params, query, body
 
 ***app.use()***
 
-The app.use() function is used to mount the specified middleware function(s) at the path which is being specified. It is mostly used to set up middleware for your application.
-app.use(express.static('public'))
-```
-app.use(express.json()); // The express.json() function is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser
-```
-
 ***Next function***
-
-The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function.
-If you pass an error to next() and you do not handle it in a custom error handler, it will be handled by the built-in error handler.
-The error will be written to the client with the stack trace. The stack trace is not included in the production environment.
-
-So when you add a custom error handler, you must delegate to the default Express error handler, when the headers have already been sent to the client.
 
 ***Middleware function***
 
-Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
-Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
-Middleware functions can perform the following tasks:
-
-Execute any code.\
-Make changes to the request and the response objects.\
-End the request-response cycle.\
-Call the next middleware function in the stack.
-
 ***Error handling functions***
-
-Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next).
 
 ## NextJS Topics
 
-***Nextjs Advantages***
+*** Nextjs Advantages ***
 
 * Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.
+
 * Pre-rendering
-* With Links, Nextjs code splits, prefetches and does client side navigation.
-* Incremental Static Generation.
+
+Server side rendering - getServerSideProps - Next.js will pre-render this page on each request.
+Static Generation - getStaticProps - Next.js will pre-render this page at build time
+Incremental Static Generation -  static pages, but content updates automatically without rebuilding the whole app.
+
+* With Links, prefetches and does client side navigation.
+
 * Automatic static optimization.
+
+* Dynamic routing *
+
 * Dynamic import, lazyload using suspense.
 
-***What is pre-rendering***
+*** What is hydration ***
 
-This means that Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. Pre-rendering can result in better performance and SEO.
+*** ISR ***
 
-***What is hydration***
+*** SWR ***
 
-Each generated HTML is associated with minimal JavaScript code necessary for that page. When a page is loaded by the browser, its JavaScript code runs and makes the page fully interactive.
-
-***getServerSideProps vs getStaticProps***
-
-Next.js will pre-render this page on each request using the data returned by getServerSideProps.\
-Next.js will pre-render this page at build time using the props returned by getStaticProps.
-
-***ISR***
-
-Incremental Static Generation uses revalidate.
-Next.js allows you to create or update static pages after you’ve built your site. Incremental Static Regeneration (ISR) enables you to use static-generation on a per-page basis, without needing to rebuild the entire site. With ISR, you can retain the benefits of static while scaling to millions of pages.
-When a request is made to a path that hasn’t been generated, Next.js will server-render the page on the first request.
-Future requests will serve the static file from the cache. ISR on Vercel persists the cache globally and handles rollbacks.
-
-***SWR***
-
-react library - stale while revalidate.
-
-***Dynamic routing***
-
-In Next.js you can add brackets to a page ([param]) to create a dynamic route (a.k.a. url slugs, pretty urls, and others).The matching paths will be available in the query string.
-
-***Client Side Navigation***
-
-Client-side navigation means that the page transition happens using JavaScript, which is faster than the default navigation done by the browser.
-
-Link
-
-Using <a href=""></a> instead of <Link href="" />, The background color will be cleared on link clicks because the browser does a full refresh.Next.js does code splitting automatically, so each page only loads what’s necessary for that page. That means when the homepage is rendered, the code for other pages is not served initially.
-
-In a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant!
-
-Next.js automatically optimizes your application for the best performance by code splitting, client-side navigation, and prefetching (in production).
+*** Client Side Navigation ***
 
 ## REST Apis Topics
 
@@ -835,8 +787,6 @@ Use PUT APIs primarily to update an existing resource (if the resource does not 
 PATCH:
 
 HTTP PATCH requests are to make a partial update on a resource.
-
-
 
 ## CSS Topics
 
