@@ -79,105 +79,52 @@ pushing your master branch to the origin.
 
 ## Javascript Topics
 
-***white label***
+*** single threaded & asynchronous ***
 
-White label software is a fully customizable software, enabling companies to rebrand it as their own. It is typically sold as part of a subscription, as the software developer lends rights to use and customize the front-end aspects for a specific period.
+*** prototype ***
 
-***Tricky Logic***
+chaining
 
-```
-console.log('2' + 3) // 23 - If one string is present, other values are strings.
+*** type coercion ***
 
-console.log(2 + true); // 3 - Boolean will be made integer(true is 1 & false is 0)
+*** declarative vs imperative ***
 
-console.log("5" - 2); // 3 - for minus integer will be parsed from string.
+*** var VS let & const keyword? ***
 
-console.log("x" * 2); // NAN - x is parsed and it is NAN.
+*** set vs array ***
 
-const numArray = [0, 1, 2, 3];
-numArray[10] = 11;
-console.log(numArray);// 0, 1, 2, 3,,,,,,, 11 - returns array with 11 values with empty values in between.
+*** primitive vs non primitive ***
 
-function test3(num) {
-  return
-    [num]
-}
-console.log(test3(10)); // undefined. return adds semicolon at the end and returns undefined.
+*** shallow copy vs deep copy***
 
-var y = 1;
-if (function f() {}) {
-  y += typeof f;
-}
-console.log(y); // 1undefined
+structured clone.
 
-(function() {
-  var a = b = 5;
-})();
-console.log(b); // 5 - b is defined globally.
+*** pure functions ***
 
-for (var i = 0; i < 4; i++) {
-  setTimeout(() => console.log(i), 0)
-} // 4 4 4 4 - for loop runs and increments value to 4, setTimeout is moved to webAPIs once the loop runs
-// and que is emoty then setTimeout is added to queue and to callstack and runs four times to show 4.
+*** hoisting ***
 
-const clothes = ['jacket', 't-shirt'];
-clothes.length = 0;
-clothes[0]; // undefined - length = 0 sets empty array.
+*** undefined vs not defined ***
 
-// foo = [] creates a new array and assigns a reference to it to a variable. Any other references are unaffected and still point to the original array.
-// foo.length = 0 modifies the array itself. If you access it via a different variable, then you still get the modified array.
-var foo = [1,2,3];
-var bar = [1,2,3];
-var foo2 = foo;
-var bar2 = bar;
-foo = [];
-bar.length = 0;
-console.log(foo, bar, foo2, bar2);
+*** undefined vs null ***
 
-const length = 4;
-const numbers = [];
-for (var i = 0; i < length; i++);
-{ 
-  // a simple block
-  numbers.push(i + 1);
-}
-console.log(numbers); // [5]
+*** typeof(x) === "undefined" ***
 
-0.1 + 0.2 == 0.3 // false 0.1 + 0.2 = 0.30000
+*** function vs arrow ***
 
-console.log(myVar);   // undefined - hoisting moves declarations to the top.
-console.log(myConst); // reference error - const & let does not support hoisting.
-var myVar = 'value';
-const myConst = 3.14;
+*** apply,call,bind ***
 
-var myObject = {
-    foo: "bar",
-    func: function() {
-        var self = this;
-        console.log("outer func:  this.foo = " + this.foo);
-        console.log("outer func:  self.foo = " + self.foo);
-        (function() {
-            console.log("inner func:  this.foo = " + this.foo);
-            console.log("inner func:  self.foo = " + self.foo);
-        }());
-    }
-};
-myObject.func();
-// outer func:  this.foo = bar
-// outer func:  self.foo = bar
-// inner func:  this.foo = undefined
-// inner func:  self.foo = bar
+*** forEach vs map ***
 
-```
+*** foreach vs for ***
 
-***undefined vs not defined***
+***Window***
 
-```
-let x;
-console.log(x); // undefined
-console.log(type0f(x)); // 'undefined'
-console.log(y)// ReferenceError: y is not defined
-```
+***window vs document***
+
+getSelection.  
+getRangeAt  
+getClientRects, getBoundingClientRects.  
+***CDN***
 
 ***string terms***
 
@@ -187,152 +134,18 @@ console.log(y)// ReferenceError: y is not defined
 
 ***IIFE(Immediately Invoked Function Expression)***
 
-If you want to create a function and execute it immediately after the declaration, we can declare an anonymous function.
-
-Anonymous functions are functions without names.
-Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
-
-***apply,call,bind***
-
-call:
-
-The call() method is a predefined JavaScript method.
-
-It can be used to invoke (call) a method with an owner object as an argument (parameter).
-
-```
-function fullName() {
-    return this.firstName + " " + this.lastName;
-  }
-  
-const person1 = {
-  firstName:"Jhn",
-  lastName: "Doe"
-}
-
-console.log(fullName.call(person1)); // Jhn Doe
-```
-
-apply:
-The apply() method accepts arguments in an array:
-
-```
-const person = {
-  fullName: function(city, country) {
-    return this.firstName + " " + this.lastName + "," + city + "," + country;
-  }
-}
-
-const person1 = {
-  firstName:"John",
-  lastName: "Doe"
-}
-
-person.fullName.apply(person1, ["Oslo", "Norway"]);
-```
-
-bind:
-
-```
-const person = {
-  firstName:"John",
-  lastName: "Doe",
-  fullName: function () {
-    return this.firstName + " " + this.lastName;
-  }
-}
-
-const member = {
-  firstName:"Hege",
-  lastName: "Nilsen",
-}
-
-let test = person.fullName.bind(member);
-test();
-```
-
-```
-const person = {
-  firstName:"John",
-  lastName: "Doe",
-  display: function () {
-    let x = document.getElementById("demo");
-    x.innerHTML = this.firstName + " " + this.lastName;
-  }
-}
-
-let display = person.display.bind(person);
-setTimeout(display, 3000);
-```
-
 ***Intersection Observer***
 
-The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the viewport), or when the amount by which the two intersect changes by a requested amount.
-
-***Object Freeze***
-
-Freezing an object is equivalent to preventing extensions and then changing all existing properties' descriptors to configurable: false, writable: false.
-
-```
-const person = Object.freeze({name: "Geeksforgeeks"});
-    
-     // TypeError in strict mode
-     //in non-strict mode it prints "Geeksforgeeks"
-     person.name = "gfg";
-```
-
-The const keyword ensures that the variable created is read-only. But It doesn’t mean that the actual value to which the const variable reference is immutable. Even though the person variable is constant. However, you can change the value of its property. But you cannot reassign a different value to the person constant.
-
-```
-const person = {
-        name: "Geeksforgeeks"
-    };
-         
-// No TypeError
-person.name = "gfg";
-console.log(person.name);
-```
-
-***object seal***
-
-The Object.seal() method seals an object. Sealing an object prevents extensions and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. seal() returns the same object that was passed in.
-
-***undefined vs null***
-
-undefined means a variable has been declared but has not yet been assigned a value.
-null is an assignment value. It can be assigned to a variable as a representation of no value.
-
- undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
-
-```
-null === undefined // false
-null == undefined // true
-null === null // true
-```
+***Object Freeze vs seal vs const***
 
 ***AAA***
 
-The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.
-So the arrange section you only have code required to setup that specific test. Here objects would be created, mocks setup (if you are using one) and potentially expectations would be set. Then there is the Act, which should be the invocation of the method being tested. And on Assert you would simply check whether the expectations were met. More info can be found HERE.
-
-***forEach vs map***
-
-The forEach() method returns “undefined“.
-Not mutating the original array.
-
 ***History***
-
-The term “history” and "history object" in this documentation refers to the history package.
 
 ```
 history.back();     // equivalent to clicking back button
 history.go(-1);     // equivalent to history.back();
 ```
-
-The following terms are also used:
-“browser history” - A DOM-specific implementation, useful in web browsers that support the HTML5 history API.
-“hash history” - A DOM-specific implementation for legacy web browsers
-“memory history” - An in-memory history implementation, useful in testing and non-DOM environments like React Native
 
 ***Location***
 
@@ -340,230 +153,15 @@ window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Locati
 window.location.href  
 window.location.assign  
 
-***Window***
-
-getSelection - object representing range of text or current position of cursor.  
-getRangeAt  
-getClientRects, getBoundingClientRects.  
-
 // point a cursor  
 const inputRange = document.createRange();  
 inputRange.selectNodeContents(editDiv.current);  
 inputRange.collapse(false);  
 selection.removeAllRanges();  
-selection.addRange(inputRange);  
+selection.addRange(inputRange);
 
+*** spread vs rest ***
 
-***Location vs History***
-
-The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.
-
-***single Threaded***
-
-Javascript is a single threaded language.This means it has one call stack and one memory heap.
-Javascript engine (V8, Spidermonkey, JavaScriptCore, etc...) has Web API(Javascript uses low level programming languages like C++ to perform these behind the scenes.)
- that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.
-
- http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
-
-***CDN***
-
-CDN stands for Content Delivery Network. CDNs deliver cached, static content from a network of servers across the globe.
-
-***Declarative vs Imperative***
-
-try / catch is great but it only works for imperative code, React components are declarative and specify what should be rendered.
-
-***Web Socket vs HTTP***
-
-Web Socket:
-
-WebSocket is a bidirectional communication protocol that can send the data from the client to the server or from the server to the client by reusing the established connection channel. The connection is kept alive until terminated by either the client or the server.
-Almost all the real-time applications like (trading, monitoring, notification) services use WebSocket to receive the data on a single communication channel.
-All the frequently updated applications used WebSocket because it is faster than HTTP Connection.
-
-HTTP Connection:
-
-The HTTP protocol is a unidirectional protocol that works on top of TCP protocol which is a connection-oriented transport layer protocol, we can create the connection by using HTTP request methods after getting the response HTTP connection get closed.
-Simple RESTful application uses HTTP protocol which is stateless.
-When we do not want to retain a connection for a particular amount of time or reuse the connection for transmitting data; An HTTP connection is slower than WebSockets.
-
-***web socket***
-
-```
-// Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
-
-// Connection opened
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
-});
-
-// Listen for messages
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
-});
-```
-
-/// Set vs array
-
-Collection of unique value, Elements are accessed using hash table.
-
-***web workers***
-
-Web Workers are a simple means for web content to run scripts in background threads.A worker is an object created using a constructor (e.g. Worker()) that runs a named JavaScript file — this file contains the code that will run in the worker thread; workers run in another global context that is different from the current window.you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the window object.
-
-The magic of workers happens via the postMessage() method and the onmessage event handler. When you want to send a message to the worker, you post messages to it like this (main.js):
-
-```
-first.onchange = function() {
-  myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
-
-second.onchange = function() {
-  myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
-
-```
-
-```
-onmessage = function(e) {
-  console.log('Message received from main script');
-  const workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-  console.log('Posting message back to main script');
-  postMessage(workerResult);
-}
-```
-
-***Var VS let & const keyword?***
-
-*** primitive vs non primitive ***
-
-*** shallow copy vs deep copy***
-
-structured clone.
-
-***prototype***
-
-***type coercion***
-
-***pure functions***
-
-
-
-for (var i = 0; i < 5; i++) {
-    setTimeout(() => {
-        console.log(i);
-    }, 1000);
-}
-
-
-***Hoisting Tricky Question***
-
-```
-var bar = 1;
-
-function test() {
-   bar = 10;
-   return bar;
-   function bar () {}; // using hoisting bar is initialized later to a function.
-
-}
-
-test();
-console.log(bar); // returns 1 instead 10.
-```
-
-***Destructuring***
-
-The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
-
-```
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-
-console.log(rest);
-// expected output: Array [30,40,50]
-```
-
-***Logical AND (&&)***
-
-The operator returns the value of the first falsy operand encountered when evaluating from left to right, or the value of the last operand if they are all truthy.
-
-```
-12 && 13 && 14 // 14
-12 && 0 && false && 15 // 0
-```
-
-***Logical OR (||)***
-
-The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of its operands is true.
-The operator returns the value of the first truthy operand encountered when evaluating from left to right, or the value of the last operand if they are all falsey.
-
-```
-12 || 13 || 15 // 12
-undefined || false // false
-```
-
-***Nullish coalescing operator (??)***
-
-The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
-This can be seen as a special case of the logical OR (||) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use || to provide some default value to another variable foo, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., '' or 0). See below for more examples.
-
-```
-'' ?? 'test' // ''
-null ?? 'test' // 'test'
-```
-
-***Higher order function***
-
-In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
-
-A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
-
-Examples: Map, Filter Function.
-
-***In Operator***
-
-The in operator returns true if the specified property is in the specified object or its prototype chain.
-
-```
-'test' in {'test': 't'} // true
-```
-
-***Callback***
-
-https://stackoverflow.com/questions/70237742/can-someone-please-explain-me-how-is-nodejs-single-threaded-being-asynchronous
-
-A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
-
-Callback Hell - Hard to read & maintain callbacks.
-Asynchronous operations are ALL implemented in native code (usually C/C++ code) by nodejs.
-
-Promises - 
-A promise will gain control over the results of callbacks: resolve and reject functions;
-All promise objects have the then () method.
-
-Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
-
-***This keyword***
-
-The JavaScript this keyword refers to the object it belongs to. This has different values depending on where it is used. In a method, this refers to the owner object and in a function, this refers to the global object.
-
-***Event Bubbling***
-
-When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.
-
-***Event Propagation***
-
-If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute.
-In other words, event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
-To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
-
-***Anonymous Functions***
-
-Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
 
 ***Closures:***
 
@@ -596,20 +194,64 @@ alert( curriedSum(1)(2)(3)(4)() ); // 3
 
 In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
 
-***Spread***
+***Destructuring***
 
-Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+***Logical AND (&&)***
 
 ```
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
-
-let mergedObj = { ...obj1, ...obj2 };
+12 && 13 && 14 // 14
+12 && 0 && false && 15 // 0
 ```
 
-***Rest***
+***Logical OR (||)***
 
-The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+```
+12 || 13 || 15 // 12
+undefined || false // false
+```
+
+***Nullish coalescing operator (??)***
+
+```
+'' ?? 'test' // ''
+null ?? 'test' // 'test'
+```
+
+Amazon CloudFront
+
+***web workers***
+
+cannot access window, cpu intensive tasks.
+
+***white label***
+
+***Tricky Logic***
+
+***Web Socket vs HTTP***
+
+***Higher order function***
+
+Examples: Map, Filter Function.
+
+***In Operator***
+
+***Callback***
+
+Callback Hell - Hard to read & maintain callbacks.
+Asynchronous operations are ALL implemented in native code (usually C/C++ code) by nodejs.
+
+Promises
+
+***this keyword***
+
+ In a method, this refers to the owner object and in a function, this refers to the global object.
+
+***Event Bubbling***
+
+***Event Propagation***
+
+event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
+To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
 
 ***Parse Int***
 
@@ -652,309 +294,22 @@ The Math.round() function returns the value of a number rounded to the nearest i
 console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
 // expected output: 6 6 5
 
-***JSON Parse***
-
-JSON.Parse && JSON.stringify
-
-***defer attribute***
-
-The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts.
-
-***prototype***
-
-All JavaScript objects inherit properties and methods from a prototype.
-
-inheritance
-
-```
-//Student.prototype = Person.prototype;
-Student.prototype = new Person();
-Student.prototype.constructor = Student;
-
-```
-
-The JavaScript prototype property allows you to add new properties to object constructors:
-
-```
-function Person(first, last, age, eyecolor) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eyecolor;
-}
-
-Person.prototype.nationality = "English";
-```
-
-***Event Emitter***
-
-```
-class EventEmitter {
- constructor() {
-   this.events = {};
-  }
-	
-  on(eventName, fn) {
-  	if(!this.events[eventName]) {
-    	this.events[eventName] = [];
-    }
-    this.events[eventName].push(fn);
-  }
-  
-  emit(eventName, data) {
-  	const events = this.events[eventName];
-    if(events) {
-    	events.forEach(fn => {
-      	fn(data);
-      });
-    }
-  }
-}
-
-let emitter = new EventEmitter();
-let first = function (data) {
-  console.log(`first ${data}`);
-}
-
-let second = function (data) {
-  console.log(`second ${data}`);
-}
-
-emitter.on('ADD', first);
-emitter.on('ADD', second);
-
-emitter.emit('ADD', 1);
-
-//"first 1"
-//"second 1"
-```
-
-***Concatenation***
-
-```
-let test = 'test' + 'best' // testbest
-```
-
-***Template literals (Template strings)***
-
-Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.
-
-```
-`string text ${expression} string text`
-```
-
-***typeof ob === "undefined"***
-
-One reason to use typeof is that it does not throw an error if the variable has not been declared.
-
-***window vs document***
-
-Window is the main JavaScript object root, aka the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window.
-
-window.screen or just screen is a small information object about physical screen dimensions.
-
-window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
-
-Since window is the global object, you can reference any properties of it with just the property name - so you do not have to write down window. - it will be figured out by the runtime.
-
-***delete operator***
-
-The JavaScript delete operator removes a property from an object;
-
-delete object.property
-
-When you delete an array element, the array length is not affected.When the delete operator removes an array element, that element is no longer in the array. In the following example, trees[3] is removed with delete.
-
-```
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-delete trees[3];
-if (3 in trees) {
-    // this is not executed
-}
-```
-
-***eval***
-
-The eval() method evaluates or executes an argument.
-
-```
-let text = "x * y";
-let result = eval(text);
-```
-
-With eval(), malicious code can run inside your application without permission.
-
-With eval(), third-party code can see the scope of your application, which can lead to possible attacks.
-
-***window objects***
-
-* localStorage - No Expiration date.
-
-```
-localStorage.getItem("test1");
-```
-
-* history
-* innerHeight
-* innerWidth
-* sessionStorage.
-* navigator.geoLocation
-* pageXOffset
-* screen
-* document.cookie
-
-***promise***
-
-Promise.all returns first reject.
-
-```
-const timeout = new Promise((resolve, reject) => {
-  setTimeout(() => resolve(110), 1000);
-});
-
-const rejected = new Promise((resolve, reject) => {
- reject("Bankrupt");
-});
-
-const allPromises = Promise.all([timeout, rejected]);
-allPromises.then (
-  value => console.log(value),
-  reason => console.log(reason)
-);
-
-// "Bankrupt"
-```
-
-***singleton***
-
-```
-var Singleton = (function () {
-    var instance;
-
-    function createInstance() {
-        var object = new Object("I am the instance");
-        return object;
-    }
-
-    return {
-        getInstance: function () {
-            if (!instance) {
-                instance = createInstance();
-            }
-            return instance;
-        }
-    };
-})();
-
-function run() {
-
-    var instance1 = Singleton.getInstance();
-    var instance2 = Singleton.getInstance();
-
-    console.log("Same instance? " + (instance1 === instance2));
-}
-```
-
-
-***let vs const***
-
-both are block scoped.
-we can change let values but if we try to change const values we get Uncaught TypeError.
-
-```
-foo(); // 'FOOOOO'
-function foo() {
-  console.log('FOOOOO');
-}
-
-foo1(); Uncaught ReferenceError: foo1 is not defined
-var foo1 = () => {
-  console.log('FOOOOO');
-};
-```
-
-***Arrow function vs Normal function***
-
-Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.\
-Arrow functions do not have their own this → this inside Person is not referring to the new object.
-Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.\
-Arrow functions cannot be used as constructors.\
-Arrow functions cannot use yield, within its body.
-Arrow functions do not have a prototype property, which is required for constructor functions
-
-***Tree Shaking***
-
-Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
-
-In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
 
 ***Common javascript functions***
 
 ***Map***
 
-The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.\
-
-```
-const filteredNumbers = numbers.map((num, index) => {
-  if (index < 3) {
-    return num;
-  }
-});
- ```
-
  ***Filter***
-
-The filter() method creates a new array with all elements that pass the test implemented by the provided function.\
-
-```
-const result = ages.filter(checkAdult);
-
-function checkAdult(age) {
-  return age >= 18;
-}
-```
 
 ***Reducer***
 
-The reduce() method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
-
-```
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
-```
-
 ***Some***
-
-The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
-
-```
-const array = [1, 2, 3, 4, 5];
-
-// checks whether an element is even
-const even = (element) => element % 2 === 0;
-
-console.log(array.some(even));
-```
 
 ***Every***
 
-Every element should satisfy the condition.
-
 ***Includes***
 
-Check if an array includes a value. We can also check strings.
-
-```
-Includes(searchElement, fromIndex)
-
-const array1 = [1, 2, 3];
-
-console.log(array1.includes(2));
-// expected output: true
-```
-
 ***Slice***
-
-The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)where start and end represent the index of items in that array. The original array will not be modified.
 
 ```
 slice(start, end)
@@ -965,8 +320,6 @@ end - index of the value to be excluded.
 
 ***Splice***
 
-The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. 
-
 ```
 Remove 0 (zero) elements before index 2, and insert "drum"
 
@@ -975,8 +328,6 @@ let removed = myFish.splice(2, 0, 'drum')
 ```
 
 ***Shift & Unshift***
-
-shift() removes the first element from an array, unshift() adds a new element to the start of the array.
 
 ***Fill***
 
@@ -1043,6 +394,76 @@ const arr1 = [0, 1, 2, [3, 4]];
 
 console.log(arr1.flat());
 // expected output: [0, 1, 2, 3, 4]
+```
+
+***JSON Parse***
+
+deep copy
+JSON.Parse && JSON.stringify
+
+***defer attribute***
+
+***Event Emitter***
+
+***Concatenation***
+
+```
+let test = 'test' + 'best' // testbest
+```
+
+***Template literals (Template strings)***
+
+***delete operator***
+
+***eval***
+
+***window objects***
+
+* localStorage - No Expiration date.
+
+```
+localStorage.getItem("test1");
+```
+
+* history
+* innerHeight
+* innerWidth
+* sessionStorage.
+* navigator.geoLocation
+* pageXOffset
+* screen
+* document.cookie
+
+***promise***
+
+***singleton***
+
+```
+var Singleton = (function () {
+    var instance;
+
+    function createInstance() {
+        var object = new Object("I am the instance");
+        return object;
+    }
+
+    return {
+        getInstance: function () {
+            if (!instance) {
+                instance = createInstance();
+            }
+            return instance;
+        }
+    };
+})();
+
+function run() {
+
+    var instance1 = Singleton.getInstance();
+    var instance2 = Singleton.getInstance();
+
+    console.log("Same instance? " + (instance1 === instance2));
+}
 ```
 
 | Features          | Map                       | Object                 |
