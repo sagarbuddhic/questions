@@ -21,7 +21,7 @@
 
 ## GIT Topics
 
-*** Package Manager ***
+**Package Manager**
 
 *** yarn vs npm ***
 
