@@ -1,6 +1,8 @@
 # Questions
 
 ### [GIT](#git-topics)
+### [Data Structures](#dsa)
+### [-Design Principle](#design-principles)
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
 ### [-NodeJS](#nodejs-topics)
@@ -16,8 +18,6 @@
 ### [Heroku](#heroku-topics)
 ### [-12 Factor](#12-factor-topics)
 ### [Python](#python)
-### [Data Structures](#data-structures)
-
 
 ## GIT Topics
 
@@ -32,6 +32,122 @@
 *** Remote Repos ***
 
 *** git push ***
+
+## DSA
+
+collection of values and the format they are stored in, relation between values and the operations on those values.
+steps taken to solve a problem.
+
+Algorithm           ArrayList   LinkedList
+seek front            O(1)         O(1)
+seek back             O(1)         O(1)
+seek to index         O(1)         O(N)
+insert at front       O(N)         O(1)
+insert at back        O(1)         O(1)
+insert after an item  O(N)         O(1)
+
+ADT        DS
+
+List    Dynamic Array, Linked List
+Queue   Linked List Based, Array Based, Stack Based
+Map     TreeMap, HashMap, HashTable
+
+DIfferent Big O:
+
+Upper Bound of the complexity in the worst case, 
+helping to quantify performance as the input size becomes arbitrarily large.
+
+O(1) - not based on input size. constant time.
+O(log n) - n/2 until we reach 1. It can also be denoted as 2<sup>n</sup>. cutting half of the items.
+Example: Binary Search
+O(n) - traverse all items. linear time algorithm.
+O(n logn) - merge sorting, heap sorting. quasilinear runtime.
+O(n<sup>2</sup>) - two dimensional array or traversing items for n array n times. quadratic runtime.cubic runtime.
+O(n!) - n * (n-1) * (n -2) ....
+
+Algorithms(set of tasks):
+
+linear search - sequential or simple search.
+binary search - cutting to half.
+brute force - same as linear , exponential runtimes.
+divide and conquer - merge sort.
+selection sort - O (n2)
+quick sort - O (n log n)
+
+Data Structures:
+
+Linked List - Nodes contain reference to the next node.
+double linked list - contains both previous and next node reference.
+Stack - One Ended linear data structure, push and pop(LIFO).
+Queue - Linear Data Structure models real world queues, enqueue and dequeue(FIFO).
+Priority Queue
+Indexed Priority Queue
+Heap - A heap is a tree based DS that satisfies the heap variant(ordered).
+Union Find - DS keeps track of elements which are split into one or more disjoint sets(find and union).
+Tree - Undirected graph with nodes.
+       Leaf Node - without children.
+Binary Tree - At most two children(greater value to the right side).
+BFS -  Breadth First Search.
+Hash Table - mapping from keys to values called hashing. they use functions to generate keys.
+Object Data - non-scalar objects in javascript behave as associated arrays, 
+so an object itself can behave as a basic hash table.
+Fenwick tree - sum range queries.
+Suffix Array - non empty substring at the end of a string of characters.
+LCP - longest common prefix array. 
+BBST - Balanaced Binary Search Tree self balancing binary search tree it will adjust itself.
+Balanced Binary Tree - height of the tree is O(Log n) where n is the number of nodes.
+It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
+The difference between the heights of the left subtree and the right subtree for any node is known as the balance factor of the node.
+AVL - Trees with rotation to make it balanced.
+
+
+Efficiency:
+
+Time Complexity
+Space Complexity
+
+
+## Design Principles
+
+*** SOLID ***
+
+* S - This principle states that every method/class should handle a single responsibility.
+       This is important because it results in better readability of code and separation of concerns.
+* O - open to extension, closed for modification. *The idea is that a class, once implemented,
+      should be closed for any further modification. If any more functionality is needed,
+      it can be added later using extension features such as inheritance. 
+      This is primarily done so as to not break existing code as well as unit tests.
+       It also results in a modular code.
+* L - Liskov - A child class should be able to do what parent does. Example - Human - child - parent.
+* I - Interface segregation principle - The Interface Segregation Principle — ISP — states that instead of a generalized interface for a class,
+       it is better to use separate segregated interfaces with smaller functionalities. 
+      This is similar to ideas we’ve discussed so far around maintaining loose coupling, but for interfaces.
+* D - Dependency inversion principle - both high-level and low-level modules will depend on abstractions rather than high-level modules dependent on low-level modules. 
+      Every dependency in the design should be directed toward an abstract class or interface. 
+      No dependency should target a concrete class.
+
+*** Observer Pattern ***
+
+*** Decorator Pattern ***
+
+*** Singleton Pattern ***
+
+*** Factory Pattern ***
+
+*** Builder ***
+
+*** Prototype ***
+
+*** Adapter pattern ***
+
+*** Iterator Pattern ***
+
+*** Microfrontend ***
+
+Webpack module federation
+
+Routing in Microfrontend
+communicating in Microfrontend
 
 ## Javascript Topics
 
@@ -1328,96 +1444,6 @@ test('handles server error', async () => {
 })
 ```
 
-## Python
-
-order of precedance
-x = 10+3*2**2
-print(x)
-parenthesis
-exponentiation
-multiplication or division
-addition or subtraction
-
-elif - used for else if
-
-for value in ['test']
-
-none similar to null object
-
-## Data Structures & Algorithms
-
-collection of values and the format they are stored in, relation between values and the operations on those values.
-steps taken to solve a problem.
-
-Algorithm           ArrayList   LinkedList
-seek front            O(1)         O(1)
-seek back             O(1)         O(1)
-seek to index         O(1)         O(N)
-insert at front       O(N)         O(1)
-insert at back        O(1)         O(1)
-insert after an item  O(N)         O(1)
-
-ADT        DS
-
-List    Dynamic Array, Linked List
-Queue   Linked List Based, Array Based, Stack Based
-Map     TreeMap, HashMap, HashTable
-
-DIfferent Big O:
-
-Upper Bound of the complexity in the worst case, 
-helping to quantify performance as the input size becomes arbitrarily large.
-
-O(1) - not based on input size. constant time.
-O(log n) - n/2 until we reach 1. It can also be denoted as 2<sup>n</sup>. cutting half of the items.
-Example: Binary Search
-O(n) - traverse all items. linear time algorithm.
-O(n logn) - merge sorting, heap sorting. quasilinear runtime.
-O(n<sup>2</sup>) - two dimensional array or traversing items for n array n times. quadratic runtime.cubic runtime.
-O(n!) - n * (n-1) * (n -2) ....
-
-Algorithms(set of tasks):
-
-linear search - sequential or simple search.
-binary search - cutting to half.
-brute force - same as linear , exponential runtimes.
-divide and conquer - merge sort.
-selection sort - O (n2)
-quick sort - O (n log n)
-
-Data Structures:
-
-Linked List - Nodes contain reference to the next node.
-double linked list - contains both previous and next node reference.
-Stack - One Ended linear data structure, push and pop(LIFO).
-Queue - Linear Data Structure models real world queues, enqueue and dequeue(FIFO).
-Priority Queue
-Indexed Priority Queue
-Heap - A heap is a tree based DS that satisfies the heap variant(ordered).
-Union Find - DS keeps track of elements which are split into one or more disjoint sets(find and union).
-Tree - Undirected graph with nodes.
-       Leaf Node - without children.
-Binary Tree - At most two children(greater value to the right side).
-BFS -  Breadth First Search.
-Hash Table - mapping from keys to values called hashing. they use functions to generate keys.
-Object Data - non-scalar objects in javascript behave as associated arrays, 
-so an object itself can behave as a basic hash table.
-Fenwick tree - sum range queries.
-Suffix Array - non empty substring at the end of a string of characters.
-LCP - longest common prefix array. 
-BBST - Balanaced Binary Search Tree self balancing binary search tree it will adjust itself.
-Balanced Binary Tree - height of the tree is O(Log n) where n is the number of nodes.
-It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
-The difference between the heights of the left subtree and the right subtree for any node is known as the balance factor of the node.
-AVL - Trees with rotation to make it balanced.
-
-
-Efficiency:
-
-Time Complexity
-Space Complexity
-
-
 ## Analytics
 
 ***Google Analytics***
@@ -1549,46 +1575,6 @@ Admin processes (Run admin/management tasks as one-off processes)\
 
 Design patterns are reusable solutions to common problems in software design
 
-## Solid Principles
-
-* S - This principle states that every method/class should handle a single responsibility.
-       This is important because it results in better readability of code and separation of concerns.
-* O - open to extension, closed for modification. *The idea is that a class, once implemented,
-      should be closed for any further modification. If any more functionality is needed,
-      it can be added later using extension features such as inheritance. 
-      This is primarily done so as to not break existing code as well as unit tests.
-       It also results in a modular code.
-* L - Liskov - A child class should be able to do what parent does. Example - Human - child - parent.
-* I - Interface segregation principle - The Interface Segregation Principle — ISP — states that instead of a generalized interface for a class,
-       it is better to use separate segregated interfaces with smaller functionalities. 
-      This is similar to ideas we’ve discussed so far around maintaining loose coupling, but for interfaces.
-* D - Dependency inversion principle - both high-level and low-level modules will depend on abstractions rather than high-level modules dependent on low-level modules. 
-      Every dependency in the design should be directed toward an abstract class or interface. 
-      No dependency should target a concrete class.
-
-## Observer Pattern
-
-## Decorator Pattern
-
-## Singleton Pattern
-
-## Factory Pattern
-
-## Builder
-
-## Prototype
-
-## Adapter pattern
-
-## Iterator Pattern
-
-## Microfrontend
-
-Webpack module federation
-
-Routing in Microfrontend
-communicating in Microfrontend
-
 ## Microservices
 
 https://nodesource.com/blog/microservices-in-nodejs
@@ -1606,3 +1592,19 @@ EditorConfig - VSCode will format according to the options in this file. If Edit
 ESLint - Create React App comes with ESLint and it can be extended. shows syntax errors.
 
 Prettier - we can show as warnings and it has better formatting. https://prettier.io/docs/en/comparison.html
+
+## Python
+
+order of precedance
+x = 10+3*2**2
+print(x)
+parenthesis
+exponentiation
+multiplication or division
+addition or subtraction
+
+elif - used for else if
+
+for value in ['test']
+
+none similar to null object
