@@ -112,18 +112,10 @@ Space Complexity
 **SOLID**
 
 * S - This principle states that every method/class should handle a single responsibility.
-       This is important because it results in better readability of code and separation of concerns.
-* O - open to extension, closed for modification. *The idea is that a class, once implemented,
-      should be closed for any further modification. If any more functionality is needed,
-      it can be added later using extension features such as inheritance. 
-      This is primarily done so as to not break existing code as well as unit tests.
-       It also results in a modular code.
+* O - open to extension, closed for modification(inheritance).
 * L - Liskov - A child class should be able to do what parent does. Example - Human - child - parent.
-* I - Interface segregation principle - The Interface Segregation Principle — ISP — states that instead of a generalized interface for a class,
-       it is better to use separate segregated interfaces with smaller functionalities. 
-      This is similar to ideas we’ve discussed so far around maintaining loose coupling, but for interfaces.
-* D - Dependency inversion principle - both high-level and low-level modules will depend on abstractions rather than high-level modules dependent on low-level modules. 
-      Every dependency in the design should be directed toward an abstract class or interface. 
+* I - Interface segregation principle - avoid generalized interface for a class,segregated interfaces with smaller functionalities.
+* D - Dependency inversion principle - Every dependency in the design should be directed toward an abstract class or interface.
       No dependency should target a concrete class.
 
 **Observer Pattern**
