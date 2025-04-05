@@ -10,8 +10,8 @@
 ### [-NextJS](#nextjs-topics)
 ### [-Rest Apis](#rest-apis-topics)
 ### [CSS](#css-topics)
-### [-Containerization](#containerization-topics)
-### [-AWS](#aws-topics)
+### [-Cloud](#cloud)
+### [-AWS](#aws)
 ### [-Jenkins](#jenkins-topics)
 ### [-Testing](#testing-topics)
 ### [-MySql](#mysql-topics)
@@ -1184,92 +1184,71 @@ inline block
 replaced element - images
 box model
 
-## Containerization Topics
+## Cloud
 
-***Virtualization vs Containerization***
+**Containerization**
 
-Virtualization is an abstract version of a physical machine, while containerization is the abstract version of an application.
+**Virtualization vs Containerization**
 
+Virtualization is an abstract version of a physical machine, 
+containerization is the abstract version of an application.
 
-Containers are deployed applications bundled with all necessary dependencies and configuration file.
+**Docker**
 
+**Docker Image**
 
-Virtualization is the means of employing software (such as Hypervisor) to create a virtual version of a resource such as a server, data storage, or application
+**docker file**
 
-***ECS***
+**Docker Engine**
 
-AWS ECS is just a logical grouping (cluster) of EC2 instances, and all the EC2 instances part of an ECS act as Docker host i.e. ECS can send command to launch a container on them (EC2). If you have launched an Amazon ECS with no EC2 instances added to it, it's good for nothing i.e. you can't do anything about it. ECS makes sense only once one (or more) EC2 instances are added to it.Docker is a utility you can install on our machine, which makes it a Docker host, and on this host you can create containers (same as virtual machines - but much more light-weight).
+**docker hub**
 
-To sum up, ECS is just about clustering of EC2 instances, and uses Docker to instantiate containers/instances/virtual machines on these (EC2) hosts. 
+**Components of docker**
 
-***Docker Image***
+* client
+* host
 
-A Docker image is an immutable (unchangeable) file that contains the source code, libraries, dependencies, tools, and other files needed for an application to run.
-
-Due to their read-only quality, these images are sometimes referred to as snapshots. They represent an application and its virtual environment at a specific point in time. This consistency is one of the great features of Docker. It allows developers to test and experiment software in stable, uniform conditions.
-
-Since images are, in a way, just templates, you cannot start or run them. What you can do is use that template as a base to build a container. A container is, ultimately, just a running image. Once you create a container, it adds a writable layer on top of the immutable image, meaning you can now modify it.
-
-The image-base on which you create a container exists separately and cannot be altered. When you run a containerized environment, you essentially create a read-write copy of that filesystem (docker image) inside the container. This adds a container layer which allows modifications of the entire copy of the image.
-
-***docker file***
-
-***Components of docker***
-
-* Client - Performs Docker build pull and run operations to open up communication with the Docker Host.
-* Host - Contains Docker daemon, containers, and associated images.
-* Registry- This is where Docker images are stored. There are two of them, a public registry and a private one. Docker Hub and Docker Cloud are two public registries available for use by anyone.
-
-***Commands***
+**Commands**
 
 * docker pull image
 * docker run image
 * docker system prune
 
-***docker vs kubernettes vs jenkins***
+**docker vs kubernettes vs jenkins**
 
-* Docker is a container engine that can make and handle containers.
-* Jenkins is a CI/CD model that can run/build/test the application.
-* Kubernetes is a container-orchestration system for automating computer applications with the external help of CI/CD.
+## AWS
 
-## AWS Topics
+**ECS(Elastic Container Service)**
 
-***Parameter store***
+**EC2(Elastic Compute Cloud)**
 
-Parameter Store
+**VPC**
 
-S3, Robots.txt, Cloud Front with Custom routing, route 53.
+**Serverless**
 
-api gateway, lambda, dynamo db, JWT authentication, cloudwatch.
+**Lambda**
 
-***S3 Bucket***
+**SQS**
 
-***Large Files in AWS***
+**Amazon API Gateway**
 
-When you upload large files to Amazon S3, it's a best practice to leverage multipart uploads. If you're using the AWS Command Line Interface (AWS CLI), then all high-level aws s3 commands automatically perform a multipart upload when the object is large. These high-level commands include aws s3 cp and aws s3 sync.
+**S3 Bucket**
 
-Multipart upload is a three-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket.
+**Dynamo DB**
 
-***Amazon VPC***
+**step functions**
 
-Amazon VPC gives you full control over your virtual networking environment, including resource placement, connectivity, and security.
-Get started by setting up your VPC in the AWS service console. Next, add resources to it such as Amazon Elastic Compute Cloud (EC2) and Amazon Relational Database Service (RDS) instances. Finally, define how your VPCs communicate with each other across accounts, Availability Zones, or AWS Regions. In the example below, network traffic is being shared between two VPCs within each Region.
+**JWT**
 
-***Serverless***
+**Cloud Watch**
 
-Serverless is a cloud-native development model that allows developers to build and run applications without having to manage servers. There are still servers in serverless, but they are abstracted away from app development.
+**Cloud Front with Custom routing**
 
-***Dynamo DB***
+**Parameter store**
 
-Amazon DynamoDB is a fully managed, serverless, key-value NoSQL database designed to run high-performance applications at any scale. DynamoDB offers built-in security, continuous backups, automated multi-Region replication, in-memory caching, and data export tools.
+**Robots.txt, , route 53**
 
-***Amazon API Gateway***
-
-Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
-
-***Amazon EC2***
-
-An Amazon EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure.
+**Large Files in AWS**
 
 ## Jenkins Topics
 
