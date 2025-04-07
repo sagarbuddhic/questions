@@ -143,6 +143,7 @@ Space Complexity
 Webpack module federation
 
 Routing in Microfrontend
+
 communicating in Microfrontend
 
 ## Javascript Topics
@@ -1134,6 +1135,8 @@ containerization is the abstract version of an application.
 
 **Docker**
 
+**NGINX**
+
 **Docker Image**
 
 **docker file**
@@ -1161,6 +1164,10 @@ containerization is the abstract version of an application.
 
 **EC2(Elastic Compute Cloud)**
 
+**ECR**
+
+**Cloud Front with Custom routing**
+
 **VPC**
 
 **Serverless**
@@ -1180,8 +1187,6 @@ containerization is the abstract version of an application.
 **JWT**
 
 **Cloud Watch**
-
-**Cloud Front with Custom routing**
 
 **Parameter store**
 
