@@ -21,17 +21,21 @@
 
 ## GIT Topics
 
-**Package Manager**
+**package manager**
 
 **yarn vs npm**
 
-**GIT INIT**
+**git init**
 
-.git subdirectory - metadata - subdirectories for objects, refs, template files. HEAD file current checked out commit.
+**.git subdirectory**
 
-**Remote Repos**
+**remote repos**
 
 **git push**
+
+**semantic versioning**
+
+**yarn workspaces**
 
 ## DSA
 
@@ -145,27 +149,50 @@ communicating in Microfrontend
 
 **single threaded & asynchronous**
 
+**javascript Interpreted or compiled**
+
+**Window**
+
+**window vs document**
+
+getSelection.  
+getRangeAt  
+getClientRects, getBoundingClientRects.  
+***CDN***
+
+typescript compiled to JS.
+
+**abstract syntax tree**
+
+**garbage collection**
+
+**web workers**
+
+mark & sweep algorithm.
+
+**primitive vs non primitive**
+
+**shallow copy vs deep copy**
+
+structured clone
+
+**hoisting**
+
+**memory leaks**
+
+**var VS let & const keyword?**
+
 **prototype**
 
 chaining
 
-**type coercion**
-
 **declarative vs imperative**
 
-**var VS let & const keyword?**
+**type coercion**
 
 **set vs array**
 
-**primitive vs non primitive**
-
-**shallow copy vs deep copy***
-
-structured clone.
-
 **pure functions**
-
-**hoisting**
 
 **undefined vs not defined**
 
@@ -177,18 +204,9 @@ structured clone.
 
 **apply,call,bind**
 
-**forEach vs map**
-
 **foreach vs for**
 
-**Window**
-
-**window vs document**
-
-getSelection.  
-getRangeAt  
-getClientRects, getBoundingClientRects.  
-***CDN***
+**forEach vs map**
 
 **string terms**
 
@@ -197,35 +215,6 @@ getClientRects, getBoundingClientRects.
 * Vowels - a,e,i,o,u.
 
 **IIFE(Immediately Invoked Function Expression)**
-
-**Intersection Observer**
-
-**Object Freeze vs seal vs const**
-
-**AAA**
-
-**History**
-
-```
-history.back();     // equivalent to clicking back button
-history.go(-1);     // equivalent to history.back();
-```
-
-**Location**
-
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
-window.location.href  
-window.location.assign  
-
-// point a cursor  
-const inputRange = document.createRange();  
-inputRange.selectNodeContents(editDiv.current);  
-inputRange.collapse(false);  
-selection.removeAllRanges();  
-selection.addRange(inputRange);
-
-**spread vs rest**
-
 
 **Closures:**
 
@@ -258,6 +247,30 @@ alert( curriedSum(1)(2)(3)(4)() ); // 3
 
 In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
 
+**AAA**
+
+**History**
+
+```
+history.back();     // equivalent to clicking back button
+history.go(-1);     // equivalent to history.back();
+```
+
+**Location**
+
+window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
+window.location.href  
+window.location.assign  
+
+// point a cursor  
+const inputRange = document.createRange();
+inputRange.selectNodeContents(editDiv.current); 
+inputRange.collapse(false);  
+selection.removeAllRanges();  
+selection.addRange(inputRange);
+
+**spread vs rest**
+
 **Destructuring**
 
 **Logical AND (&&)**
@@ -281,11 +294,7 @@ undefined || false // false
 null ?? 'test' // 'test'
 ```
 
-Amazon CloudFront
-
-**web workers**
-
-cannot access window, cpu intensive tasks.
+**object freeze vs seal vs const**
 
 **white label**
 
@@ -302,32 +311,26 @@ Examples: Map, Filter Function.
 **Callback**
 
 Callback Hell - Hard to read & maintain callbacks.
-Asynchronous operations are ALL implemented in native code (usually C/C++ code) by nodejs.
 
-Promises
+**Promises**
+
+**functions vs methods**
 
 **this keyword**
 
- In a method, this refers to the owner object and in a function, this refers to the global object.
+**strict mode**
 
 **Event Bubbling**
 
 **Event Propagation**
 
-event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
-To stop the bubbling and prevent handlers on the current element from running, there’s a method event.stopImmediatePropagation(). After it no other handlers execute.
-
 **Parse Int**
-
-The parseInt method parses a value as a string and returns the first integer.
-
-A radix parameter specifies the number system to use:
-
-2 = binary, 8 = octal, 10 = decimal, 16 = hexadecimal.
 
 ```
 parseInt('32', 10) // 32
 ```
+
+**Intersection Observer**
 
 ***Math Floor***
 
@@ -357,7 +360,6 @@ The Math.round() function returns the value of a number rounded to the nearest i
 
 console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
 // expected output: 6 6 5
-
 
 **Common javascript functions**
 
@@ -439,8 +441,6 @@ for (const [key, value] of Object.entries(object1)) {
 
 **Find**
 
-The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
-
 ```
 const array1 = [5, 12, 8, 130, 44];
 
@@ -482,12 +482,8 @@ let test = 'test' + 'best' // testbest
 
 **window objects**
 
-* localStorage - No Expiration date.
-
-```
-localStorage.getItem("test1");
-```
-
+* local storage
+* session storage
 * history
 * innerHeight
 * innerWidth
