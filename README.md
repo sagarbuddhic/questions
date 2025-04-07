@@ -550,112 +550,6 @@ Super()
 
 passing props to super.
 
-**create react app**
-
-What are each of these files and folders for?
-
-*  README.md.
-* node_modules - semantic-  ^, *, ~.
-* package.json.
-* .gitignore
-* public 
-* src
-
-**Source Map Explorer**
-
-**depcheck**
-
-**change app's metadata**
-
-public/index.html
-
-**build folder**
-
-contains static/js, static/css, assetmanifest.json
-
-**React Folder Structure**
-
-src/js
-src/style
-
-src - contains js, style.js.
-
-The /src folder comprises of the raw non-minified code.
-
-dist: It stands for distribution and is the minified or concatenated version it has been actually used on production sites.
-
-**minification**
-
-Developers write code that is optimized for human readability. This code might contain extra information that is not necessary for the code to run, such as comments, spaces, indents, and multiple lines.
-
-**build folder**
-
-static/js
-static/css
-
-**React Scripts**
-
-react-scripts
-
-Creating a React App Without Webpack and Babel
-
-**React Render**
-
-// client side
-import ReactDOM from 'react-dom/client';
-
-import ReactDOM from 'react-dom/server';
-
-**React Router**
-
-once `BrowserRouter` is added we can start using router anywhere.
-
-**React Thunk**
-
-Nested routes - outlets
-
-Link vs NavLinnk
-
-**React DOM**
-
-import ReactDOM from "react-dom/client";
-
-**React Build**
-
-React build combine all components and css into minified version, will be added to respective bundles.
-
-* Minified versions of JavaScript files (bundle.js)
-* Minified versions of CSS files (style.css)
-
-dist folder 
-* bundle.js
-* style.css
-
-compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
-
-**bundle**
-
-bundle analyzer: This analysis provides a clear picture of each library used in your project and how they affect the JavaScript bundle size.
-Compressing Bundles: Gzip and Brotli are the most commonly used compression techniques, and you can use their Webpack plugins to simplify the entire process.
-
-**Bundling**:
-minification to build folder, , Tree Shaking, Code Splitting
-
-**Babel**
-
-**Compilers**
-
-**Virtual DOM**
-
-**Reconciliation**
-
-**React Diff Algorithm**
-
-Element Type Checking
-Key Based
-
-**React Fiber**
-
 **React Lifecycle:**
 
 Mount Phase:
@@ -681,11 +575,32 @@ ComponentWillUnmount
 
 componentDidMount, componentDidUpdate, componentWillUnmount
 
-**Composition Vs Inheritance**
+**Bundling**:
+minification to build folder, Tree Shaking, Code Splitting
 
-no hierarchies with composition.
-no parent child relationship.
-Composition with HOCs(Adds behavior without modifying the original component).
+**transpiler**
+
+**React Without Bundler/Transpiler**
+
+**Compilers**
+
+**Keys**
+
+**Virtual DOM**
+
+**Reconciliation**
+
+**React Diff Algorithm**
+
+**Repaint vs Reflow**
+
+**React Fiber**
+
+**React Error Boundaries**
+
+getDerivedStateFromError
+
+**Composition Vs Inheritance**
 
 **HOC**
 
@@ -694,17 +609,15 @@ Composition with HOCs(Adds behavior without modifying the original component).
 Example Downshift.
 MouseTracker
 
-**Pure Components**
-
-**Lifting State Up**
-
 **props.children**
 
 **React Portals**
 
-**JSX**
+**Lifting State Up**
 
-**Keys**
+**Pure Components**
+
+**JSX**
 
 **State vs props**
 
@@ -718,10 +631,6 @@ MouseTracker
 
 **React Profiler**
 
-**React Error Boundaries**
-
-getDerivedStateFromError
-
 **React Fragments**
 
 **React JS Multiple SetStates**
@@ -731,15 +640,60 @@ React 18:
 Batch Updates are available for all events.
 
 **Redux**
+
 @reduxjs/toolkit
+
+**React Thunk**
 
 **How does Redux compare to the React Context API ?**
 
-Similarities
+**create react app**
 
-avoid prop drilling
+What are each of these files and folders for?
 
-Differences
+*  README.md.
+* node_modules - semantic-  ^, *, ~.
+* package.json.
+* .gitignore
+* public 
+* src
+
+**change app's metadata**
+
+**build folder**
+
+contains static/js, static/css, assetmanifest.json
+
+src - contains js, style.js.
+
+**dependencies vs devdependencies vs peerdependencies**
+
+**Source Map Explorer**
+
+**depcheck**
+
+**React Scripts**
+
+Creating a React App Without Webpack and Babel
+
+**React Render**
+
+// client side
+import ReactDOM from 'react-dom/client';
+
+import ReactDOM from 'react-dom/server';
+
+**React Router**
+
+Nested routes - outlets
+
+Link vs NavLinnk
+
+compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
+
+**React Optimizations**
+
+Avoid prop drilling
 
 **Call Endpoint Once to Fetch Initial Data**
 
@@ -760,21 +714,10 @@ usedebugvalue
 
 useTransition
 
-**React Optimizations**
-
 code splitting, lazy.
 using keys for list.
-
-react patterns
-
-Avoid re-renders by providing array of values in useEffect.
-single render with empty array in useeffect.\
-
-Big Calculations useMemo to store the output.\  
-useCallback to store the function.\  
+ 
 PureComponents, React.memo for re-render only when a prop changes(Table rows).
-
-Error Boundaries.
 
 **Refresh Table specific row**
 
