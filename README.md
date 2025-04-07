@@ -169,6 +169,8 @@ typescript compiled to JS.
 
 **web workers**
 
+**denounce vs throttle**
+
 mark & sweep algorithm.
 
 **primitive vs non primitive**
