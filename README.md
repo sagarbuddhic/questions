@@ -9,10 +9,10 @@
 ### [-Rest Apis](#rest-apis-topics)
 ### [-NodeJS](#nodejs-topics)
 ### [-ExpressJS](#expressjs-topics)
-### [CSS](#css-topics)
 ### [-Cloud](#cloud)
 ### [-AWS](#aws)
 ### [-Jenkins](#jenkins-topics)
+### [CSS](#css-topics)
 ### [-Testing](#testing-topics)
 ### [-MySql](#mysql-topics)
 ### [Heroku](#heroku-topics)
@@ -158,7 +158,7 @@ typescript compiled to JS.
 
 **web workers**
 
-**denounce vs throttle**
+**debounce vs throttle**
 
 mark & sweep algorithm.
 
@@ -536,6 +536,10 @@ style.
 
 ## ReactJS Topics
 
+**jsx vs js**
+
+**jsx vs tsx**
+
 **React Classes**
 
 Super()
@@ -719,272 +723,26 @@ Create seperate component for rows. Use PureComponents or React.Memo to render o
 
 **Nextjs Advantages**
 
-* Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.
+**next js folder structure**
 
-* Pre-rendering
+**Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.**
+
+**Pre-rendering**
 
 Server side rendering - getServerSideProps - Next.js will pre-render this page on each request.
-Static Generation - getStaticProps - Next.js will pre-render this page at build time
+Static Generation - getStaticProps - Next.js will pre-render this page at build time(Automatic static optimization.)
 Incremental Static Generation -  static pages, but content updates automatically without rebuilding the whole app.
 
-* With Links, prefetches and does client side navigation.
+**With Links, prefetches and does client side navigation.**
 
-* Automatic static optimization.
+**Dynamic routing**
 
-* Dynamic routing *
-
-* Dynamic import, lazyload using suspense.
+**Dynamic import, lazyload using suspense.**
 
 **What is hydration**
 
 **SWR**
 
-**Client Side Navigation**
-
-## CSS Topics
-
-**Box Model**
-
-**border box**
-
-**Visibility vs Display vs Opacity**
-
-**display**
-
-**align items**
-
-**align-self**
-
-**justify-contents**
-
-**grid vs flex**
-
-**text-align**
-
-**vertical align**
-
-**Descendant Selector (space)**
-
-The descendant selector matches all elements.
-nts that are descendants of a specified element. selects all paragraph below.
-
-```
-div p {
-  background-color: yellow;
-}
-
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <section><p>Paragraph 3 in the div.</p></section>
-</div>
-```
-
-**Child Selector (>)**
-
-The child selector selects all elements that are the children of a specified element.
-
-```
-div > p {
-  background-color: yellow;
-}
-
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <section>
-    <!-- not Child but Descendant -->
-    <p>Paragraph 3 in the div (inside a section element).</p>
-  </section>
-  <p>Paragraph 4 in the div.</p>
-</div>
-```
-
-**Adjacent Sibling Selector (+)**
-
-The adjacent sibling selector is used to select an element that is directly after another specific element.
-
-```
-<h2>Adjacent Sibling Selector</h2>
-
-<p>The + selector is used to select an element that is directly after another specific element.</p>
-<p>The following example selects the first p element that are placed immediately after div elements:</p>
-
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-</div>
-
-<p>Paragraph 3. After a div.</p>
-<p>Paragraph 4. After a div.</p>
-
-<div>
-  <p>Paragraph 5 in the div.</p>
-  <p>Paragraph 6 in the div.</p>
-</div>
-
-<p>Paragraph 7. After a div.</p>
-<p>Paragraph 8. After a div.</p>
-
-```
-
-***General Sibling Selector (~)***
-
-The general sibling selector selects all elements that are next siblings of a specified element.
-
-```
-<p>Paragraph 1.</p>
-
-<div>
-  <p>Paragraph 2.</p>
-</div>
-
-<p>Paragraph 3.</p>
-<code>Some code.</code>
-<p>Paragraph 4.</p>
-```
-
-***pseudo***
-
-A pseudo-class is used to define a special state of an element.
-
-Example: Style an element when a user mouses over it.
-
-```
-a:hover {
-  color: #FF00FF;
-}
-```
-
-***Pseudo-element***
-
-```
-h1::after {
-  content: url(smiley.gif);
-}
-```
-
-***css transform***
-
-CSS transforms allow you to move, rotate, scale, and skew elements.
-
-***position***
-
-The five different position values are fixed, static, absolute, sticky, and relative.
-
-* Static - The element is positioned according to the normal flow of the document.
-* Relative - The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.
-* Absolute - The element is removed from the normal document flow, and no space is created for the element in the page layout.
-Absolutely positioned elements are positioned with respect to a containing block, which is the nearest postioned ancestor. If there is no positioned ancestor, the viewport will be the containing block.
-* Fixed - The element is removed from the normal document flow, and no space is created for the element in the page layout.
-Elements with fixed positioning are fixed with respect to the viewport—the viewport is always their containing block.
-* Sticky - The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left.
-
-***mixin***
-
-Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
-
-```
-@mixin theme($theme: DarkGray) {
-  background: $theme;
-  box-shadow: 0 0 1px rgba($theme, .25);
-  color: #fff;
-}
-
-.info {
-  @include theme;
-}
-.alert {
-  @include theme($theme: DarkRed);
-}
-.success {
-  @include theme($theme: DarkGreen);
-}
-
-https://sass-lang.com/guide
-```
-
-***float***
-
-The CSS float property specifies how an element should float.
-In its simplest use, the float property can be used to wrap text around images.
-
-The CSS clear property specifies what elements can float beside the cleared element and on which side.
-When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.
-
-***Table***
-
-```
-divWrapper {
-  overflow: scroll;
-}
-
-table {
-  layout: fixed
-  width: 100%
-}
-
-colgroup {
-
-}
-
-tbody {
-  
-}
-```
-
-***Margin vs Padding***
-
- the margin property controls the space outside an element, and the padding property controls the space inside an element.
-
-**ruleset***
-
-**css integration***
-
- * style tags in the head section.
- * inline styling.
- * css in seperate file and linking to the html page.
-
-**sprites***
-
- An image sprite is a collection of images put into a single image.
-
-**css image repetition***
-
- The background-repeat property is used to control the image.
-
- ```
- background-image: url(‘url_of_image’);
-
-  background-repeat: no-repeat;
-
-  background-attachment: fixed;
- ```
-
-**RGB***
-
- In CSS, a color can be specified as an RGB value, using this formula: rgb(red, green, blue) Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
-
-***CSS [attribute] Selector***
-
-The [attribute] selector is used to select elements with a specified attribute.
-
-```
-a[target] {11
-  background-color: yellow;
-}
-```
-
-<!DOCTYPE>
-<head>
-<link> - best place to use it  in head tags
-<script> - best place for script tags
-custom tag names - inline
-
-inline vs block
-inline block
-replaced element - images
-box model
 
 ## REST Apis Topics
 
@@ -994,21 +752,10 @@ Client provides all information required for the server in the form of url, quer
 
 ***CRUD***
 
-Create, Read, Update, Delete
-
-POST,  GET,   PUT,    DELETE.
-
-POST:
-
-POST methods are used to create a new resource into the collection of resources.
-
-PUT:
-
-Use PUT APIs primarily to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not).
-
-PATCH:
-
-HTTP PATCH requests are to make a partial update on a resource.
+Create - Post
+Read - GET
+Update - PUT, PATCH 
+Delete - delete
 
 ## NodeJS Topics
 
@@ -1055,6 +802,8 @@ Config values are set in parameter store in AWS, those values set to process env
 **content negotiation**
 
 **third party libraries**
+
+**axios vs fetch**
 
 ## ExpressJS Topics
 
@@ -1150,6 +899,159 @@ params, query, body
 ## Jenkins Topics
 
 Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
+
+## CSS Topics
+
+**Box Model**
+
+**border box**
+
+**Visibility vs Display vs Opacity**
+
+**display**
+
+**align items**
+
+**align-self**
+
+**justify-contents**
+
+**grid vs flex**
+
+**text-align**
+
+**vertical align**
+
+**Descendant Selector (space)**
+
+**Child Selector (>)**
+
+**Adjacent Sibling Selector (+)**
+
+**General Sibling Selector (~)**
+
+***pseudo***
+
+A pseudo-class is used to define a special state of an element.
+
+Example: Style an element when a user mouses over it.
+
+```
+a:hover {
+  color: #FF00FF;
+}
+```
+
+**Pseudo-element**
+
+```
+h1::after {
+  content: url(smiley.gif);
+}
+```
+
+**css transform**
+
+CSS transforms allow you to move, rotate, scale, and skew elements.
+
+**position**
+
+The five different position values are fixed, static, absolute, sticky, and relative.
+
+* Static
+* Relative
+* Absolute
+* Fixed
+* Sticky
+
+**mixin**
+
+Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
+
+```
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($theme: DarkRed);
+}
+.success {
+  @include theme($theme: DarkGreen);
+}
+
+https://sass-lang.com/guide
+```
+
+**float**
+
+**Table**
+
+```
+divWrapper {
+  overflow: scroll;
+}
+
+table {
+  layout: fixed
+  width: 100%
+}
+
+colgroup {
+
+}
+
+tbody {
+  
+}
+```
+
+**margin vs padding**
+
+**ruleset***
+
+**css vs scss**
+
+**scss vs emotions**
+
+**css integration**
+
+**sprites***
+
+**css image repetition***
+
+ The background-repeat property is used to control the image.
+
+ ```
+ background-image: url(‘url_of_image’);
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+ ```
+
+**RGB**
+
+**CSS [attribute] Selector**
+
+## HTML
+
+***Semantic vs non***
+
+semantic elements: <form>, <table>, <article>
+non semantic elements:  <div>, <span>
+
+**important meta tags**
+
+<!DOCTYPE>
+<head>
+<link> - best place to use it  in head tags
+<script> - best place for script tags
 
 ## Testing Topics
 
@@ -1408,13 +1310,6 @@ In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 * show tables;
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
-
-## HTML
-
-***Semantic vs non***
-
-semantic elements: <form>, <table>, <article>
-non semantic elements:  <div>, <span>
 
 
 ## Heroku Topics
