@@ -5,10 +5,10 @@
 ### [-Design Principle](#design-principles)
 ### [Javascript](#javascript-topics)
 ### [-ReactJS](#reactjs-topics)
-### [-NodeJS](#nodejs-topics)
-### [-ExpressJS](#expressjs-topics)
 ### [-NextJS](#nextjs-topics)
 ### [-Rest Apis](#rest-apis-topics)
+### [-NodeJS](#nodejs-topics)
+### [-ExpressJS](#expressjs-topics)
 ### [CSS](#css-topics)
 ### [-Cloud](#cloud)
 ### [-AWS](#aws)
@@ -37,18 +37,13 @@
 
 **yarn workspaces**
 
+**github actions vs jenkins**
+
 ## DSA
 
-collection of values and the format they are stored in, relation between values and the operations on those values.
-steps taken to solve a problem.
+collection of values and the format they are stored in, steps taken to solve a problem.
 
-Algorithm           ArrayList   LinkedList
-seek front            O(1)         O(1)
-seek back             O(1)         O(1)
-seek to index         O(1)         O(N)
-insert at front       O(N)         O(1)
-insert at back        O(1)         O(1)
-insert after an item  O(N)         O(1)
+**linked list vs arrays**
 
 ADT        DS
 
@@ -59,14 +54,14 @@ Map     TreeMap, HashMap, HashTable
 DIfferent Big O:
 
 Upper Bound of the complexity in the worst case, 
-helping to quantify performance as the input size becomes arbitrarily large.
 
-O(1) - not based on input size. constant time.
-O(log n) - n/2 until we reach 1. It can also be denoted as 2<sup>n</sup>. cutting half of the items.
+O(1)
+O(n)
+O(log n)
 Example: Binary Search
-O(n) - traverse all items. linear time algorithm.
+
 O(n logn) - merge sorting, heap sorting. quasilinear runtime.
-O(n<sup>2</sup>) - two dimensional array or traversing items for n array n times. quadratic runtime.cubic runtime.
+O(n<sup>2</sup>)
 O(n!) - n * (n-1) * (n -2) ....
 
 Algorithms(set of tasks):
@@ -80,36 +75,30 @@ quick sort - O (n log n)
 
 Data Structures:
 
-Linked List - Nodes contain reference to the next node.
-double linked list - contains both previous and next node reference.
-Stack - One Ended linear data structure, push and pop(LIFO).
+Linked List
+double linked list
+Stack - LIFO.
 Queue - Linear Data Structure models real world queues, enqueue and dequeue(FIFO).
 Priority Queue
 Indexed Priority Queue
-Heap - A heap is a tree based DS that satisfies the heap variant(ordered).
-Union Find - DS keeps track of elements which are split into one or more disjoint sets(find and union).
-Tree - Undirected graph with nodes.
-       Leaf Node - without children.
-Binary Tree - At most two children(greater value to the right side).
-BFS -  Breadth First Search.
-Hash Table - mapping from keys to values called hashing. they use functions to generate keys.
-Object Data - non-scalar objects in javascript behave as associated arrays, 
-so an object itself can behave as a basic hash table.
-Fenwick tree - sum range queries.
-Suffix Array - non empty substring at the end of a string of characters.
-LCP - longest common prefix array. 
-BBST - Balanaced Binary Search Tree self balancing binary search tree it will adjust itself.
-Balanced Binary Tree - height of the tree is O(Log n) where n is the number of nodes.
-It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
-The difference between the heights of the left subtree and the right subtree for any node is known as the balance factor of the node.
-AVL - Trees with rotation to make it balanced.
-
+Heap
+Union Find
+Tree
+Leaf Node
+Binary Tree
+BFS
+Hash Table
+Object Data
+Fenwick tree
+Suffix Array
+LCP
+BBST
+Balanced Binary Tree
 
 Efficiency:
 
 Time Complexity
 Space Complexity
-
 
 ## Design Principles
 
@@ -726,66 +715,6 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
-## NodeJS Topics
-
-**single threaded event loop architecture**
-
-**libuv thread pool**
-
-**middlewares**
-
-**Handling a Large Volume of Customers in Node.js**
-
-Load Balancing & Scaling with Clustering <br/>
-Optimize Database Queries & Caching(redis) <br/>
-Use Asynchronous & Non-Blocking Code <br/>
-connection loop to reuse db connections <br/>
-compressions for response <br/>
-Rate Limiting & API Throttling <br/>
-monitor and log <br/>
-
-**child processes**
-
-concurrent
-
-**worker thread **
-
-**v8 engine**
-
-**debugging issue which is only in production not in dev docker**
-
-cors, bodyparser, compression, cookie parser
-
-**use async and await**
-
-**create query executed and disk storage in database becomes full solution for this***
-
-***Process environment***
-
-Config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
-
-***Connect to MySql***
-
-**Connect to MongoDB**
-
-**content negotiation**
-
-**third party libraries**
-
-### ExpressJS Topics
-
-***Request Object***
-
-params, query, body
-
-***app.use()***
-
-***Next function***
-
-***Middleware function***
-
-***Error handling functions***
-
 ## NextJS Topics
 
 **Nextjs Advantages**
@@ -808,102 +737,36 @@ Incremental Static Generation -  static pages, but content updates automatically
 
 **What is hydration**
 
-**ISR**
-
 **SWR**
 
 **Client Side Navigation**
 
-## REST Apis Topics
-
-***Stateless***
-
-Client provides all information required for the server in the form of url, query string, header or through a body.
-
-***CRUD***
-
-Create, Read, Update, Delete
-
-POST,  GET,   PUT,    DELETE.
-
-POST:
-
-POST methods are used to create a new resource into the collection of resources.
-
-PUT:
-
-Use PUT APIs primarily to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not).
-
-PATCH:
-
-HTTP PATCH requests are to make a partial update on a resource.
-
 ## CSS Topics
 
-***Box Model***
+**Box Model**
 
-In CSS, the term "box model" is used when talking about design and layout.
-The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+**border box**
 
-***Visibility vs Display vs Opacity***
+**Visibility vs Display vs Opacity**
 
-* visibility: hidden - Element is still part of DOM, So the element takes up space.
-* display: none - Element is removed from the DOM.
-* opacity: 0 - This is used for transition mainly. Element is still part of DOM, So the element takes up space.
+**display**
 
-***display***
+**align items**
 
-* contents - Makes the container disappear, making the child elements children of the element the next level up in the DOM
-* inline - 	Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
-* block - Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width.
-* flex - Displays an element as a block-level flex container
-* grid - Displays an element as a block-level grid container
-* inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
-* inline-flex, inline-grid, inline-table.
+**align-self**
 
-Explanation
+**justify-contents**
 
-An element with display: flex is similar to an element with display: block, whereby it occupies the whole row. However, its child elements can be positioned flexibly and dynamically, compared to previously-available layout properties.
+**grid vs flex**
 
-If we change this to display: inline-flex, it:
+**text-align**
 
-makes the parent container display inline
-still applies all flex properties to the children, no differently form display: flex
-This means that if the child elements aren't too big, two containers with display: inline-flex can sit side-by-side.
-Other display properties also have an inline counterpart:
+**vertical align**
 
-block has inline-block
-table has inline-table
-and even grid has inline-grid
+**Descendant Selector (space)**
 
-https://codepen.io/clairecodes/pen/POjKXY
-
-***grid vs flex***
-
-The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
-fr - fractional unit.
-grid-template-columns: repeat(3, 1fr)
-
-***vertical align***
-
-baseline - baseline of parent.
-percentage, pixels allowed.
-
-**align items***
-
-The align-items property specifies the default alignment for items inside the flexible container.
-
-align-self - overrides align items.
-
-The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
-
-text-align
-
-justify-contents - center in flexbox.
-
-***Descendant Selector (space)***
-
-The descendant selector matches all elements that are descendants of a specified element. selects all paragraph below.
+The descendant selector matches all elements.
+nts that are descendants of a specified element. selects all paragraph below.
 
 ```
 div p {
@@ -917,7 +780,7 @@ div p {
 </div>
 ```
 
-***Child Selector (>)***
+**Child Selector (>)**
 
 The child selector selects all elements that are the children of a specified element.
 
@@ -937,7 +800,7 @@ div > p {
 </div>
 ```
 
-***Adjacent Sibling Selector (+)***
+**Adjacent Sibling Selector (+)**
 
 The adjacent sibling selector is used to select an element that is directly after another specific element.
 
@@ -1000,9 +863,6 @@ h1::after {
   content: url(smiley.gif);
 }
 ```
-***hover***
-
-margin not considered on hover.
 
 ***css transform***
 
@@ -1126,34 +986,119 @@ inline block
 replaced element - images
 box model
 
+## REST Apis Topics
+
+***Stateless***
+
+Client provides all information required for the server in the form of url, query string, header or through a body.
+
+***CRUD***
+
+Create, Read, Update, Delete
+
+POST,  GET,   PUT,    DELETE.
+
+POST:
+
+POST methods are used to create a new resource into the collection of resources.
+
+PUT:
+
+Use PUT APIs primarily to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not).
+
+PATCH:
+
+HTTP PATCH requests are to make a partial update on a resource.
+
+## NodeJS Topics
+
+**single threaded event loop architecture**
+
+**libuv thread pool**
+
+**middlewares**
+
+**Handling a Large Volume of Customers in Node.js**
+
+Optimize Database Queries & Caching(redis) <br/>
+Use Asynchronous & Non-Blocking Code <br/>
+connection loop to reuse db connections <br/>
+compressions for response <br/>
+Load Balancing & Scaling with Clustering <br/>
+Rate Limiting & API Throttling <br/>
+monitor and log <br/>
+
+**child processes**
+
+**concurrent**
+
+**worker thread**
+
+**v8 engine**
+
+**debugging issue which is only in production not in dev docker**
+
+cors, bodyparser, compression, cookie parser, rate limiting
+
+**async and await vs .then**
+
+**create query executed and disk storage in database becomes full solution for this**
+
+**Process environment**
+
+Config values are set in parameter store in AWS, those values set to process environment during jenkins build, and those are accessed in code.
+
+**Connect to MySql**
+
+**Connect to MongoDB**
+
+**content negotiation**
+
+**third party libraries**
+
+## ExpressJS Topics
+
+***Request Object***
+
+params, query, body
+
+***app.use()***
+
+***Next function***
+
+***Middleware function***
+
+***Error handling functions***
+
 ## Cloud
 
 **Containerization**
 
 **Virtualization vs Containerization**
 
-Virtualization is an abstract version of a physical machine, 
-containerization is the abstract version of an application.
+**image**
+
+**containers**
 
 **Docker**
 
-**NGINX**
-
-**Docker Image**
+**Components of docker**
 
 **docker file**
+
+**NGINX**
 
 **Docker Engine**
 
 **docker hub**
 
-**Components of docker**
+**docker client**
 
-* client
-* host
+**docker host**
 
 **Commands**
 
+* docker build image
 * docker pull image
 * docker run image
 * docker system prune
@@ -1166,11 +1111,9 @@ containerization is the abstract version of an application.
 
 **EC2(Elastic Compute Cloud)**
 
+**Cluster**
+
 **ECR**
-
-**Cloud Front with Custom routing**
-
-**VPC**
 
 **Serverless**
 
@@ -1180,13 +1123,19 @@ containerization is the abstract version of an application.
 
 **Amazon API Gateway**
 
-**S3 Bucket**
-
 **Dynamo DB**
+
+**S3 Bucket**
 
 **step functions**
 
+**Cloud Front with Custom routing**
+
+**VPC**
+
 **JWT**
+
+**app sync**
 
 **Cloud Watch**
 
@@ -1195,6 +1144,8 @@ containerization is the abstract version of an application.
 **Robots.txt, , route 53**
 
 **Large Files in AWS**
+
+**DockerFile & JenkinsFile**
 
 ## Jenkins Topics
 
