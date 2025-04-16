@@ -1250,15 +1250,15 @@ Indexing and Clustered Indexing in SQL
 
 UNION vs UNION ALL in SQL
 
-SQL Query to Find the Second Highest Value in a Table
-
 Views
-
-text to dates
 
 triggers
 
 stored procedures
+
+SQL Query to Find the Second Highest Value in a Table
+
+text to dates
 
 ## No SQL:
 
