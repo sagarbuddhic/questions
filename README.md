@@ -1055,11 +1055,11 @@ non semantic elements:  <div>, <span>
 
 ## Testing Topics
 
-***Test runners***
+**Test runners**
 
 Examples: Mocha, Jest.
 
-***Mocha***
+**Mocha**
 
 ```
 describe('Array', function () {
@@ -1073,14 +1073,14 @@ describe('Array', function () {
 
 **Assertion libraries with mocha**
 
-***should***
+**should**
 
 ```
 user.should.have.property('name', 'tj');
 user.should.have.property('pets').with.lengthOf(4);
 ```
 
-***Expect***
+**Expect**
 
 ```
 expect(window.r).to.be(undefined);
@@ -1090,7 +1090,7 @@ expect([]).to.be.an('array');
 expect(window).not.to.be.an(Image);
 ```
 
-***chai***
+**chai**
 
 Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
 
@@ -1126,12 +1126,12 @@ assert.lengthOf(tea.flavors, 3);
                 
 ```
 
-***Mocha vs Jest***
+**Mocha vs Jest**
 
 Mocha requires other libraries to work such as sinon for stubbing.
 Jest does not require any pre configuration.
 
-***Jest***
+**Jest**
 
 ```
 test('null', () => {
@@ -1165,7 +1165,7 @@ test('two plus two', () => {
 });
 ```
 
-***React Testing Library***
+**React Testing Library**
 
 ```
 import React from 'react'
@@ -1216,19 +1216,13 @@ test('handles server error', async () => {
 
 ## Analytics
 
-***Google Analytics***
+**Google Analytics**
 
-***Group Stats***
+**Group Stats**
 
-InHouse tracking.
+**Mixpanel**
 
-***Mixpanel***
-
-Mixpanel events. Provides test and prod environment. Live events can be seen.
-
-***HotJar***
-
-See where the users are active.
+**HotJar**
 
 ## Database:
 
