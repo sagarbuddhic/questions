@@ -719,6 +719,17 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
+
+## Microservices
+
+https://nodesource.com/blog/microservices-in-nodejs
+
+## OAuth
+
+Client ID, Client Secret, Access Token
+
+Authorization: Bearer Tokenm
+
 ## NextJS Topics
 
 **Nextjs Advantages**
@@ -1274,10 +1285,6 @@ advantages and disadvantages of no sql.
 
 Types of Indexing in NoSQL Databases
 
-data consistency 
-
-eventual consistency
-
 ## MongoDB Topics:
 
 ***Cluster***
@@ -1331,16 +1338,6 @@ Logs (Kibana logs)\
 Admin processes (Run admin/management tasks as one-off processes)\
 
 Design patterns are reusable solutions to common problems in software design
-
-## Microservices
-
-https://nodesource.com/blog/microservices-in-nodejs
-
-## OAuth
-
-Client ID, Client Secret, Access Token
-
-Authorization: Bearer Token
 
 ## Formatting
 
