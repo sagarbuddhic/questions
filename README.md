@@ -564,17 +564,17 @@ minification to build folder, Tree Shaking, Code Splitting
 
 **Compilers**
 
-**Keys**
-
 **Virtual DOM**
 
 **Reconciliation**
 
 **React Diff Algorithm**
 
-**Repaint vs Reflow**
-
 **React Fiber**
+
+**Keys**
+
+**Repaint vs Reflow**
 
 **React Error Boundaries**
 
@@ -584,7 +584,7 @@ getDerivedStateFromError
 
 **HOC**
 
-**Render Props**
+**Render Props vs custom hooks**
 
 Example Downshift.
 MouseTracker
@@ -595,21 +595,27 @@ MouseTracker
 
 **Lifting State Up**
 
-**Pure Components**
+**Redux**
 
-**JSX**
+@reduxjs/toolkit
+
+**React Thunk**
+
+**Pure Components vs React.Memo**
 
 **State vs props**
 
 **Controlled vs. Uncontrolled Components**
 
+**Refs**
+
 **Strict Mode**
 
 **Typechecking With PropTypes**
 
-**Refs**
-
 **React Profiler**
+
+**Container presentational layout**
 
 **React Fragments**
 
@@ -618,12 +624,6 @@ MouseTracker
 React 18:
 
 Batch Updates are available for all events.
-
-**Redux**
-
-@reduxjs/toolkit
-
-**React Thunk**
 
 **How does Redux compare to the React Context API ?**
 
@@ -654,10 +654,6 @@ src - contains js, style.js.
 
 **React Scripts**
 
-Creating a React App Without Webpack and Babel
-
-**React Render**
-
 // client side
 import ReactDOM from 'react-dom/client';
 
@@ -667,7 +663,7 @@ import ReactDOM from 'react-dom/server';
 
 Nested routes - outlets
 
-Link vs NavLinnk
+Link vs NavLink
 
 compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
 
@@ -685,13 +681,9 @@ UseMemo - Runs the function only if arguments change other it will return the st
 
 **Difference with useMemo vs useCallback**
 
-useMemo - stores value.\
-useCallback - stores function
-
+useMemo
+useCallback
 usedebugvalue
-
-**allow transition in state**
-
 useTransition
 
 code splitting, lazy.
@@ -702,7 +694,6 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 **Refresh Table specific row**
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
-
 
 ## Microservices
 
