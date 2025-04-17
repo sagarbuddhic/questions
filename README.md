@@ -148,25 +148,28 @@ communicating in Microfrontend
 getSelection.  
 getRangeAt  
 getClientRects, getBoundingClientRects.  
-***CDN***
+
+**CDN**
 
 typescript compiled to JS.
+
+**typescript vs javascript**
 
 **abstract syntax tree**
 
 **garbage collection**
 
+**mark and sweep**
+
 **web workers**
 
 **debounce vs throttle**
-
-mark & sweep algorithm.
 
 **primitive vs non primitive**
 
 **shallow copy vs deep copy**
 
-structured clone
+**structured clone**
 
 **hoisting**
 
@@ -237,8 +240,6 @@ alert( curriedSum(1)(2)(3)(4)() ); // 3
 
 **Recursive**
 
-In programming terms, a recursive function can be defined as a routine that calls itself directly or indirectly.
-
 **AAA**
 
 **History**
@@ -298,6 +299,8 @@ null ?? 'test' // 'test'
 
 Examples: Map, Filter Function.
 
+**decorator**
+
 **In Operator**
 
 **Callback**
@@ -311,6 +314,8 @@ Callback Hell - Hard to read & maintain callbacks.
 **this keyword**
 
 **strict mode**
+
+**Event Emitter**
 
 **Event Bubbling**
 
@@ -458,8 +463,6 @@ JSON.Parse && JSON.stringify
 
 **defer attribute**
 
-**Event Emitter**
-
 **Concatenation**
 
 ```
@@ -484,8 +487,6 @@ let test = 'test' + 'best' // testbest
 * pageXOffset
 * screen
 * document.cookie
-
-**promise**
 
 **singleton**
 
@@ -516,23 +517,6 @@ function run() {
     console.log("Same instance? " + (instance1 === instance2));
 }
 ```
-
-| Features          | Map                       | Object                 |
-| Accidental Keys   | no keys by default        |  prototype             |
-| Security          | safe                      |  allow an attacker to override the object's prototype |
-| Key Types         | map key can be functions  |  must be a string 
-                       objects  
-| size property     | number of items           |  Object.keys().length
-| Iteration         | map is iterable           |  Object.entries()
-| Performance       | better                    |  not optimized
-| Serializing
- & parsing          | no native support         | native support for serialization
-
-
-**css**
-
-style.display
-style.
 
 ## ReactJS Topics
 
