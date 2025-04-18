@@ -695,6 +695,14 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
+**Microfrontend**
+
+exposes, remote, webpackmodulefederation plugin, webpack config file.
+each MFE handles their own routes and parent routes in defined in host
+each app with its own docker containers, ECS handles containers.
+nginx routing can be configured to each container.
+
+
 ## Microservices
 
 https://nodesource.com/blog/microservices-in-nodejs
@@ -815,15 +823,15 @@ params, query, body
 
 **containers**
 
-**Docker**
+**docker**
 
-**Components of docker**
+**components of docker**
 
 **docker file**
 
 **NGINX**
 
-**Docker Engine**
+**docker engine**
 
 **docker hub**
 
@@ -843,6 +851,8 @@ params, query, body
 ## AWS
 
 **ECS(Elastic Container Service)**
+
+**Docker Compose**
 
 **EC2(Elastic Compute Cloud)**
 
