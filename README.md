@@ -702,7 +702,6 @@ each MFE handles their own routes and parent routes in defined in host
 each app with its own docker containers, ECS handles containers.
 nginx routing can be configured to each container.
 
-
 ## Microservices
 
 https://nodesource.com/blog/microservices-in-nodejs
@@ -1272,9 +1271,9 @@ Types of Indexing in NoSQL Databases
 
 ## MongoDB Topics:
 
-***Cluster***
+**Cluster**
 
-***Replica Set***
+**Replica Set**
 
 ***Shards***
 
