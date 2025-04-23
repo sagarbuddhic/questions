@@ -702,19 +702,21 @@ Create seperate component for rows. Use PureComponents or React.Memo to render o
 **Microfrontend**
 
 exposes, remote, webpackmodulefederation plugin, webpack config file.
-each MFE handles their own routes and parent routes in defined in host
+each MFE handles their own routes and parent routes in defined in host.
 each app with its own docker containers, ECS handles containers.
 nginx routing can be configured to each container.
 
-## Microservices
+routing in MFE
 
-https://nodesource.com/blog/microservices-in-nodejs
+passing props in MFE
+
+## Microservices
 
 ## OAuth
 
 Client ID, Client Secret, Access Token
 
-Authorization: Bearer Tokenm
+Authorization: Bearer Token
 
 ## NextJS Topics
 
@@ -804,17 +806,17 @@ Config values are set in parameter store in AWS, those values set to process env
 
 ## ExpressJS Topics
 
-***Request Object***
+**Request Object**
 
 params, query, body
 
-***app.use()***
+**app.use()**
 
-***Next function***
+**Next function**
 
-***Middleware function***
+**Middleware function**
 
-***Error handling functions***
+**Error handling functions**
 
 ## Cloud
 
@@ -1040,7 +1042,7 @@ tbody {
 
 ## HTML
 
-***Semantic vs non***
+**Semantic vs non**
 
 semantic elements: <form>, <table>, <article>
 non semantic elements:  <div>, <span>
@@ -1263,7 +1265,7 @@ text to dates
 
 difference with no sql and sql
 
-tyoes of no sql DBS 
+types of no sql DBS 
 
 Popular NoSQL Databases & Their Use Cases
 
