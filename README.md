@@ -53,7 +53,7 @@ Map     TreeMap, HashMap, HashTable
 
 DIfferent Big O:
 
-Upper Bound of the complexity in the worst case, 
+Upper Bound of the complexity in the worst case,
 
 O(1)
 O(n)
@@ -140,6 +140,8 @@ communicating in Microfrontend
 **single threaded & asynchronous**
 
 **javascript Interpreted or compiled**
+
+**decorators**
 
 **Window**
 
@@ -1275,13 +1277,13 @@ Types of Indexing in NoSQL Databases
 
 **Replica Set**
 
-***Shards***
+**Shards**
 
-***Database Access***
+**Database Access**
 
 Use "Database Access" Tab in mongo to edit the password.
 
-***Network Access***
+**Network Access**
 
 In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 
