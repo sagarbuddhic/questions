@@ -189,6 +189,8 @@ chaining
 
 **set vs array**
 
+**map vs object**
+
 **pure functions**
 
 **undefined vs not defined**
@@ -198,6 +200,8 @@ chaining
 **typeof(x) === "undefined"**
 
 **function vs arrow**
+
+**functions vs methods**
 
 **apply,call,bind**
 
@@ -311,8 +315,6 @@ Callback Hell - Hard to read & maintain callbacks.
 
 **Promises**
 
-**functions vs methods**
-
 **this keyword**
 
 **strict mode**
@@ -364,7 +366,7 @@ console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
 
 **Map**
 
- **Filter**
+**Filter**
 
 **Reducer**
 
