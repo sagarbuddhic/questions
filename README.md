@@ -143,29 +143,25 @@ communicating in Microfrontend
 
 **javascript Interpreted or compiled**
 
+**web workers**
+
+**abstract syntax tree**
+
 **decorators**
 
 **Window**
 
 **window vs document**
 
-getSelection.  
-getRangeAt  
-getClientRects, getBoundingClientRects.  
-
-**CDN**
-
-typescript compiled to JS.
+**declarative vs imperative**
 
 **typescript vs javascript**
-
-**abstract syntax tree**
 
 **garbage collection**
 
 **mark and sweep**
 
-**web workers**
+**memory leaks**
 
 **debounce vs throttle**
 
@@ -177,29 +173,25 @@ typescript compiled to JS.
 
 **hoisting**
 
-**memory leaks**
-
-**var VS let & const keyword?**
+**var vs let vs const keyword?**
 
 **prototype**
 
 chaining
 
-**declarative vs imperative**
-
 **type coercion**
-
-**set vs array**
-
-**map vs object**
-
-**pure functions**
 
 **undefined vs not defined**
 
 **undefined vs null**
 
 **typeof(x) === "undefined"**
+
+**set vs array**
+
+**map vs object**
+
+**pure functions**
 
 **function vs arrow**
 
@@ -216,6 +208,8 @@ chaining
 * Palindrome - reverse words should read the same.(racecar)
 * Anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different(secure) - (rescue).
 * Vowels - a,e,i,o,u.
+
+**CDN**
 
 **IIFE(Immediately Invoked Function Expression)**
 
