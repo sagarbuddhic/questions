@@ -41,7 +41,7 @@
 
 ## DSA
 
-collection of values and the format they are stored in, steps taken to solve a problem.
+* collection of values and the format they are stored in, steps taken to solve a problem.
 
 **linked list vs arrays**
 
@@ -50,6 +50,8 @@ ADT        DS
 List    Dynamic Array, Linked List
 Queue   Linked List Based, Array Based, Stack Based
 Map     TreeMap, HashMap, HashTable
+
+**treemap vs hashmap vs hashtable**
 
 DIfferent Big O:
 
