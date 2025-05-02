@@ -151,6 +151,16 @@ communicating in Microfrontend
 
 **Window**
 
+**window objects**
+
+* local storage
+* session storage
+* cookie
+* history
+* navigator
+* location
+* screen
+
 **window vs document**
 
 **declarative vs imperative**
@@ -164,6 +174,10 @@ communicating in Microfrontend
 **memory leaks**
 
 **debounce vs throttle**
+
+**this keyword**
+
+**strict mode**
 
 **primitive vs non primitive**
 
@@ -190,6 +204,10 @@ chaining
 **set vs array**
 
 **map vs object**
+
+**Higher order function**
+
+Examples: Map, Filter Function.
 
 **pure functions**
 
@@ -268,6 +286,30 @@ selection.addRange(inputRange);
 
 **Destructuring**
 
+**object freeze vs seal vs const**
+
+**white label**
+
+**Tricky Logic**
+
+**Web Socket vs HTTP**
+
+**In Operator**
+
+**Callback**
+
+Callback Hell - Hard to read & maintain callbacks.
+
+**Promises**
+
+**Event Emitter**
+
+**Event Bubbling**
+
+**Event Propagation**
+
+**Intersection Observer**
+
 **Logical AND (&&)**
 
 ```
@@ -289,45 +331,11 @@ undefined || false // false
 null ?? 'test' // 'test'
 ```
 
-**object freeze vs seal vs const**
-
-**white label**
-
-**Tricky Logic**
-
-**Web Socket vs HTTP**
-
-**Higher order function**
-
-Examples: Map, Filter Function.
-
-**decorator**
-
-**In Operator**
-
-**Callback**
-
-Callback Hell - Hard to read & maintain callbacks.
-
-**Promises**
-
-**this keyword**
-
-**strict mode**
-
-**Event Emitter**
-
-**Event Bubbling**
-
-**Event Propagation**
-
 **Parse Int**
 
 ```
 parseInt('32', 10) // 32
 ```
-
-**Intersection Observer**
 
 ***Math Floor***
 
@@ -474,19 +482,6 @@ let test = 'test' + 'best' // testbest
 **delete operator**
 
 **eval**
-
-**window objects**
-
-* local storage
-* session storage
-* history
-* innerHeight
-* innerWidth
-* sessionStorage.
-* navigator.geoLocation
-* pageXOffset
-* screen
-* document.cookie
 
 **singleton**
 
