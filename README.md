@@ -1220,25 +1220,21 @@ test('handles server error', async () => {
 
 DBMS vs RDBMS
 
+DDL & DML
+
+ACID vs CAP
+
 Primary Key vs Foreign Key
 
-ACID
+Indexing and Clustered Indexing in SQL
 
 Constraints
 
-DDL & DML
+DROP vs TRUNCATE vs DELETE
 
-DROP vs TRUNCATE
-
-Difference Between Delete, Drop, and Truncate
-
-Group By vs Order by
-
-Where vs Having
+WHERE, ORDER BY, GROUP BY, HAVING
 
 Aggregate Functions in SQL
-
-Indexing and Clustered Indexing in SQL
 
 UNION vs UNION ALL in SQL
 
@@ -1249,8 +1245,6 @@ triggers
 stored procedures
 
 SQL Query to Find the Second Highest Value in a Table
-
-text to dates
 
 ## No SQL:
 
@@ -1293,7 +1287,6 @@ In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
 
-
 ## Heroku Topics
 
 * heroku CLI
@@ -1332,10 +1325,15 @@ Prettier - we can show as warnings and it has better formatting. https://prettie
 
 order of precedance
 x = 10+3*2**2
+
 print(x)
+
 parenthesis
+
 exponentiation
+
 multiplication or division
+
 addition or subtraction
 
 elif - used for else if
