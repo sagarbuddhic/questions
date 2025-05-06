@@ -815,17 +815,11 @@ params, query, body
 
 **Virtualization vs Containerization**
 
-**image**
-
 **containers**
-
-**docker**
 
 **components of docker**
 
-**docker file**
-
-**NGINX**
+**image**
 
 **docker engine**
 
@@ -834,6 +828,10 @@ params, query, body
 **docker client**
 
 **docker host**
+
+**docker file**
+
+**NGINX**
 
 **Commands**
 
@@ -1028,8 +1026,6 @@ tbody {
  ```
 
 **RGB**
-
-**CSS [attribute] Selector**
 
 ## HTML
 
