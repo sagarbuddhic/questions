@@ -41,15 +41,9 @@
 
 ## DSA
 
-* collection of values and the format they are stored in, steps taken to solve a problem.
+collection of values and the format they are stored in, steps taken to solve a problem.
 
 **linked list vs arrays**
-
-ADT        DS
-
-List    Dynamic Array, Linked List
-Queue   Linked List Based, Array Based, Stack Based
-Map     TreeMap, HashMap, HashTable
 
 **treemap vs hashmap vs hashtable**
 
@@ -105,13 +99,6 @@ Space Complexity
 ## Design Principles
 
 **SOLID**
-
-* S - This principle states that every method/class should handle a single responsibility.
-* O - open to extension, closed for modification(inheritance).
-* L - Liskov - A child class should be able to do what parent does. Example - Human - child - parent.
-* I - Interface segregation principle - avoid generalized interface for a class,segregated interfaces with smaller functionalities.
-* D - Dependency inversion principle - Every dependency in the design should be directed toward an abstract class or interface.
-      No dependency should target a concrete class.
 
 **Observer Pattern**
 
@@ -846,8 +833,6 @@ params, query, body
 
 **ECS(Elastic Container Service)**
 
-**Docker Compose**
-
 **EC2(Elastic Compute Cloud)**
 
 **Cluster**
@@ -869,6 +854,8 @@ params, query, body
 **step functions**
 
 **Cloud Front with Custom routing**
+
+**Docker Compose**
 
 **VPC**
 
