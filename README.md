@@ -128,17 +128,13 @@ communicating in Microfrontend
 
 **single threaded & asynchronous**
 
-**javascript Interpreted or compiled**
-
 **web workers**
+
+**javascript Interpreted or compiled**
 
 **abstract syntax tree**
 
-**decorators**
-
-**Window**
-
-**window objects**
+**window vs document**
 
 * local storage
 * session storage
@@ -148,7 +144,9 @@ communicating in Microfrontend
 * location
 * screen
 
-**window vs document**
+window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
+window.location.href  
+window.location.assign 
 
 **declarative vs imperative**
 
@@ -160,17 +158,17 @@ communicating in Microfrontend
 
 **memory leaks**
 
+**primitive vs non primitive**
+
+**decorators**
+
 **debounce vs throttle**
 
 **this keyword**
 
 **strict mode**
 
-**primitive vs non primitive**
-
 **shallow copy vs deep copy**
-
-**structured clone**
 
 **hoisting**
 
@@ -180,11 +178,11 @@ communicating in Microfrontend
 
 chaining
 
+**In Operator**
+
 **type coercion**
 
-**undefined vs not defined**
-
-**undefined vs null**
+**undefined vs not defined vs null**
 
 **typeof(x) === "undefined"**
 
@@ -204,9 +202,9 @@ Examples: Map, Filter Function.
 
 **apply,call,bind**
 
-**foreach vs for**
+**forEach vs map vs for vs for ..in vs for .. of**
 
-**forEach vs map**
+**in operator**
 
 **string terms**
 
@@ -220,11 +218,7 @@ Examples: Map, Filter Function.
 
 **Closures:**
 
-A closure is a function having access to the parent scope, even after the parent function has closed.
-
 **Currying:**
-
-Currying is translating a function from callable as f(a, b, c) into callable as f(a)(b)(c).
 
 Example below of using closures, currying and recursive function.
 
@@ -247,20 +241,7 @@ alert( curriedSum(1)(2)(3)(4)() ); // 3
 
 **Recursive**
 
-**AAA**
-
-**History**
-
-```
-history.back();     // equivalent to clicking back button
-history.go(-1);     // equivalent to history.back();
-```
-
-**Location**
-
-window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload'); // does not save previous url in history.  
-window.location.href  
-window.location.assign  
+**AAA** 
 
 // point a cursor  
 const inputRange = document.createRange();
@@ -277,17 +258,15 @@ selection.addRange(inputRange);
 
 **white label**
 
-**Tricky Logic**
-
 **Web Socket vs HTTP**
-
-**In Operator**
 
 **Callback**
 
 Callback Hell - Hard to read & maintain callbacks.
 
 **Promises**
+
+**async**
 
 **Event Emitter**
 
@@ -455,6 +434,7 @@ console.log(arr1.flat());
 
 deep copy
 JSON.Parse && JSON.stringify
+structured clone
 
 **defer attribute**
 
@@ -502,15 +482,11 @@ function run() {
 
 ## ReactJS Topics
 
-**jsx vs js**
-
-**jsx vs tsx**
+**jsx vs js vs tsx**
 
 **React Classes**
 
-Super()
-
-passing props to super.
+Super() passing props to super
 
 **React Lifecycle:**
 
@@ -537,26 +513,21 @@ ComponentWillUnmount
 
 componentDidMount, componentDidUpdate, componentWillUnmount
 
-**Bundling**:
-minification to build folder, Tree Shaking, Code Splitting
-
-**transpiler**
+Bundling, transpiling, minification, tree shaking, code splitting
 
 **React Without Bundler/Transpiler**
 
-**Compilers**
-
-**Virtual DOM**
-
-**Reconciliation**
-
-**React Diff Algorithm**
-
-**React Fiber**
+**Virtual DOM vs React Diff Algorithm vs Reconciliation vs React Fiber**
 
 **Keys**
 
 **Repaint vs Reflow**
+
+**State vs props**
+
+**Pure Components vs React.Memo**
+
+**Refs**
 
 **React Error Boundaries**
 
@@ -564,18 +535,22 @@ getDerivedStateFromError
 
 **Composition Vs Inheritance**
 
-**HOC**
+props.children
 
-**Render Props vs custom hooks**
+**Controlled vs. Uncontrolled Components**
+
+**HOCS vs Render Props vs custom hooks**
 
 Example Downshift.
 MouseTracker
 
-**props.children**
+**Container presentational layout**
 
 **React Portals**
 
 **Lifting State Up**
+
+**Context api**
 
 **Redux**
 
@@ -583,21 +558,11 @@ MouseTracker
 
 **React Thunk**
 
-**Pure Components vs React.Memo**
-
-**State vs props**
-
-**Controlled vs. Uncontrolled Components**
-
-**Refs**
-
 **Strict Mode**
 
 **Typechecking With PropTypes**
 
 **React Profiler**
-
-**Container presentational layout**
 
 **React Fragments**
 
@@ -606,8 +571,6 @@ MouseTracker
 React 18:
 
 Batch Updates are available for all events.
-
-**How does Redux compare to the React Context API ?**
 
 **create react app**
 
@@ -647,11 +610,15 @@ Nested routes - outlets
 
 Link vs NavLink
 
-compression is a process in which the size of a file is reduced by re-encoding the file data to use fewer bits of storage than the original file.
-
 **React Optimizations**
 
+compressions
+
 Avoid prop drilling
+
+code splitting, lazy.
+
+using keys for list.
 
 **Call Endpoint Once to Fetch Initial Data**
 
@@ -667,9 +634,6 @@ useMemo
 useCallback
 usedebugvalue
 useTransition
-
-code splitting, lazy.
-using keys for list.
  
 PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
@@ -831,6 +795,8 @@ params, query, body
 
 ## AWS
 
+**Docker Compose**
+
 **ECS(Elastic Container Service)**
 
 **EC2(Elastic Compute Cloud)**
@@ -855,17 +821,15 @@ params, query, body
 
 **Cloud Front with Custom routing**
 
-**Docker Compose**
-
 **VPC**
-
-**JWT**
-
-**app sync**
 
 **Cloud Watch**
 
 **Parameter store**
+
+**JWT**
+
+**app sync**
 
 **Robots.txt, , route 53**
 
@@ -885,7 +849,11 @@ Jenkins is typically run as a standalone application in its own process with the
 
 **Visibility vs Display vs Opacity**
 
+**margin vs padding**
+
 **display**
+
+**float**
 
 **align items**
 
@@ -893,11 +861,11 @@ Jenkins is typically run as a standalone application in its own process with the
 
 **justify-contents**
 
-**grid vs flex**
-
 **text-align**
 
 **vertical align**
+
+**grid vs flex**
 
 **Descendant Selector (space)**
 
@@ -965,8 +933,6 @@ Mixins allow document authors to define patterns of property value pairs, which 
 https://sass-lang.com/guide
 ```
 
-**float**
-
 **Table**
 
 ```
@@ -988,17 +954,15 @@ tbody {
 }
 ```
 
-**margin vs padding**
+**ruleset**
 
-**ruleset***
+**css integration**
 
 **css vs scss**
 
 **scss vs emotions**
 
-**css integration**
-
-**sprites***
+**sprites**
 
 **css image repetition***
 
@@ -1203,15 +1167,15 @@ test('handles server error', async () => {
 
 DBMS vs RDBMS
 
-DDL & DML
-
 ACID vs CAP
+
+DDL & DML
 
 Primary Key vs Foreign Key
 
-Indexing and Clustered Indexing in SQL
+clustered and non clustered indexing in sql
 
-Constraints
+constraints
 
 DROP vs TRUNCATE vs DELETE
 
@@ -1233,7 +1197,7 @@ SQL Query to Find the Second Highest Value in a Table
 
 difference with no sql and sql
 
-types of no sql DBS 
+types of no sql DBS
 
 Popular NoSQL Databases & Their Use Cases
 
