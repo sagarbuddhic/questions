@@ -634,6 +634,7 @@ useMemo
 useCallback
 usedebugvalue
 useTransition
+useReducer
  
 PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
@@ -662,6 +663,12 @@ Authorization: Bearer Token
 
 ## NextJS Topics
 
+App vs Page Based Routing
+Next Js version10 vs 15
+React Server Components
+Fetch with cache and revalidate
+middlewares in nextjs
+
 **Nextjs Advantages**
 
 **next js folder structure**
@@ -670,9 +677,9 @@ Authorization: Bearer Token
 
 **Pre-rendering**
 
-Server side rendering - getServerSideProps - Next.js will pre-render this page on each request.
-Static Generation - getStaticProps - Next.js will pre-render this page at build time(Automatic static optimization.)
-Incremental Static Generation -  static pages, but content updates automatically without rebuilding the whole app.
+Server side rendering - getServerSideProps - fetch with no cache - Next.js will pre-render this page on each request.
+Static Generation - getStaticProps - fetch with cache - Next.js will pre-render this page at build time(Automatic static optimization.)
+Incremental Static Generation - revalidate - useful for dashboards -  static pages, but content updates automatically without rebuilding the whole app.
 
 **With Links, prefetches and does client side navigation.**
 
@@ -683,7 +690,6 @@ Incremental Static Generation -  static pages, but content updates automatically
 **What is hydration**
 
 **SWR**
-
 
 ## REST Apis Topics
 
@@ -761,8 +767,6 @@ params, query, body
 **Error handling functions**
 
 ## Cloud
-
-**Containerization**
 
 **Virtualization vs Containerization**
 
@@ -847,9 +851,9 @@ Jenkins is typically run as a standalone application in its own process with the
 
 **border box**
 
-**Visibility vs Display vs Opacity**
-
 **margin vs padding**
+
+**Visibility vs Display vs Opacity**
 
 **display**
 
@@ -867,6 +871,8 @@ Jenkins is typically run as a standalone application in its own process with the
 
 **grid vs flex**
 
+**selectors**
+
 **Descendant Selector (space)**
 
 **Child Selector (>)**
@@ -876,10 +882,6 @@ Jenkins is typically run as a standalone application in its own process with the
 **General Sibling Selector (~)**
 
 ***pseudo***
-
-A pseudo-class is used to define a special state of an element.
-
-Example: Style an element when a user mouses over it.
 
 ```
 a:hover {
@@ -897,8 +899,6 @@ h1::after {
 
 **css transform**
 
-CSS transforms allow you to move, rotate, scale, and skew elements.
-
 **position**
 
 The five different position values are fixed, static, absolute, sticky, and relative.
@@ -910,28 +910,6 @@ The five different position values are fixed, static, absolute, sticky, and rela
 * Sticky
 
 **mixin**
-
-Mixins allow document authors to define patterns of property value pairs, which can then be reused in other rulesets.
-
-```
-@mixin theme($theme: DarkGray) {
-  background: $theme;
-  box-shadow: 0 0 1px rgba($theme, .25);
-  color: #fff;
-}
-
-.info {
-  @include theme;
-}
-.alert {
-  @include theme($theme: DarkRed);
-}
-.success {
-  @include theme($theme: DarkGreen);
-}
-
-https://sass-lang.com/guide
-```
 
 **Table**
 
@@ -945,22 +923,13 @@ table {
   width: 100%
 }
 
-colgroup {
-
-}
-
-tbody {
-  
-}
 ```
 
 **ruleset**
 
 **css integration**
 
-**css vs scss**
-
-**scss vs emotions**
+**css vs scss vs emotions**
 
 **sprites**
 
@@ -991,6 +960,9 @@ non semantic elements:  <div>, <span>
 <head>
 <link> - best place to use it  in head tags
 <script> - best place for script tags
+
+defer vs async
+in head vs body
 
 ## Testing Topics
 
@@ -1288,3 +1260,22 @@ elif - used for else if
 for value in ['test']
 
 none similar to null object
+
+DATADIOS@DD.COM
+
+
+sagarsagar405
+
+
+Challenging in Analyzer:
+
+Every Data Source Comparison
+What comes from the endpoint and what we decide in the UI.
+Colors from ColorHunt, w3schools
+
+
+COntainer Presentation:
+HOCs - push stats
+custom hooks - 
+compound components - children - Error Boundaries
+Controlled vs Uncontrolled - refs
