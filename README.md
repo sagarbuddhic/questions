@@ -663,11 +663,17 @@ Authorization: Bearer Token
 
 ## NextJS Topics
 
-App vs Page Based Routing
-Next Js version10 vs 15
-React Server Components
-Fetch with cache and revalidate
-middlewares in nextjs
+**App vs Page Based Routing**
+
+**Next Js version10 vs 15**
+
+**React Server Components**
+
+**Fetch with cache and revalidate**
+
+**middlewares in nextjs**
+
+**next.config.js**
 
 **Nextjs Advantages**
 
