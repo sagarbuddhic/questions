@@ -19,6 +19,7 @@
 ### [-12 Factor](#12-factor-topics)
 ### [Python](#python)
 
+
 ## GIT Topics
 
 **package manager**
@@ -482,6 +483,8 @@ function run() {
 
 ## ReactJS Topics
 
+**ReactJS Patterns**
+
 **jsx vs js vs tsx**
 
 **React Classes**
@@ -655,6 +658,8 @@ passing props in MFE
 
 ## Microservices
 
+**Elastic Search & Search Box**
+
 ## OAuth
 
 Client ID, Client Secret, Access Token
@@ -710,7 +715,15 @@ Read - GET
 Update - PUT, PATCH 
 Delete - delete
 
+**graphql**
+
+caching in graphql
+
+**compare graphql vs rest**
+
 ## NodeJS Topics
+
+**node js design patterns**
 
 **single threaded event loop architecture**
 
