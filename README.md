@@ -668,9 +668,9 @@ Authorization: Bearer Token
 
 ## NextJS Topics
 
-**App vs Page Based Routing**
-
 **Next Js version10 vs 15**
+
+**App vs Page Based Routing**
 
 **React Server Components**
 
@@ -684,7 +684,7 @@ Authorization: Bearer Token
 
 **next js folder structure**
 
-**Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.**
+**Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.*
 
 **Pre-rendering**
 
