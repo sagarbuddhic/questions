@@ -103,17 +103,17 @@ Space Complexity
 
 **Observer Pattern**
 
-**Decorator Pattern**
-
 **Singleton Pattern**
-
-**Factory Pattern**
-
-**Builder**
 
 **Prototype**
 
 **Adapter pattern**
+
+**Decorator Pattern**
+
+**Factory Pattern**
+
+**Builder**
 
 **Iterator Pattern**
 
@@ -124,6 +124,7 @@ Webpack module federation
 Routing in Microfrontend
 
 communicating in Microfrontend
+
 
 ## Javascript Topics
 
@@ -153,6 +154,8 @@ window.location.assign
 
 **typescript vs javascript**
 
+**strict mode**
+
 **garbage collection**
 
 **mark and sweep**
@@ -167,25 +170,29 @@ window.location.assign
 
 **this keyword**
 
-**strict mode**
+**pure functions**
 
-**shallow copy vs deep copy**
+**function vs arrow**
+
+**functions vs methods**
+
+**apply,call,bind**
 
 **hoisting**
 
 **var vs let vs const keyword?**
 
-**prototype**
-
-chaining
-
-**In Operator**
+**shallow copy vs deep copy**
 
 **type coercion**
 
 **undefined vs not defined vs null**
 
 **typeof(x) === "undefined"**
+
+**prototype**
+
+chaining
 
 **set vs array**
 
@@ -194,14 +201,6 @@ chaining
 **Higher order function**
 
 Examples: Map, Filter Function.
-
-**pure functions**
-
-**function vs arrow**
-
-**functions vs methods**
-
-**apply,call,bind**
 
 **forEach vs map vs for vs for ..in vs for .. of**
 
@@ -638,6 +637,7 @@ useCallback
 usedebugvalue
 useTransition
 useReducer
+Profiler
  
 PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
@@ -645,7 +645,7 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
-**Microfrontend**
+## Microfrontend
 
 exposes, remote, webpackmodulefederation plugin, webpack config file.
 each MFE handles their own routes and parent routes in defined in host.
@@ -657,8 +657,6 @@ routing in MFE
 passing props in MFE
 
 ## Microservices
-
-**Elastic Search & Search Box**
 
 ## OAuth
 
@@ -674,6 +672,8 @@ Authorization: Bearer Token
 
 **React Server Components**
 
+**next js folder structure**
+
 **Fetch with cache and revalidate**
 
 **middlewares in nextjs**
@@ -681,8 +681,6 @@ Authorization: Bearer Token
 **next.config.js**
 
 **Nextjs Advantages**
-
-**next js folder structure**
 
 **Webpack Integrated, Compiler replaces babel for individual files and terser for minifying output bundles.*
 
@@ -693,6 +691,8 @@ Static Generation - getStaticProps - fetch with cache - Next.js will pre-render 
 Incremental Static Generation - revalidate - useful for dashboards -  static pages, but content updates automatically without rebuilding the whole app.
 
 **With Links, prefetches and does client side navigation.**
+
+**Images**
 
 **Dynamic routing**
 
@@ -715,11 +715,13 @@ Read - GET
 Update - PUT, PATCH 
 Delete - delete
 
-**graphql**
+## graphql
 
 caching in graphql
 
 **compare graphql vs rest**
+
+## Elastic Search & Search Box
 
 ## NodeJS Topics
 
