@@ -115,6 +115,8 @@ Space Complexity
 
 **Builder**
 
+**Facade**
+
 **Iterator Pattern**
 
 **Microfrontend**
@@ -124,7 +126,6 @@ Webpack module federation
 Routing in Microfrontend
 
 communicating in Microfrontend
-
 
 ## Javascript Topics
 
@@ -153,6 +154,8 @@ window.location.assign
 **declarative vs imperative**
 
 **typescript vs javascript**
+
+**ES5 vs ES6**
 
 **strict mode**
 
@@ -434,8 +437,6 @@ deep copy
 JSON.Parse && JSON.stringify
 structured clone
 
-**defer attribute**
-
 **Concatenation**
 
 ```
@@ -526,6 +527,10 @@ MouseTracker
 
 @reduxjs/toolkit
 
+Redux Persistance
+How to stop a store
+Jenkins Pipeline
+
 **React Thunk**
 
 **Strict Mode**
@@ -580,6 +585,8 @@ Nested routes - outlets
 
 Link vs NavLink
 
+MonoRepo
+
 **React Optimizations**
 
 compressions
@@ -608,6 +615,10 @@ useReducer
 Profiler
  
 PureComponents, React.memo for re-render only when a prop changes(Table rows).
+
+**spas**
+
+**NFRs**
 
 **Refresh Table specific row**
 
@@ -699,6 +710,12 @@ caching in graphql
 
 **libuv thread pool**
 
+**child processes**
+
+**concurrent**
+
+**worker thread**
+
 **middlewares**
 
 **Handling a Large Volume of Customers in Node.js**
@@ -710,12 +727,6 @@ compressions for response <br/>
 Load Balancing & Scaling with Clustering <br/>
 Rate Limiting & API Throttling <br/>
 monitor and log <br/>
-
-**child processes**
-
-**concurrent**
-
-**worker thread**
 
 **v8 engine**
 
@@ -738,6 +749,10 @@ Config values are set in parameter store in AWS, those values set to process env
 **content negotiation**
 
 **third party libraries**
+
+**third party services integration**
+
+ElasticSearch,SendGrid, Twilio,Cloudinary
 
 **axios vs fetch**
 
@@ -810,6 +825,8 @@ params, query, body
 
 **S3 Bucket**
 
+Image storing in S3, lambda, cloudfront.
+
 **step functions**
 
 **Cloud Front with Custom routing**
@@ -821,6 +838,8 @@ params, query, body
 **Parameter store**
 
 **JWT**
+
+**NGINX**
 
 **app sync**
 
@@ -835,6 +854,12 @@ params, query, body
 Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
 
 ## CSS Topics
+
+**tailwind**
+
+**media queries**
+
+**material UI**
 
 **Box Model**
 
@@ -898,6 +923,8 @@ The five different position values are fixed, static, absolute, sticky, and rela
 * Fixed
 * Sticky
 
+top and left
+
 **mixin**
 
 **Table**
@@ -915,6 +942,8 @@ table {
 ```
 
 **ruleset**
+
+**responsive**
 
 **css integration**
 
@@ -934,7 +963,7 @@ table {
   background-attachment: fixed;
  ```
 
-**RGB**
+**RGB vs hex vs HSL**
 
 ## HTML
 
@@ -1125,6 +1154,10 @@ test('handles server error', async () => {
 **HotJar**
 
 ## Database:
+
+ORM:(sequalize, prisma)
+
+Kinesis, kafka, confluent
 
 DBMS vs RDBMS
 
