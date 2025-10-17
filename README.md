@@ -525,6 +525,8 @@ MouseTracker
 
 **Redux**
 
+**flux**
+
 @reduxjs/toolkit
 
 Redux Persistance
