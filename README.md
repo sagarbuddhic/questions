@@ -685,6 +685,8 @@ Incremental Static Generation - revalidate - useful for dashboards -  static pag
 
 ## REST Apis Topics
 
+***headers***
+
 ***Stateless***
 
 Client provides all information required for the server in the form of url, query string, header or through a body.
