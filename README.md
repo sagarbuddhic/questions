@@ -698,6 +698,10 @@ Read - GET
 Update - PUT, PATCH 
 Delete - delete
 
+***mongoose***
+
+***sequelize***
+
 ## graphql
 
 caching in graphql
@@ -732,6 +736,17 @@ Load Balancing & Scaling with Clustering <br/>
 Rate Limiting & API Throttling <br/>
 monitor and log <br/>
 
+***packages***
+
+***middlewares***
+
+cors
+express-rate-limit
+cookie-parser
+bodyParser
+compression
+jsonwebtoken
+
 **v8 engine**
 
 **debugging issue which is only in production not in dev docker**
@@ -756,6 +771,25 @@ Config values are set in parameter store in AWS, those values set to process env
 
 **third party services integration**
 
+mongoose
+sequelize
+redis
+mongodb
+prisma
+aws-sdk
+cloudinary
+sharp
+@sendgrid/mail
+jsonwebtoken
+bcrypt
+axios
+fetch
+newrelic
+winston
+sentry
+openai
+langchain
+openai
 ElasticSearch,SendGrid, Twilio,Cloudinary
 
 **axios vs fetch**
