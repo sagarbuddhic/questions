@@ -791,8 +791,20 @@ openai
 langchain
 openai
 ElasticSearch,SendGrid, Twilio,Cloudinary
+passport-google-oauth20
 
 **axios vs fetch**
+
+***authentication***
+
+HTTps
+TLS
+bcrypt,
+cookie,
+jwt
+oauth20
+
+Bearer Token with client id and client secret
 
 ## ExpressJS Topics
 
@@ -886,6 +898,83 @@ Image storing in S3, lambda, cloudfront.
 **Large Files in AWS**
 
 **DockerFile & JenkinsFile**
+
+
+## Database:
+
+ORM:(sequalize, prisma)
+
+Kinesis, kafka, confluent
+
+DBMS vs RDBMS
+
+ACID vs CAP
+
+DDL & DML
+
+Primary Key vs Foreign Key
+
+clustered and non clustered indexing in sql
+
+constraints
+
+DROP vs TRUNCATE vs DELETE
+
+WHERE, ORDER BY, GROUP BY, HAVING
+
+Aggregate Functions in SQL
+
+UNION vs UNION ALL in SQL
+
+Views
+
+triggers
+
+stored procedures
+
+SQL Query to Find the Second Highest Value in a Table
+
+## No SQL:
+
+difference with no sql and sql
+
+types of no sql DBS
+
+Popular NoSQL Databases & Their Use Cases
+
+CAP Theorem
+
+advantages and disadvantages of no sql.
+
+Types of Indexing in NoSQL Databases
+
+## MongoDB Topics:
+
+**Cluster**
+
+**Replica Set**
+
+**Shards**
+
+**Database Access**
+
+Use "Database Access" Tab in mongo to edit the password.
+
+**Network Access**
+
+In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
+
+## MySql topics
+
+* sudo systemctl start mysql.service
+* show databases;
+* create database sagar;
+* use sagar;
+* create table user (id int, name varchar(50), email varchar(50), gender varchar(10), status varchar(10));
+* show tables;
+* select user();
+* INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
+
 
 ## Jenkins Topics
 
@@ -1190,81 +1279,6 @@ test('handles server error', async () => {
 **Mixpanel**
 
 **HotJar**
-
-## Database:
-
-ORM:(sequalize, prisma)
-
-Kinesis, kafka, confluent
-
-DBMS vs RDBMS
-
-ACID vs CAP
-
-DDL & DML
-
-Primary Key vs Foreign Key
-
-clustered and non clustered indexing in sql
-
-constraints
-
-DROP vs TRUNCATE vs DELETE
-
-WHERE, ORDER BY, GROUP BY, HAVING
-
-Aggregate Functions in SQL
-
-UNION vs UNION ALL in SQL
-
-Views
-
-triggers
-
-stored procedures
-
-SQL Query to Find the Second Highest Value in a Table
-
-## No SQL:
-
-difference with no sql and sql
-
-types of no sql DBS
-
-Popular NoSQL Databases & Their Use Cases
-
-CAP Theorem
-
-advantages and disadvantages of no sql.
-
-Types of Indexing in NoSQL Databases
-
-## MongoDB Topics:
-
-**Cluster**
-
-**Replica Set**
-
-**Shards**
-
-**Database Access**
-
-Use "Database Access" Tab in mongo to edit the password.
-
-**Network Access**
-
-In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
-
-## MySql topics
-
-* sudo systemctl start mysql.service
-* show databases;
-* create database sagar;
-* use sagar;
-* create table user (id int, name varchar(50), email varchar(50), gender varchar(10), status varchar(10));
-* show tables;
-* select user();
-* INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
 
 ## Heroku Topics
 
