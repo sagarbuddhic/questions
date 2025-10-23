@@ -669,7 +669,7 @@ Authorization: Bearer Token
 
 Server side rendering - getServerSideProps - fetch with no cache - Next.js will pre-render this page on each request.
 Static Generation - getStaticProps - fetch with cache - Next.js will pre-render this page at build time(Automatic static optimization.)
-Incremental Static Generation - revalidate - useful for dashboards -  static pages, but content updates automatically without rebuilding the whole app.
+Incremental Static Generation - revalidate - useful for dashboards - static pages, but content updates automatically without rebuilding the whole app.
 
 **With Links, prefetches and does client side navigation.**
 
