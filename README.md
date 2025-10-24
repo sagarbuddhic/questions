@@ -215,8 +215,6 @@ Examples: Map, Filter Function.
 * Anagram - An anagram of a string is another string that contains the same characters, only the order of characters can be different(secure) - (rescue).
 * Vowels - a,e,i,o,u.
 
-**CDN**
-
 **IIFE(Immediately Invoked Function Expression)**
 
 **Closures:**
