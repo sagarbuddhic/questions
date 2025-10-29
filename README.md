@@ -4,11 +4,13 @@
 ### [Data Structures](#dsa)
 ### [-Design Principle](#design-principles)
 ### [Javascript](#javascript-topics)
+### [-Frontend](#frontend-topics)
 ### [-ReactJS](#reactjs-topics)
 ### [-NextJS](#nextjs-topics)
 ### [-Rest Apis](#rest-apis-topics)
 ### [-NodeJS](#nodejs-topics)
 ### [-ExpressJS](#expressjs-topics)
+### [-Deployment](#deployment)
 ### [-Cloud](#cloud)
 ### [-AWS](#aws)
 ### [-Jenkins](#jenkins-topics)
@@ -18,27 +20,6 @@
 ### [Heroku](#heroku-topics)
 ### [-12 Factor](#12-factor-topics)
 ### [Python](#python)
-
-
-## GIT Topics
-
-**package manager**
-
-**yarn vs npm**
-
-**git init**
-
-**.git subdirectory**
-
-**remote repos**
-
-**git push**
-
-**semantic versioning**
-
-**yarn workspaces**
-
-**github actions vs jenkins**
 
 ## DSA
 
@@ -116,14 +97,6 @@ quick sort
 **Facade**
 
 **Iterator Pattern**
-
-**Microfrontend**
-
-Webpack module federation
-
-Routing in Microfrontend
-
-communicating in Microfrontend
 
 ## Javascript Topics
 
@@ -445,6 +418,16 @@ let test = 'test' + 'best' // testbest
 
 **eval**
 
+## Frontend Topics
+
+## Microfrontend
+
+**basic setup, modulefederationplugin, shared, redux shared**
+
+**routing in MFE**
+
+**passing props in MFE, subpub, dispatchevent**
+
 ## ReactJS Topics
 
 **ReactJS Patterns**
@@ -457,28 +440,7 @@ Super() passing props to super
 
 **React Lifecycle:**
 
-Mount Phase:
-
-Constructor\
-getDerivedStateFromProps\
-Render\
-ComponentDidMount
-
-Update Phase:
-
-getDerivedStateFromProps\
-ShouldComponentUpdate\
-Render\
-getSnapshotBeforeUpdate()\
-ComponentDidUpdate
-
-UnMount Phase:
-
-ComponentWillUnmount
-
 **useEffect Lifecycles:**
-
-componentDidMount, componentDidUpdate, componentWillUnmount
 
 Bundling, transpiling, minification, tree shaking, code splitting
 
@@ -527,7 +489,6 @@ MouseTracker
 
 Redux Persistance
 How to stop a store
-Jenkins Pipeline
 
 **React Thunk**
 
@@ -541,9 +502,7 @@ Jenkins Pipeline
 
 **React JS Multiple SetStates**
 
-React 18:
-
-Batch Updates are available for all events.
+**React 18**
 
 **create react app**
 
@@ -621,17 +580,6 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 **Refresh Table specific row**
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
-
-## Microfrontend
-
-exposes, remote, webpackmodulefederation plugin, webpack config file.
-each MFE handles their own routes and parent routes in defined in host.
-each app with its own docker containers, ECS handles containers.
-nginx routing can be configured to each container.
-
-routing in MFE
-
-passing props in MFE
 
 ## Microservices
 
@@ -816,6 +764,30 @@ params, query, body
 
 **Error handling functions**
 
+## Deployment
+
+## GIT Topics
+
+**package manager**
+
+**yarn vs npm**
+
+**git init**
+
+**.git subdirectory**
+
+**remote repos**
+
+**git push**
+
+**semantic versioning**
+
+**yarn workspaces**
+
+**lerna**
+
+**github actions vs jenkins**
+
 ## Cloud
 
 **Virtualization vs Containerization**
@@ -894,7 +866,6 @@ Image storing in S3, lambda, cloudfront.
 **Large Files in AWS**
 
 **DockerFile & JenkinsFile**
-
 
 ## Database:
 
