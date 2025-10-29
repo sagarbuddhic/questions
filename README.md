@@ -55,27 +55,21 @@ Upper Bound of the complexity in the worst case,
 O(1)
 O(n)
 O(log n)
-Example: Binary Search
-
-O(n logn) - merge sorting, heap sorting. quasilinear runtime.
 O(n<sup>2</sup>)
 O(n!) - n * (n-1) * (n -2) ....
 
-Algorithms(set of tasks):
+Efficiency:
 
-linear search - sequential or simple search.
-binary search - cutting to half.
-brute force - same as linear , exponential runtimes.
-divide and conquer - merge sort.
-selection sort - O (n2)
-quick sort - O (n log n)
+Time Complexity
+Space Complexity
 
 Data Structures:
 
+Arrays
 Linked List
 double linked list
 Stack - LIFO.
-Queue - Linear Data Structure models real world queues, enqueue and dequeue(FIFO).
+Queue -FIFO
 Priority Queue
 Indexed Priority Queue
 Heap
@@ -92,10 +86,14 @@ LCP
 BBST
 Balanced Binary Tree
 
-Efficiency:
+Algorithms(set of tasks):
 
-Time Complexity
-Space Complexity
+linear search
+binary search
+brute force
+divide and conquer
+selection sort
+quick sort
 
 ## Design Principles
 
