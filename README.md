@@ -100,6 +100,10 @@ quick sort
 
 ## Javascript Topics
 
+**How to Hide or How to avoid someone seeing our source code in the browser**
+
+**javascript ES5 and above and its features**
+
 **single threaded & asynchronous**
 
 **web workers**
