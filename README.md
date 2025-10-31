@@ -428,11 +428,29 @@ let test = 'test' + 'best' // testbest
 
 **basic setup, modulefederationplugin, shared, redux shared**
 
+**share history, navigation**
+
+**same version of react, router dom required**
+
 **routing in MFE**
 
 **passing props in MFE, subpub, dispatchevent**
 
 ## ReactJS Topics
+
+**Reactjs Library**
+
+**Vite with ESBuild(Transform), Rollup(Bundle), ESBUIld Minifier**
+
+**Create React App with Babel(Transform) and Webpack(Bundle) & Terser(minifier)**
+
+**Nextjs with SWC(Transform) && Turbopack(bundle) && Terser(Minification)**
+
+1. Transformation
+2. Bundling
+   2a. Tree Shaking (inside bundling)
+   2b. Code Splitting (inside bundling)
+3. Minification (last)
 
 **ReactJS Patterns**
 
@@ -446,9 +464,9 @@ Super() passing props to super
 
 **useEffect Lifecycles:**
 
-Bundling, transpiling, minification, tree shaking, code splitting
-
 **React Without Bundler/Transpiler**
+
+**React Router DOM v5 vs V6**
 
 **Virtual DOM vs React Diff Algorithm vs Reconciliation vs React Fiber**
 
