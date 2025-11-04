@@ -1,6 +1,5 @@
 # Questions
 
-### [GIT](#git-topics)
 ### [Data Structures](#dsa)
 ### [-Design Principle](#design-principles)
 ### [Javascript](#javascript-topics)
@@ -11,6 +10,7 @@
 ### [-NodeJS](#nodejs-topics)
 ### [-ExpressJS](#expressjs-topics)
 ### [-Deployment](#deployment)
+### [GIT](#git-topics)
 ### [-Cloud](#cloud)
 ### [-AWS](#aws)
 ### [-Jenkins](#jenkins-topics)
@@ -603,14 +603,6 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
-## Microservices
-
-## OAuth
-
-Client ID, Client Secret, Access Token
-
-Authorization: Bearer Token
-
 ## NextJS Topics
 
 **Next Js version10 vs 15**
@@ -649,11 +641,29 @@ Incremental Static Generation - revalidate - useful for dashboards - static page
 
 **SWR**
 
+## Microservices
+
+## Security
+
+**OAuth 1.0 vs OAuth 2.0**
+
+**google authentication**
+
+**password authentication**
+
+**endpoint authentication**
+
+client ID, Client Secret, Access Token
+
+Authorization: Bearer Token
+
 ## REST Apis Topics
 
 ***headers***
 
 ***Stateless***
+
+**status codes**
 
 Client provides all information required for the server in the form of url, query string, header or through a body.
 
@@ -664,18 +674,6 @@ Read - GET
 Update - PUT, PATCH 
 Delete - delete
 
-***mongoose***
-
-***sequelize***
-
-## graphql
-
-caching in graphql
-
-**compare graphql vs rest**
-
-## Elastic Search & Search Box
-
 ## NodeJS Topics
 
 **node js design patterns**
@@ -684,11 +682,11 @@ caching in graphql
 
 **libuv thread pool**
 
-**child processes**
-
 **concurrent**
 
 **worker thread**
+
+**child processes**
 
 **middlewares**
 
@@ -704,7 +702,9 @@ monitor and log <br/>
 
 ***packages***
 
-***middlewares***
+***mongoose***
+
+***sequelize***
 
 cors
 express-rate-limit
@@ -785,6 +785,14 @@ params, query, body
 **Middleware function**
 
 **Error handling functions**
+
+## graphql
+
+caching in graphql
+
+**compare graphql vs rest**
+
+## Elastic Search & Search Box
 
 ## Deployment
 
@@ -1326,9 +1334,7 @@ none similar to null object
 
 DATADIOS@DD.COM
 
-
 sagarsagar405
-
 
 Challenging in Analyzer:
 
@@ -1336,8 +1342,7 @@ Every Data Source Comparison
 What comes from the endpoint and what we decide in the UI.
 Colors from ColorHunt, w3schools
 
-
-COntainer Presentation:
+Container Presentation:
 HOCs - push stats
 custom hooks - 
 compound components - children - Error Boundaries
