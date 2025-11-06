@@ -897,6 +897,10 @@ Image storing in S3, lambda, cloudfront.
 
 **DockerFile & JenkinsFile**
 
+## Jenkins Topics
+
+Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
+
 ## Database:
 
 ORM:(sequalize, prisma)
@@ -972,10 +976,6 @@ In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
 
-
-## Jenkins Topics
-
-Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
 
 ## CSS Topics
 
@@ -1072,6 +1072,8 @@ table {
 **css integration**
 
 **css vs scss vs emotions**
+
+**tailwind css**
 
 **sprites**
 
@@ -1347,3 +1349,5 @@ HOCs - push stats
 custom hooks - 
 compound components - children - Error Boundaries
 Controlled vs Uncontrolled - refs
+
+
