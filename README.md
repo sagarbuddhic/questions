@@ -603,6 +603,10 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
+**Smart vs Dumb Components**
+
+**shallow rendering vs full rendering**
+
 ## NextJS Topics
 
 **Next Js version10 vs 15**
@@ -730,6 +734,8 @@ Config values are set in parameter store in AWS, those values set to process env
 **Connect to MySql**
 
 **Connect to MongoDB**
+
+mongodb CP or AP
 
 **content negotiation**
 
@@ -1349,5 +1355,8 @@ HOCs - push stats
 custom hooks - 
 compound components - children - Error Boundaries
 Controlled vs Uncontrolled - refs
+
+Redux, Context API, useState - why they are immutable?
+
 
 
