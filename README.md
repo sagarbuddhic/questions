@@ -828,11 +828,11 @@ caching in graphql
 
 **Virtualization vs Containerization**
 
-**containers**
+**image**
+
+**Containers**
 
 **components of docker**
-
-**image**
 
 **docker engine**
 
@@ -844,7 +844,7 @@ caching in graphql
 
 **docker file**
 
-**NGINX**
+**Docker Compose**
 
 **Commands**
 
@@ -857,11 +857,29 @@ caching in graphql
 
 ## AWS
 
-**Docker Compose**
+**NGINX**
 
 **ECS(Elastic Container Service)**
 
 **EC2(Elastic Compute Cloud)**
+
+**EBS vs instance store**
+
+**stop vs terminate EC2**
+
+**key pair, Elastic IP, EC2 Instance Crash Recovery, Difference Between On-Demand, Reserved, and Spot Instances**
+
+**Users → CloudFront → ALB → Auto Scaling Group → EC2 Instances**
+
+**Horizontal scrolling vs Vertical scrolling**
+
+**parameter store vs security manager, IAM, VPCs**
+
+**task definition, containers**
+
+**service discovery**
+
+**rolling deployment**
 
 **Cluster**
 
@@ -869,11 +887,17 @@ caching in graphql
 
 **Serverless**
 
-**Lambda**
+**Lambda, synchronous , asynchronous, polling, max timeout**
 
-**SQS**
+**route53, cloudfront**
 
-**Amazon API Gateway**
+**SQS, FIFO,timeout, SNS, DLQ**
+
+**Agent App  →  Property Service →  SQS Queue →  Image Processor →  S3 + Search Indexing**
+
+**Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Client** 
+
+**Amazon API Gateway, api resource and method**
 
 **Dynamo DB**
 
@@ -885,13 +909,13 @@ Image storing in S3, lambda, cloudfront.
 
 **Cloud Front with Custom routing**
 
-**VPC**
-
-**Cloud Watch**
+**Cloud Watch, Event Bridge**
 
 **Parameter store**
 
 **JWT**
+
+**ALB**
 
 **NGINX**
 
@@ -903,35 +927,35 @@ Image storing in S3, lambda, cloudfront.
 
 **DockerFile & JenkinsFile**
 
+**Kinesis, kafka, confluent**
+
 ## Jenkins Topics
 
 Jenkins is typically run as a standalone application in its own process with the built-in Java servlet container/application server (Jetty).
 
 ## Database:
 
-ORM:(sequalize, prisma)
+**DBMS vs RDBMS**
 
-Kinesis, kafka, confluent
+**Normalization**
 
-DBMS vs RDBMS
+**ACID vs CAP**
 
-ACID vs CAP
+**DDL vs DML vs DCL vs TCL**
 
-DDL & DML
+**Primary Key vs Foreign Key**
 
-Primary Key vs Foreign Key
+**Clustered and Non clustered indexing in sql**
 
-clustered and non clustered indexing in sql
+**Constraints**
 
-constraints
+**DROP vs TRUNCATE vs DELETE**
 
-DROP vs TRUNCATE vs DELETE
+**WHERE, ORDER BY, GROUP BY, HAVING**
 
-WHERE, ORDER BY, GROUP BY, HAVING
+**Aggregate Functions in SQL**
 
-Aggregate Functions in SQL
-
-UNION vs UNION ALL in SQL
+**UNION vs UNION ALL in SQL**
 
 Views
 
@@ -939,11 +963,13 @@ triggers
 
 stored procedures
 
-SQL Query to Find the Second Highest Value in a Table
+difference with no sql and sql
+
+**vertical scaling vs horizontal scaling**
 
 ## No SQL:
 
-difference with no sql and sql
+**nodes**
 
 types of no sql DBS
 
@@ -972,6 +998,8 @@ Use "Database Access" Tab in mongo to edit the password.
 In Network Access Tab, adding 0.0.0.0/0 allows access to any ips.
 
 ## MySql topics
+
+ORM:(sequalize, prisma)
 
 * sudo systemctl start mysql.service
 * show databases;
