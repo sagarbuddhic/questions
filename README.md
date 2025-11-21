@@ -23,8 +23,6 @@
 
 ## DSA
 
-collection of values and the format they are stored in, steps taken to solve a problem.
-
 **linked list vs arrays**
 
 **treemap vs hashmap vs hashtable**
@@ -80,7 +78,11 @@ quick sort
 
 **SOLID**
 
+**Inversion of Control**
+
 **Observer Pattern**
+
+**Factory Pattern**
 
 **Singleton Pattern**
 
@@ -89,8 +91,6 @@ quick sort
 **Adapter pattern**
 
 **Decorator Pattern**
-
-**Factory Pattern**
 
 **Builder**
 
