@@ -106,7 +106,7 @@ quick sort
 
 **single threaded & asynchronous**
 
-**web workers**
+**web workers, Example Image Compression**
 
 **javascript Interpreted or compiled**
 
@@ -128,8 +128,6 @@ window.location.assign
 
 **declarative vs imperative**
 
-**typescript vs javascript**
-
 **ES5 vs ES6**
 
 **strict mode**
@@ -140,11 +138,11 @@ window.location.assign
 
 **memory leaks**
 
+**tools for detecting**
+
 **primitive vs non primitive**
 
-**decorators**
-
-**debounce vs throttle**
+**debounce for search vs throttle for maps**
 
 **this keyword**
 
@@ -171,6 +169,8 @@ window.location.assign
 **prototype**
 
 chaining
+
+**decorators**
 
 **set vs array**
 
@@ -355,6 +355,8 @@ const reversed = array1.reverse();
 console.log('reversed:', reversed);
 // expected output: "reversed:" Array ["three", "two", "one"]
 ```
+
+**typescript vs javascript**
 
 **Sort**
 
