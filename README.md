@@ -170,8 +170,6 @@ window.location.assign
 
 chaining
 
-**decorators**
-
 **set vs array**
 
 **map vs object**
@@ -196,35 +194,11 @@ Examples: Map, Filter Function.
 
 **Currying:**
 
-Example below of using closures, currying and recursive function.
-
-```
-function curry() {
-    let a = 0;
-    return function adder(b) {
-      if(!b) {
-      	return a;
-      }
-      a += b;
-      return adder;
-    };
-  };
-
-let curriedSum = curry();
-
-alert( curriedSum(1)(2)(3)(4)() ); // 3
-```
-
 **Recursive**
 
-**AAA** 
+Example: Tree View
 
-// point a cursor  
-const inputRange = document.createRange();
-inputRange.selectNodeContents(editDiv.current); 
-inputRange.collapse(false);  
-selection.removeAllRanges();  
-selection.addRange(inputRange);
+**AAA** 
 
 **spread vs rest**
 
@@ -233,8 +207,6 @@ selection.addRange(inputRange);
 **object freeze vs seal vs const**
 
 **white label**
-
-**Web Socket vs HTTP**
 
 **Callback**
 
@@ -245,6 +217,8 @@ Callback Hell - Hard to read & maintain callbacks.
 **async**
 
 **Event Bubbling**
+
+**Event Capturing**
 
 **Event Propagation**
 
@@ -277,7 +251,7 @@ null ?? 'test' // 'test'
 parseInt('32', 10) // 32
 ```
 
-***Math Floor***
+**Math Floor**
 
 The Math.floor() function returns the largest integer less than or equal to a given number.
 
@@ -356,8 +330,6 @@ console.log('reversed:', reversed);
 // expected output: "reversed:" Array ["three", "two", "one"]
 ```
 
-**typescript vs javascript**
-
 **Sort**
 
 ```
@@ -424,6 +396,12 @@ let test = 'test' + 'best' // testbest
 
 **eval**
 
+**decorators**
+
+**typescript vs javascript**
+
+**Web Socket vs HTTP**
+
 ## Frontend Topics
 
 ## Microfrontend
@@ -436,17 +414,25 @@ let test = 'test' + 'best' // testbest
 
 **routing in MFE**
 
-**passing props in MFE, subpub, dispatchevent**
+**passing props in MFE, subpub, dispatch event**
+
+## Security
+
+**OAuth 1.0 vs OAuth 2.0**
+
+**google authentication**
+
+**password authentication**
+
+**endpoint authentication**
+
+client ID, Client Secret, Access Token
+
+Authorization: Bearer Token
 
 ## ReactJS Topics
 
 **Reactjs Library**
-
-**Vite with ESBuild(Transform), Rollup(Bundle), ESBUIld Minifier**
-
-**Create React App with Babel(Transform) and Webpack(Bundle) & Terser(minifier)**
-
-**Nextjs with SWC(Transform) && Turbopack(bundle) && Terser(Minification)**
 
 1. Transformation
 2. Bundling
@@ -454,7 +440,33 @@ let test = 'test' + 'best' // testbest
    2b. Code Splitting (inside bundling)
 3. Minification (last)
 
+**Vite with ESBuild(Transform), Rollup(Bundle), ESBUIld Minifier**
+
+**Create React App with Babel(Transform) and Webpack(Bundle) & Terser(minifier)**
+
+**Nextjs with SWC(Transform) && Turbopack(bundle) && Terser(Minification)**
+
+**Smart vs Dumb Components**
+
+**Virtual DOM vs React Diff Algorithm vs Reconciliation vs React Fiber**
+
+**shallow rendering vs full rendering**
+
 **ReactJS Patterns**
+
+**Composition Vs Inheritance**
+
+**Render Pattern - props.children**
+
+**Controlled vs. Uncontrolled Components**
+
+**HOCS vs Render Props vs custom hooks**
+
+**Container presentational layout**
+
+**React Error Boundaries**
+
+**Repaint vs Reflow**
 
 **jsx vs js vs tsx**
 
@@ -466,38 +478,17 @@ Super() passing props to super
 
 **useEffect Lifecycles:**
 
+**Keys**
+
 **React Without Bundler/Transpiler**
 
 **React Router DOM v5 vs V6**
 
-**Virtual DOM vs React Diff Algorithm vs Reconciliation vs React Fiber**
-
-**Keys**
-
-**Repaint vs Reflow**
-
-**State vs props**
-
-**Pure Components vs React.Memo**
+**State vs props, immutability both**
 
 **Refs**
 
-**React Error Boundaries**
-
-getDerivedStateFromError
-
-**Composition Vs Inheritance**
-
-props.children
-
-**Controlled vs. Uncontrolled Components**
-
-**HOCS vs Render Props vs custom hooks**
-
-Example Downshift.
-MouseTracker
-
-**Container presentational layout**
+**Pure Components vs React.Memo**
 
 **React Portals**
 
@@ -605,10 +596,6 @@ PureComponents, React.memo for re-render only when a prop changes(Table rows).
 
 Create seperate component for rows. Use PureComponents or React.Memo to render only when props changes. Re-render will only happen for rows with value change.
 
-**Smart vs Dumb Components**
-
-**shallow rendering vs full rendering**
-
 ## NextJS Topics
 
 **Next Js version10 vs 15**
@@ -649,20 +636,6 @@ Incremental Static Generation - revalidate - useful for dashboards - static page
 
 ## Microservices
 
-## Security
-
-**OAuth 1.0 vs OAuth 2.0**
-
-**google authentication**
-
-**password authentication**
-
-**endpoint authentication**
-
-client ID, Client Secret, Access Token
-
-Authorization: Bearer Token
-
 ## REST Apis Topics
 
 ***headers***
@@ -679,6 +652,8 @@ Create - Post
 Read - GET
 Update - PUT, PATCH 
 Delete - delete
+
+***get vs post***
 
 ## NodeJS Topics
 
@@ -859,29 +834,7 @@ caching in graphql
 
 ## AWS
 
-**NGINX**
-
 **ECS(Elastic Container Service)**
-
-**EC2(Elastic Compute Cloud)**
-
-**EBS vs instance store**
-
-**stop vs terminate EC2**
-
-**key pair, Elastic IP, EC2 Instance Crash Recovery, Difference Between On-Demand, Reserved, and Spot Instances**
-
-**Users → CloudFront → ALB → Auto Scaling Group → EC2 Instances**
-
-**Horizontal scrolling vs Vertical scrolling**
-
-**parameter store vs security manager, IAM, VPCs**
-
-**task definition, containers**
-
-**service discovery**
-
-**rolling deployment**
 
 **Cluster**
 
@@ -889,15 +842,43 @@ caching in graphql
 
 **Serverless**
 
+**rolling deployment**
+
+**EC2(Elastic Compute Cloud)**
+
+**stop vs terminate EC2**
+
+**EBS vs instance store**
+
+**ssh vs http**
+
+**public vs elastic IP**
+
+**key pair, Elastic IP, EC2 Instance Crash Recovery, Difference Between On-Demand, Reserved, and Spot Instances**
+
+**Horizontal scaling vs Vertical scaling**
+
+**task definition, containers**
+
+**parameter store vs security manager, VPCs vs KMS**
+
+**IAM users, groups, roles and policies**
+
+**service discovery**
+
 **Lambda, synchronous , asynchronous, polling, max timeout**
 
 **route53, cloudfront**
 
+**Users → CloudFront → ALB → Auto Scaling Group → EC2 Instances**
+
 **SQS, FIFO,timeout, SNS, DLQ**
 
-**Agent App  →  Property Service →  SQS Queue →  Image Processor →  S3 + Search Indexing**
+**Agent App → Property Service → S3 Upload Image -> SQS Queue →  Image Processor →  S3 + Search Indexing**
 
-**Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Client** 
+**Client → API Gateway → Lambda → DynamoDB → Lambda → API Gateway → Client**
+
+**WS CloudWatch → Alarm at 70% usage → SNS → Email to DevOps + Slack**
 
 **Amazon API Gateway, api resource and method**
 
@@ -909,7 +890,9 @@ Image storing in S3, lambda, cloudfront.
 
 **step functions**
 
-**Cloud Front with Custom routing**
+**Cloud Front, S3, EC2, ALB, TTL**
+
+**redis**
 
 **Cloud Watch, Event Bridge**
 
@@ -919,15 +902,17 @@ Image storing in S3, lambda, cloudfront.
 
 **ALB**
 
-**NGINX**
+**NGINX, web server, reverse proxy, load balancer, caching**
 
 **app sync**
-
-**Robots.txt, , route 53**
 
 **Large Files in AWS**
 
 **DockerFile & JenkinsFile**
+
+**ESB arch with kafka**
+
+**kafka, brokers, topics**
 
 **Kinesis, kafka, confluent**
 
@@ -989,7 +974,7 @@ Types of Indexing in NoSQL Databases
 
 **Replica Set**
 
-**Shards**
+**Shards(Horizontal Scaling)**
 
 **Database Access**
 
@@ -1011,7 +996,6 @@ ORM:(sequalize, prisma)
 * show tables;
 * select user();
 * INSERT INTO user (id, name, email, gender, status) VALUES (1, 'sagar', 's', 'M', 'active');"
-
 
 ## CSS Topics
 
@@ -1107,7 +1091,7 @@ table {
 
 **css integration**
 
-**css vs scss vs emotions**
+**css vs scss vs emotions vs tailwind**
 
 **tailwind css**
 
@@ -1128,6 +1112,10 @@ table {
 **RGB vs hex vs HSL**
 
 ## HTML
+
+Accessiblity
+
+Headless CMS
 
 **Semantic vs non**
 
