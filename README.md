@@ -78,6 +78,8 @@ quick sort
 
 **SOLID**
 
+
+
 **Inversion of Control**
 
 **Observer Pattern**
@@ -179,8 +181,6 @@ chaining
 Examples: Map, Filter Function.
 
 **forEach vs map vs for vs for ..in vs for .. of**
-
-**in operator**
 
 **string terms**
 
