@@ -1376,5 +1376,30 @@ Controlled vs Uncontrolled - refs
 
 Redux, Context API, useState - why they are immutable?
 
+biggest problem
 
+I prefer being proactive, requirements could be on the spot.
 
+biggest strength
+
+communication , technical strength
+
+failure/Mistake
+
+Not Realizing the importance of tests
+
+Disagree with teammate
+
+workload analyzer
+
+Motivation at work
+
+If there is a new useful tech, using it and building a product
+
+prioritize tasks
+
+product manager, tech redundant, tech upgrade or a application level task.
+
+teammate succeed ?
+
+Many times I have taken sessions on technology, explaining react, JS. 
