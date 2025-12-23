@@ -540,6 +540,9 @@ src - contains js, style.js.
 
 **dependencies vs devdependencies vs peerdependencies**
 
+dev - webpack, testing packages, ESLint
+peer dep - datetimepicker with react 18
+
 **Source Map Explorer**
 
 **depcheck**
@@ -744,7 +747,7 @@ passport-google-oauth20
 
 **axios vs fetch**
 
-***authentication***
+**authentication**
 
 HTTps
 TLS
@@ -794,6 +797,8 @@ caching in graphql
 **git push**
 
 **semantic versioning**
+
+**yarn link**
 
 **yarn workspaces**
 
@@ -913,6 +918,12 @@ Image storing in S3, lambda, cloudfront.
 **DockerFile & JenkinsFile**
 
 **ESB arch with kafka**
+
+**Web Hooks**
+
+**AWS MSK**
+
+Github web hooks to Create PR, run tests.
 
 **kafka, brokers, topics**
 
