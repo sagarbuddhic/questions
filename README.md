@@ -1012,11 +1012,11 @@ ORM:(sequalize, prisma)
 
 ## CSS Topics
 
-**tailwind**
+**Tailwind**
 
-**media queries**
+**Media Queries**
 
-**material UI**
+**Material UI**
 
 **Box Model**
 
