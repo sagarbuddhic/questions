@@ -847,15 +847,15 @@ caching in graphql
 
 **ECR**
 
-**Serverless**
-
-**rolling deployment**
-
 **EC2(Elastic Compute Cloud)**
 
 **stop vs terminate EC2**
 
 **EBS vs instance store**
+
+**Serverless**
+
+**rolling deployment**
 
 **ssh vs http**
 
@@ -871,11 +871,11 @@ caching in graphql
 
 **IAM users, groups, roles and policies**
 
-**service discovery**
+**Service Discovery**
 
 **Lambda, synchronous , asynchronous, polling, max timeout**
 
-**route53, cloudfront**
+**Route53, Cloudfront**
 
 **Users → CloudFront → ALB → Auto Scaling Group → EC2 Instances**
 
