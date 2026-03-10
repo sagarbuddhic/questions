@@ -849,7 +849,7 @@ caching in graphql
 
 **EC2(Elastic Compute Cloud)**
 
-**stop vs terminate EC2**
+**Stop vs Terminate EC2**
 
 **EBS vs instance store**
 
@@ -861,25 +861,25 @@ caching in graphql
 
 **public vs elastic IP**
 
-**key pair, Elastic IP, EC2 Instance Crash Recovery, Difference Between On-Demand, Reserved, and Spot Instances**
+**Key pair, Elastic IP, EC2 Instance Crash Recovery, Difference Between On-Demand, Reserved, and Spot Instances**
 
-**Horizontal scaling vs Vertical scaling**
+**Horizontal Scaling vs Vertical Scaling**
 
-**task definition, containers**
+**Task definition, Containers**
 
-**parameter store vs security manager, VPCs vs KMS**
+**Parameter store vs security manager, VPCs vs KMS**
 
 **IAM users, groups, roles and policies**
 
 **Service Discovery**
+
+**SQS, FIFO,timeout, SNS, DLQ**
 
 **Lambda, synchronous , asynchronous, polling, max timeout**
 
 **Route53, Cloudfront**
 
 **Users → CloudFront → ALB → Auto Scaling Group → EC2 Instances**
-
-**SQS, FIFO,timeout, SNS, DLQ**
 
 **Agent App → Property Service → S3 Upload Image -> SQS Queue →  Image Processor →  S3 + Search Indexing**
 
